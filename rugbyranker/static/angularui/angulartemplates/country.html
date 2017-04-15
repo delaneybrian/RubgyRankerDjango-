@@ -1,0 +1,58 @@
+<div class="standardcontent">
+
+    <div class="countryintro">
+        <div class="basiccountryinfo">
+            <h3>{{ country.name }}</h3>
+            <img class="bigflag" src="{{ country.flag_url }}" alt="{{ country.name }} flag">
+            <p>{{ country.hemisphire }} HEMISPHERE</p>
+        </div>
+
+        <div class="countrystats">
+            <h4>Home Win Precentage: <b>{{ information.country_home_win_precentage | number : 2 }}%</b></h4>
+            <p>Tracks home wins by teams from {{ country.name }} against teams from other countries.</p>
+            <br>
+            <h4>Away Win Precentage: <b>{{ information.country_away_win_precentage | number : 2}}%</b></h4>
+            <p>Tracks away wins by teams from {{ country.name }} against teams from other countries.</p>
+        </div>
+    </div>
+
+    <div class="countryteams">
+        <h3>Teams</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Team Logo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="team in teams" ng-click="clickrank(team.id)" ng-class-odd="'odd'"
+                ng-class-even="'even'">
+                    <td>{{ team.name }}</td>
+                    <td><img class="smallteamlogo" src="{{ team.logo_url }}" alt="{{ team.name }} logo"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div class="countrytournaments">
+        <h3>Tournaments</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tournament Name</th>
+                    <th>Tournament Logo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tournament in tournaments" ng-click="clicktournament(tournament.id)" ng-class-odd="'odd'"
+                ng-class-even="'even'">
+                    <td>{{ tournament.name }}</td>
+                    <td><img class="midtournamentlogo" src="{{ tournament.logo_url }}" alt="{{ tournament.name }} logo"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

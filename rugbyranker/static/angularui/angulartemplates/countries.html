@@ -1,0 +1,15 @@
+<div class="standardcontent">
+    <div class="countrycontainer content">
+
+        <div class="country" ng-repeat="country in countries">
+            <div class="countrycontain">
+                <a ng-href="/countries/{{ country.id }}"><img class="bigflag flagimage" src="{{ country.flag_url }}"
+                                                              alt="{{ country.name }} flag">
+                    <div class="overlay">
+                        <div class="text">{{ country.name }}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

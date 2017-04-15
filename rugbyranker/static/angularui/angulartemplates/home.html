@@ -1,0 +1,92 @@
+<div class="standardcontent">
+
+    <div class="introcontainer">
+        <div class="homestats">
+            <div class="headlinetext">
+                <h1>Currently ranking <b>{{ details.Teams }} Teams </b> Accros <b>{{ details.Tournaments }} Global Tournaments </b> In <b>{{ details.Matches }} Matches.</b></h1>
+            </div>
+            <br>
+            <br>
+            <div class="rankingdates">
+                <h4>First Ranked Match: <b><span>{{ details.FirstMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
+                <h4>Latest Ranked Match: <b><span>{{ details.LastMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
+            </div>
+        </div>
+
+        <div class="featuredteam">
+            <h3>Featured Team</h3>
+            <div class="featuredteamhover" ng-click="clickfeatured(featured.team.id)">
+                <h4 class="featuredteamname">{{ featured.team.name }} - {{ featured.teamranking.rating }}</h4>
+                <img class="largeteamlogo" src="{{ featured.team.logo_url }}" alt="{{ featured.team.name }} logo">
+                <div class="rankingpositioncontainer">
+                    <div class="homerankingposition">
+                        <span class="currentposition">{{ featured.teamranking.position }}</span>
+                        <i ng-show="featured.teamranking.change == 'SAME'" class="fa fa-minus fa-5x icon-height"
+                           aria-hidden="true"></i>
+                        <i ng-show="featured.teamranking.change == 'DOWN'" class="fa fa-arrow-down fa-5x icon-height"
+                           aria-hidden="true"></i>
+                        <i ng-show="featured.teamranking.change == 'UP'" class="fa fa-arrow-up fa-5x icon-height"
+                           aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="homecontent">
+        <div class="homelatestmatches">
+            <h3>Latest Ranked Matches</h3>
+            <table>
+                <tr>
+                    <th>Hometeam</th>
+                    <th></th>
+                    <th>Score</th>
+                    <th></th>
+                    <th>Awayteam</th>
+                    <th></th>
+                    <th>Score</th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="match in matches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                    <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
+                    <td class="teamname">{{ match.hometeam.name }}</td>
+                    <td>{{ match.hometeam_score }}</td>
+                    <td>-</td>
+                    <td>{{ match.awayteam_score }}</td>
+                    <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></td>
+                    <td class="teamname">{{ match.awayteam.name }}</td>
+                    <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="rankingsnip">
+            <h3>Top 15 Teams</h3>
+            <table>
+                <tr>
+                    <th>Position</th>
+                    <th>Team</th>
+                    <th></th>
+                    <th>Rating</th>
+                    <th>Country</th>
+                    <th>Movement</th>
+                </tr>
+                <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'"
+                    ng-click="clickrank(rank.team.id)">
+                    <td>{{ rank.position }}</td>
+                    <td>{{ rank.team.name }}</td>
+                    <td><img class="smallteamlogo" src="{{ rank.team.logo_url }}"></td>
+                    <td>{{ rank.rating }}</td>
+                    <td><a ng-href="/countries/{{ rank.team.country.id }}"><img class="flag"
+                                                                                src="{{ rank.team.country.flag_url }}"></a>
+                    </td>
+                    <td ng-show="rank.change == 'SAME'"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
+                    <td ng-show="rank.change == 'DOWN'"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
+                    <td ng-show="rank.change == 'UP'"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

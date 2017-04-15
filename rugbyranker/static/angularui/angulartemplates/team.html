@@ -1,0 +1,148 @@
+<div class="standardcontent">
+    <div class="teamrow">
+        <div class="team_details">
+            <h2>{{ details.name }} <a ng-href="/countries/{{ details.country.id }}/"><img class="flag"
+                                                                                          src="{{ details.country.flag_url }}"
+                                                                                          alt="{{ details.country.name }} Flag"></a>
+            </h2>
+            <a target="_blank" ng-href="{{ details.website }}"><img class="largeteamlogo" src="{{ details.logo_url }}"></a>
+        </div>
+
+        <div class="moreteamdetails">
+            <div class="currentranking">
+                <div>
+                    <span class="currentposition">{{ currentranking.position }}</span>
+                    <i ng-show="currentranking.change == 'SAME'" class="fa fa-minus fa-5x icon-height"
+                       aria-hidden="true"></i></span>
+                    <i ng-show="currentranking.change == 'DOWN'" class="fa fa-arrow-down fa-5x icon-height"
+                       aria-hidden="true"></i></span>
+                    <i ng-show="currentranking.change == 'UP'" class="fa fa-arrow-up fa-5x icon-height"
+                       aria-hidden="true"></i></span>
+                </div>
+                <h4>{{ currentranking.rating }}</h4>
+            </div>
+
+            <div class="historicranking">
+                <div class="historicrank">
+                    <h5> Historic Max:</h5>
+                    <hr class="historicline">
+                    <span><b>{{ history.max.position }}</b></span> - <span>{{ history.max.rating }}</span><br>
+                    <small>{{ history.max.date | date : "d-MMMM-yyyy" }}</small>
+                </div>
+                <div class="historicrank">
+                    <h5> Historic Min:</h5>
+                    <hr class="historicline">
+                    <span><b>{{ history.min.position }}</b></span> - <span>{{ history.min.rating }}</span><br>
+                    <small>{{ history.min.date | date : "d-MMMM-yyyy" }}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="teamcontent">
+        <div class="team_stadium">
+            <h3>Stadium</h3>
+            <div ng-repeat="stad in details.stadium">
+                <h4>{{ stad.name }}</h4>
+                <img src="{{ stad.image_url }}">
+                <p>Capacity: {{ stad.capacity }}</p>
+                <p>Location: <img class="flag" src="{{ stad.country.flag_url }}"></p>
+            </div>
+        </div>
+
+        <div class="latestgames">
+            <h3>Latest Home Matches</h3>
+            <table class="latestgamestable">
+                <tr>
+                    <th>Hometeam</th>
+                    <th></th>
+                    <th>Score</th>
+                    <th></th>
+                    <th>Score</th>
+                    <th>Awayteam</th>
+                    <th></th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="match in homematchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                    <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
+                    <td class="teamname">{{ match.hometeam.name }}</td>
+                    <td>{{ match.hometeam_score }}</td>
+                    <td>-</td>
+                    <td>{{ match.awayteam_score }}</td>
+                    <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></td>
+                    <td class="teamname">{{ match.awayteam.name }}</td>
+                    <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="latestgames">
+            <h3>Latest Away Matches</h3>
+            <table>
+                <tr>
+                    <th>Hometeam</th>
+                    <th></th>
+                    <th>Score</th>
+                    <th></th>
+                    <th>Score</th>
+                    <th>Awayteam</th>
+                    <th></th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="match in awaymatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                    <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
+                    <td class="teamname">{{ match.hometeam.name }}</td>
+                    <td>{{ match.hometeam_score }}</td>
+                    <td>-</td>
+                    <td>{{ match.awayteam_score }}</td>
+                    <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></td>
+                    <td class="teamname">{{ match.awayteam.name }}</td>
+                    <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="teamrivals">
+            <h3>Rivals</h3>
+            <h4>Search For Rival</h4>
+            <form class="form-group">
+                <input type="text" class="form-control" ng-model="searchRivals" placeholder="Search For Rival...">
+            </form>
+            <table class="rivalstable">
+                <tr>
+                    <th ng-click="sortType = 'team_b.name'; sortReverse = !sortReverse">
+                        <button class="btn">
+                            <div class="sortbutton">Rival<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                        </button>
+                    </th>
+                    <th></th>
+                    <th ng-click="sortType = 'wins'; sortReverse = !sortReverse">
+                        <button class="btn">
+                            <div class="sortbutton">Wins<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                        </button>
+                    </th>
+                    <th ng-click="sortType = 'losses'; sortReverse = !sortReverse">
+                        <button class="btn">
+                            <div class="sortbutton">Losses<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                        </button>
+                    </th>
+                    <th ng-click="sortType = 'draws'; sortReverse = !sortReverse">
+                        <button class="btn">
+                            <div class="sortbutton">Draws<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                        </button>
+                    </th>
+                </tr>
+                <tr ng-repeat="rival in rivals | orderBy:sortType:sortReverse | filter:searchRivals"
+                    ng-class-odd="'odd'"
+                    ng-class-even="'even'">
+                    <td>{{ rival.team_b.name }}</td>
+                    <td><img class="smallteamlogo" src="{{ rival.team_b.logo_url }}"></td>
+                    <td>{{ rival.wins }}</td>
+                    <td>{{ rival.losses }}</td>
+                    <td>{{ rival.draws }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="standardcontent">
+
+    <div class="tournamentflex">
+        <div ng-repeat="tournament in tournaments">
+            <div class="tournamentcontainer">
+                <div class="tournamentmainlogo">
+                    <img class="tournamentlogoimage" alt="{{ tournament.name }} Logo" src="{{ tournament.logo_url }}">
+                </div>
+                <div class="touroverlay" ng-click="tournamentlink(tournament.id)">
+                    <div class="tourtext">{{ tournament.name }}</div>
+                    <div class="countriesflags">
+                        <span ng-repeat="country in tournament.countries">
+                            <img class="flag exflag" src="{{ country.flag_url }}">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <h3>Tournaments</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Logo</th>
+            <th>Countries</th>
+        </tr>
+        <tr ng-repeat="tournament in tournaments">
+            <td>{{ tournament.name }}</td>
+            <td><img class ="bigtournamentlogo" alt="{{ tournament.name }} Logo" src="{{ tournament.logo_url }}"></td>
+            <td>
+                <ul>
+                    <li ng-repeat="country in tournament.countries">
+                        <a ng-href="/countries/{{ country.id }}"> <img class="flag" src="{{ country.flag_url }}"></a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    -->
+</div>
+
+

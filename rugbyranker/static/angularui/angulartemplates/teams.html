@@ -1,0 +1,27 @@
+<div class="standardcontent">
+    <div class="teamsContainer">
+        <div class="teamTable">
+            <h3>Teams</h3>
+            <table>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Team Logo</th>
+                    <th>Country</th>
+                </tr>
+                <tr ng-repeat="team in teams.results" ng-class-odd="'odd'" ng-class-even="'even'"
+                    ng-click="clickteam(team.id)">
+                    <td>{{ team.name }}</td>
+                    <td><img class="smallteamlogo" src="{{ team.logo_url }}"></td>
+                    <td><a ng-href="/countries/{{ team.country.id }}"><img class="flag"
+                                                                           src="{{ team.country.flag_url }}"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="teamPagination">
+        <span class="btn btn-default btn-sm pagbutton" ng-show="teams.previous" ng-click="newpage(teams.previous)"><i
+                class="fa fa-chevron-left"></i> Previous</span>
+            <span class="btn btn-default btn-sm pagbutton" ng-show="teams.next" ng-click="newpage(teams.next)">Next <i
+                    class="fa fa-chevron-right"></i></span>
+        </div>
+    </div>
+</div>

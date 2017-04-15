@@ -1,0 +1,33 @@
+<div class="standardcontent">
+    <h3>Rankings</h3>
+
+
+    <div class="input-group margin-bottom-sm rankingsearch">
+      <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span>
+      <input class="form-control" type="text" placeholder="Search Rankings" ng-model="searchRank">
+    </div>
+
+    <table class="fullwidthrank">
+        <tr>
+            <th ng-click="sortType = 'position'; sortReverse = !sortReverse"><button class="btn"><div class="sortbutton">Position<i class="fa fa-sort aftersort" aria-hidden="true"></i></div></button></th>
+            <th ng-click="sortType = 'team.name'; sortReverse = !sortReverse"><button class="btn"><div class="sortbutton">Team <i class="fa fa-sort aftersort" aria-hidden="true"></i></div></button></th>
+            <th ng-click=""></th>
+            <th ng-click="sortType = 'rating'; sortReverse = !sortReverse"><button class="btn"><div class="sortbutton">Rating<i class="fa fa-sort aftersort" aria-hidden="true"></i></div></button></th>
+            <th ng-click="sortType = 'team.country.name'; sortReverse = !sortReverse"><button class="btn"><div class="sortbutton">Country<i class="fa fa-sort aftersort" aria-hidden="true"></i></div></button></th>
+            <th ng-click="sortType = 'change'; sortReverse = !sortReverse"><button class="btn"><div class="sortbutton">Movement<i class="fa fa-sort aftersort" aria-hidden="true"></i></div></button></th>
+        </tr>
+        <tr ng-repeat="rank in rankingdata | orderBy:sortType:sortReverse | filter:searchRank" ng-class-odd="'odd'"
+                ng-class-even="'even'" ng-click="clickrank(rank.team.id)">
+            <td>{{ rank.position }}</td>
+            <td>{{ rank.team.name }}</td>
+            <td><img class="smallteamlogo" src="{{ rank.team.logo_url }}"></td>
+            <td>{{ rank.rating }}</td>
+            <td><span class="hide" {{ rank.team.country.name }}></span><a ng-href="/countries/{{ rank.team.country.id }}"><img class="flag" src="{{ rank.team.country.flag_url }}"></a></td>
+            <td ng-show="rank.change == 'SAME'"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
+            <td ng-show="rank.change == 'DOWN'"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
+            <td ng-show="rank.change == 'UP'"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+        </tr>
+    </table>
+
+</div>
+

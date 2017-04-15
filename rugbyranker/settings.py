@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'elo',
     'rest_framework',
+    'angularui',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +61,10 @@ ROOT_URLCONF = 'rugbyranker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '/rugbyranker/templates',
+            '/elo/templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

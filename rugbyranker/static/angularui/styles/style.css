@@ -1,0 +1,808 @@
+/*GENERAL SECTION CSS */
+html{
+     position: relative;
+     min-height: 100%;
+}
+
+body{
+    border-top: 0px;
+}
+
+.standardcontent{
+    padding: 5% 10% 5% 10%;
+    padding-top: 50px;
+}
+
+.centerstandard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+td {
+    height: 50px;
+    min-height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+i {
+    text-align: center;
+}
+
+tr {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+.sitelogosm{
+    width:50px;
+    min-width: 50px;
+    height: auto;
+    max-height: 50px;
+}
+
+.sitelogomd{
+    width:100px;
+    min-width: 100px;
+    height: auto;
+    max-height: 100px;
+}
+
+.sitelogolg{
+    width:200px;
+    min-width: 200px;
+    height: auto;
+    max-height: 200px;
+}
+
+.sitelogovl{
+    width:300px;
+    min-width: 300px;
+    height: auto;
+    max-height: 300px;
+}
+
+.moreteamdetails{
+    padding: 5%;
+}
+
+
+
+
+.smallteamlogo {
+    height: auto;
+    max-height: 50px;
+    width: 50px;
+    min-width: 50px;
+}
+
+.midteamlogo {
+    height: auto;
+    min-height: 50px;
+    max-height: 100px;
+    min-width: 50px;
+    width: 100px;
+}
+
+.largeteamlogo {
+    width: 300px;
+    height: auto
+}
+
+.mainlogo{
+    max-width: 400px;
+    height: auto;
+}
+
+.flag {
+    max-width: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+.medflag {
+    max-width: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+
+.bigtournamentlogo {
+    max-width: 200px;
+    height: 200px;
+    width: 200px;
+}
+
+.midtournamentlogo {
+    max-width: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.smalltournamentlogo {
+    max-width: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+.hide {
+    Display: none;
+}
+
+.odd{
+    background-color: #7189A5;
+}
+
+.even{
+    background-color: #A5B7CA;
+}
+
+.odd:hover{
+    background-color: #2B4B6F;
+    color: white;
+}
+
+.even:hover{
+    background-color: #2B4B6F;
+    color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.content{
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+/*Footer Styles*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+}
+
+.newsletter{
+    max-width: 30%;
+}
+
+.footermain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5% 5% 2% 5%;
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: #738CA6;
+}
+
+footer a{
+    color: white;
+}
+
+
+.emailflex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.social{
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerlinks{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.sociallink{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.fa-twitter-square:hover{
+    color: #00aced;
+}
+
+.fa-facebook-square:hover{
+    color:#3B5998;
+}
+
+.fa-snapchat-square:hover{
+    color: #fffc00;
+}
+
+
+
+
+/* Styles For Team Page */
+.contentcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.team_details{
+    display:flex;
+    flex-direction: column;
+    align-items: center ;
+    z-index: 14444;
+}
+
+.team_stadium{
+    width: 100%;
+}
+
+.latestgames{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.latestgames table {
+    width: 100%;
+}
+
+.teamrivals{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.rivalstable{
+    width: 100%;
+}
+
+.fullwidthrank{
+    width: 100%;
+}
+
+/* COUTNRIES CSS */
+
+.countrycontainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.country{
+    padding: 2% 5% 2% 5%;
+}
+
+.currentposition{
+    font-size: 500%;
+}
+
+/* Home STYLE */
+
+.homelatestmatches{
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.homelatestmatches table{
+    width: 100%;
+}
+
+.rankingsnip{
+    width: 100%;
+}
+
+.rankingsnip table{
+    width: 100%;
+}
+
+.homecontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rankingpositioncontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.icon-height{
+    padding-left: 30px;
+}
+
+.featuredteamname{
+    padding-bottm: 20px;
+ }
+
+.flexrating{
+    height: inherit;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.homestats{
+    max-width: 50%;
+}
+
+.introcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.featuredteamhover{
+    padding: 5%;
+    border-radius: 3%;
+    background-color: #A5B7CA;
+}
+
+
+
+.featuredteamhover:hover{
+    background-color: #2B4B6F;
+    padding: 5%;
+    border-radius: 3%;
+    color:white;
+}
+
+/* teams STYLE */
+
+.historicrank{
+    padding-bottom: 20px;
+}
+
+.currentranking{
+    padding-bottom: 20px;
+}
+
+.historicline{
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.teamsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.teamTable{
+    width:100%;
+}
+
+.teamTable table{
+    width:100%;
+}
+
+.pagbutton{
+    margin: 20px;
+}
+
+/* ARROW STYLES */
+
+.fa-minus{
+    color: #e68a00;
+}
+
+.fa-arrow-down{
+    color: #ff0000;
+}
+
+.fa-arrow-up{
+    color: #00b300;
+}
+
+
+/* OVERLAY FOR COUNTRY IMAGE */
+.countrycontain {
+  position: relative;
+  width: 50%;
+}
+
+.countrystats{
+    max-width: 30%;
+}
+
+.bigflag {
+    max-width: 200px;
+    height: 200px;
+    width: 200px;
+}
+
+.flagimage {
+  display: block;
+    height: auto;
+    width: 200px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  background-color: rgba(2, 22, 40, 1);;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.countrycontain:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* MATCH WIDTH IN TABLE */
+
+.oddmatch{
+    background-color: #7189A5;
+}
+
+.evenmatch{
+    background-color: #A5B7CA;
+}
+
+.teamname{
+    min-width: 180px;
+}
+
+.teambackground {
+    -webkit-filter: blur(3px) opacity(30%);
+    -moz-filter: blur(3px) opacity(30%);
+    -o-filter: blur(3px) opacity(30%);
+    filter: blur(3px) opacity(30%);
+    position:absolute;
+    height: auto;
+
+}
+
+
+.teamrow{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    position: relative;
+    height: 50%;
+    flex-wrap: wrap;
+
+}
+
+.teamcontent{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.latestgames{
+    width: 100%;
+}
+
+latestgamestable{
+    width: 100%;
+}
+
+.team_stadium{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.viewarea{
+    min-height: 800px;
+}
+
+.aftersort{
+    padding-left: 10px;
+}
+
+
+/* navbar */
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: rgba(2, 22, 40, 1);
+    border-width: 0px;
+    border-radius: 4px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(2, 22, 40, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(84, 115, 145, 1);
+    background-color: rgba(2, 22, 40, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(2, 22, 40, 1);
+    background-color: rgba(226, 230, 235, 1);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(226, 230, 235, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(226, 230, 235, 1) 100%);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #e2e6eb;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #e2e6eb;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #e2e6eb;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #021628;
+}
+
+.navbar {
+    margin: 0px;
+    border: 0px;
+}
+
+/* Country CSS */
+
+.countryintro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.countryteams{
+    width: 100%;
+}
+
+.countrytournaments{
+    width: 100%;
+}
+
+.countryteams table{
+    width: 100%;
+}
+
+.countrytournaments table{
+    width: 100%;
+}
+
+
+/* CONTACT PAGE */
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactoption{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    align-items: center;
+}
+
+.contacttext{
+    padding-left: 20px;
+    font-size: 125%;
+}
+
+.contentheadertext{
+    text-align: center;
+}
+
+/* FAQ PAGE */
+
+.faqanswer{
+    text-align: justify;
+}
+
+.faqs {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.faqquestion{
+    margin-bottom: 0px;
+}
+
+.faqs hr{
+    margin-top: 5px;
+}
+
+/* Tournaments */
+
+.tournamentflex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.tournamentmainlogo{
+   width: 220px;
+   height: 220px;
+}
+
+.tournamentlogoimage {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+/* OVERLAY FOR TOURNAMENTS */
+.tournamentcontainer {
+  position: relative;
+  width: 50%;
+    margin: 30px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.touroverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  width: 220px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(2, 22, 40, 1);
+}
+
+.tournamentcontainer:hover .touroverlay {
+  opacity: 1;
+}
+
+.tourtext {
+  display: flex;
+  justify-content: center;
+    padding: 5px;
+  color: white;
+  font-size: 20px;
+    width: 100%;
+}
+
+.countriesflags{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.exflag {
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+
+/* tournament */
+
+.tournamentcountries{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournamentcountry{
+    padding: 30px;
+}
+
+.tournamentsbottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tourteams{
+    width: 100%;
+}
+
+.tourteamtable{
+    width: 100%;
+}
+
+.tourrecentgames{
+    width: 100%;
+}
+
+.tourrecentgames table{
+    width: 100%;
+}
+
+.tourrecentgamesrow{
+    height: 100px;
+}
+
+/* ranking style */
+
+.rankingsearch{
+    padding-bottom: 5%;
+}
+
+.fa-ellipsis-v{
+    color: white;
+}

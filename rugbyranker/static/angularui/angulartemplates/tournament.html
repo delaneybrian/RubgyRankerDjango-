@@ -1,0 +1,81 @@
+<div class="standardcontent">
+
+    <div class="tournamentInfo">
+        <a target="_blank" ng-href="{{ tournamentdata.website }}" alt="{{ tournamentdata.name }} Website">
+            <h2>{{ tournamentdata.name }}</h2>
+            <img class="largeteamlogo" alt="{{ tournamentdata.name }} Logo" src="{{ tournamentdata.logo_url }}">
+        </a>
+    </div>
+    <br>
+    <div class="tournamentsbottom">
+        <div class="countries">
+            <ul>
+                <div class="tournamentcountries">
+                    <div class="tournamentcountry" ng-repeat=" country in tournamentdata.countries">
+                        <a ng-href="/countries/{{ country.id }}/"><img class="medflag" alt="{{ country.name }} Flag"
+                                                                       src="{{ country.flag_url }}"></a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <br>
+
+    <div class="tourteams">
+        <h4>Teams:</h4>
+        <table class="tourteamtable">
+            <thead>
+            <tr>
+                <th>Team</th>
+                <th></th>
+                <th>Tournament Ranking</th>
+                <th>Global Ranking</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="tourrecentgamesrow" ng-click="teamtourlink(item.team.id)" ng-repeat=" item in tournamentteamdata" ng-class-odd="'odd'" ng-class-even="'even'">
+                <td>{{ item.team.name }}</td>
+                <td><img class="midteamlogo" alt="{{ item.team.name }} Logo" src="{{ item.team.logo_url }}"></td>
+                <td>{{ $index + 1}}</td>
+                <td>{{ item.position }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div class="tourrecentgames">
+        <h4>Latest Matches:</h4>
+        <table>
+            <thead>
+            <tr>
+                <th>Hometeam</th>
+                <th></th>
+                <th>Score</th>
+                <th></th>
+                <th>Awayteam</th>
+                <th></th>
+                <th>Score</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="match in tournamentmatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}" alt="{{ match.hometeam.name }} Logo">
+                </td>
+                <td>{{ match.hometeam.name }}</td>
+                <td>{{ match.hometeam_score }}</td>
+                <td><span> - </span></td>
+                <td>{{ match.awayteam_score }}</td>
+                <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}" alt="{{ match.awayteam.name }} Logo">
+                </td>
+                <td>{{ match.awayteam.name }}</td>
+                <td>
+                    <small>{{ match.match_date | date : "d-MMMM-yyyy" }}</small>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
