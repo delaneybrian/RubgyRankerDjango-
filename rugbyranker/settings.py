@@ -84,7 +84,6 @@ WSGI_APPLICATION = 'rugbyranker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -95,7 +94,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-"""
 
 AUTH_PASSWORD_VALIDATORS = [
     {
