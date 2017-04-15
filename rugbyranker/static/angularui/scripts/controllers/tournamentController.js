@@ -11,7 +11,7 @@ sportModule.controller('tournamentController', function ($scope, $http, $routePa
 
     console.log("/api/tournaments/" + tournamentId + "/teams/");
 
-    $http.get(host + "api/tournaments/" + tournamentId + "/matches/")
+    $http.get("/api/tournaments/" + tournamentId + "/matches/")
         .then(function (response) {
             $scope.tournamentmatchdata = response.data;
             console.log("Http Sucess");

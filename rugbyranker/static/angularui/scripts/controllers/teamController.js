@@ -3,28 +3,28 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams) 
     var teamId = String($routeParams.teamId);
 
 
-    $http.get(host + "api/teams/" + teamId + '/details/')
+    $http.get("/api/teams/" + teamId + '/details/')
         .then(function (response) {
             $scope.details = response.data;
             console.log("Http Sucess");
             console.log(response.data);
         });
 
-    $http.get(host + "api/teams/" + teamId + '/matches/home/')
+    $http.get("/api/teams/" + teamId + '/matches/home/')
         .then(function (response) {
             $scope.homematchdata = response.data;
             console.log("Http Sucess");
             console.log(response.data);
         });
 
-    $http.get(host + "api/teams/" + teamId + '/matches/away/')
+    $http.get("/api/teams/" + teamId + '/matches/away/')
         .then(function (response) {
             $scope.awaymatchdata = response.data;
             console.log("Http Sucess");
             console.log(response.data);
         });
 
-    $http.get(host + "api/teams/" + teamId + '/information/')
+    $http.get("/api/teams/" + teamId + '/information/')
         .then(function (response) {
             $scope.information = response.data;
             console.log("Http Sucess");
