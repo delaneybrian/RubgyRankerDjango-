@@ -84,6 +84,7 @@ WSGI_APPLICATION = 'rugbyranker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -94,6 +95,20 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+"""
+
+#AWS Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rugbyrank',
+        'USER': 'briandelaney',
+        'PASSWORD': 'quqaiwii1!brianamazonweb2017',
+        'HOST': 'rugbyranker.codekqzebszq.us-west-2.rds.amazonaws.com',
+        'PORT': '5432',
+    }
+}
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -119,9 +134,9 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# Update database configuration with $DATABASE_URL.
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# Update database configuration with $DATABASE_URL.UNCOMMENT THE NEXT TO LINES TO RUN IN HEROKU
+#db_from_env = dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(db_from_env)
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

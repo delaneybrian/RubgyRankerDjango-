@@ -60,6 +60,22 @@
             </table>
         </div>
 
+        <div class="homecontentmobile">
+            <h3>Latest Ranked Matches</h3>
+            <div class="mobilematch" ng-repeat="match in matches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                <div class="mobileawayteam">
+                    <img class="smallteamlogo" src="{{ match.hometeam.logo_url }}">
+                    <span>{{ match.hometeam.name }}</span>
+                    <span><b>{{ match.hometeam_score }}</b></span>
+                </div>
+                <div class="mobilehometeam">
+                    <img class="smallteamlogo" src="{{ match.awayteam.logo_url }}">
+                    <span>{{ match.awayteam.name }}</span>
+                    <span><b>{{ match.awayteam_score }}</b></span>
+                </div>
+            </div>
+        </div>
+
         <div class="rankingsnip">
             <h3>Top 15 Teams</h3>
             <table>
@@ -87,6 +103,30 @@
                 </tr>
             </table>
         </div>
+
+        <div class="rankingsnipmobile">
+            <h3>Top 15 Teams</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th>Ranking</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'">
+                        <td><b>{{ rank.position }}</b></td>
+                        <td><img class="smallteamlogo" src="{{ rank.team.logo_url }}"></td>
+                        <td ng-show="rank.change == 'SAME'"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
+                        <td ng-show="rank.change == 'DOWN'"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
+                        <td ng-show="rank.change == 'UP'"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
     </div>
 
 </div>

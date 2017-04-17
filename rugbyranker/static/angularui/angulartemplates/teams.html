@@ -6,13 +6,13 @@
                 <tr>
                     <th>Team Name</th>
                     <th>Team Logo</th>
-                    <th>Country</th>
+                    <th class="teamsmobilehide">Country</th>
                 </tr>
                 <tr ng-repeat="team in teams.results" ng-class-odd="'odd'" ng-class-even="'even'"
                     ng-click="clickteam(team.id)">
                     <td>{{ team.name }}</td>
                     <td><img class="smallteamlogo" src="{{ team.logo_url }}"></td>
-                    <td><a ng-href="/countries/{{ team.country.id }}"><img class="flag"
+                    <td class="teamsmobilehide"><a ng-href="/countries/{{ team.country.id }}"><img class="flag"
                                                                            src="{{ team.country.flag_url }}"></a></td>
                 </tr>
             </table>

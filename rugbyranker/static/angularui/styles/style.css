@@ -271,7 +271,6 @@ img {
     display:flex;
     flex-direction: column;
     align-items: center ;
-    z-index: 14444;
 }
 
 .team_stadium{
@@ -805,4 +804,122 @@ latestgamestable{
 
 .fa-ellipsis-v{
     color: white;
+}
+
+
+/* MOBILE FRIENDLY */
+/* Home */
+.rankingsnipmobile{
+    display: none;
+    width:100%;
+}
+
+.homecontentmobile{
+    display: none;
+    width:100%;
+}
+
+.mobilematch {
+    padding: 5%;
+}
+
+.mobilehometeam{
+    min-height: 50px;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mobileawayteam{
+    min-height: 50px;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* Ranking page styles mobule */
+.mobilerank{
+      display: none;
+  }
+
+@media (max-width: 800px) {
+   .standardcontent{
+       padding: 5%;
+   }
+
+  .rankingsnip {
+    display: none;
+  }
+
+  .homecontentmobile{
+      display: block;
+  }
+
+  .rankingsnipmobile{
+        display: block;
+    }
+
+  .homelatestmatches{
+        display: none;
+  }
+
+  .mobilerank{
+      display: block;
+      width: 100%;
+  }
+
+  .mobilerank table{
+      width: 100%;
+  }
+
+  .fullwidthrank{
+      display: none;
+  }
+
+  .standardcontent{
+        padding-top: 50px;
+    }
+}
+
+.rankingtables{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ssmobilerank {
+    display: none;
+}
+
+
+
+@media (max-width: 500px) {
+
+    .mobilerank{
+      display: none;
+  }
+
+    .ssmobilerank table{
+    width: 100%;
+    }
+
+    .ssmobilerank {
+        width: 100%;
+    display: block;
+    }
+}
+
+
+/* MOBILE STYLES FOR TEAMS PAGE */
+
+@media (max-width: 400px) {
+    .teamsmobilehide{
+        display: none;
+    }
 }
