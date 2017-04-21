@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from elo.models import Team, Tournament, Match, Country, Stadium, RatingTimestamp, NewsletterEmails, FAQ, Rivals, CurrentRankingTable
+from elo.models import Team, Tournament, Match, Country, Stadium, NewsletterEmails, FAQ, Rivals
 
 class CountrySerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,7 +21,7 @@ class TeamSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Team
-        fields = ('id', 'name', 'rating', 'country', 'stadium', 'active', 'image_url', 'logo_url', 'description', 'website')
+        fields = ('id', 'name', 'rating', 'country', 'stadium', 'active', 'image_url', 'logo_url', 'description', 'website', 'max_rating', 'max_position', 'max_date', 'min_rating', 'min_position', 'min_date', 'lastweek_rating', 'lastweek_position', 'thisweek_rating', 'thisweek_position', 'current_streak', 'max_streak', 'played_matches')
 
 
 class TeamShortSerializer(serializers.ModelSerializer):
@@ -29,7 +29,14 @@ class TeamShortSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Team
-        fields = ('id', 'name', 'logo_url', 'active', 'country')
+        fields = ('id', 'name', 'logo_url', 'active', 'country', 'thisweek_position', 'thisweek_rating')
+
+class TeamRankingSerializer(serializers.ModelSerializer):
+    country = CountrySerializer(read_only=True)
+
+    class Meta:
+        model = Team
+        fields = ('id', 'name', 'logo_url', 'active', 'country', 'lastweek_rating', 'lastweek_position', 'thisweek_rating', 'thisweek_position')
 
 
 class TournamentSerializer(serializers.ModelSerializer):
@@ -59,14 +66,6 @@ class MatchSerializer(serializers.ModelSerializer):
         fields = ('hometeam', 'hometeam_score', 'awayteam', 'awayteam_score', 'match_date', 'tournament')
 
 
-class RatingSerializer(serializers.ModelSerializer):
-    team = TeamShortSerializer(read_only=True)
-
-    class Meta:
-        model = RatingTimestamp
-        fields = ("team", "date", "dated_rating")
-
-
 class NewsletterSerializer(serializers.ModelSerializer):
     class Meta:
         model = NewsletterEmails
@@ -87,10 +86,3 @@ class RivalsSerializer(serializers.ModelSerializer):
         model = Rivals
         fields  = ('wins', 'losses', 'draws', 'team_a', 'team_b')
 
-
-class RankingSerializer(serializers.ModelSerializer):
-    team = TeamShortSerializer(read_only=True)
-
-    class Meta:
-        model = CurrentRankingTable
-        fields = ('team', 'rating', 'date', 'position', 'change')

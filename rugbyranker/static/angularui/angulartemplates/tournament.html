@@ -33,11 +33,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr class="tourrecentgamesrow" ng-click="teamtourlink(item.team.id)" ng-repeat=" item in tournamentteamdata" ng-class-odd="'odd'" ng-class-even="'even'">
-                <td>{{ item.team.name }}</td>
-                <td><img class="midteamlogo" alt="{{ item.team.name }} Logo" src="{{ item.team.logo_url }}"></td>
+            <tr class="tourrecentgamesrow" ng-click="teamtourlink(item.id)" ng-repeat=" item in tournamentteamdata" ng-class-odd="'odd'" ng-class-even="'even'">
+                <td>{{ item.name }}</td>
+                <td><img class="midteamlogo" alt="{{ item.name }} Logo" src="{{ item.logo_url }}"></td>
                 <td>{{ $index + 1}}</td>
-                <td>{{ item.position }}</td>
+                <td>{{ item.thisweek_position }}</td>
             </tr>
             </tbody>
         </table>

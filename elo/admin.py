@@ -1,5 +1,5 @@
 from django.contrib import admin
-from elo.models import Match, Team, Stadium, Country, Tournament, RatingTimestamp, NewsletterEmails, FAQ
+from elo.models import Match, Team, Stadium, Country, Tournament, NewsletterEmails, FAQ
 
 class TeamAdmin(admin.ModelAdmin):
     model = Team
@@ -20,6 +20,5 @@ admin.site.register(Match, MatchAdmin)
 admin.site.register(Tournament, TournamentAdmin)
 admin.site.register(Stadium)
 admin.site.register(Country)
-admin.site.register(RatingTimestamp)
 admin.site.register(NewsletterEmails)
 admin.site.register(FAQ)

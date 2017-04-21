@@ -10,23 +10,23 @@
     <div class="rankingtables">
         <table class="fullwidthrank">
             <tr>
-                <th ng-click="sortType = 'position'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Position<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
-                <th ng-click="sortType = 'team.name'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'name'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Team <i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
                 <th ng-click=""></th>
-                <th ng-click="sortType = 'rating'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'thisweek_rating'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Rating<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
-                <th ng-click="sortType = 'team.country.name'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'country.name'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Country<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
@@ -38,29 +38,29 @@
                 </th>
             </tr>
             <tr ng-repeat="rank in rankingdata | orderBy:sortType:sortReverse | filter:searchRank" ng-class-odd="'odd'"
-                ng-class-even="'even'" ng-click="clickrank(rank.team.id)">
-                <td>{{ rank.position }}</td>
-                <td>{{ rank.team.name }}</td>
-                <td><img class="smallteamlogo" src="{{ rank.team.logo_url }}"></td>
-                <td>{{ rank.rating }}</td>
-                <td><span class="hide" {{ rank.team.country.name }}></span><a
-                        ng-href="/countries/{{ rank.team.country.id }}"><img class="flag"
-                                                                             src="{{ rank.team.country.flag_url }}"></a>
+                ng-class-even="'even'" ng-click="clickrank(rank.id)">
+                <td>{{ rank.thisweek_position }}</td>
+                <td>{{ rank.name }}</td>
+                <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
+                <td>{{ rank.thisweek_rating }}</td>
+                <td><span class="hide" {{ rank.country.name }}></span><a
+                        ng-href="/countries/{{ rank.country.id }}"><img class="flag"
+                                                                             src="{{ rank.country.flag_url }}"></a>
                 </td>
-                <td ng-show="rank.change == 'SAME'"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
-                <td ng-show="rank.change == 'DOWN'"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
-                <td ng-show="rank.change == 'UP'"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
+                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
+                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
             </tr>
         </table>
 
         <table class="mobilerank">
             <tr>
-                <th ng-click="sortType = 'position'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Position<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
-                <th ng-click="sortType = 'team.name'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'name'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Team <i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
@@ -73,19 +73,19 @@
                 </th>
             </tr>
             <tr ng-repeat="rank in rankingdata | orderBy:sortType:sortReverse | filter:searchRank" ng-class-odd="'odd'"
-                ng-class-even="'even'" ng-click="clickrank(rank.team.id)">
-                <td>{{ rank.position }}</td>
-                <td>{{ rank.team.name }}</td>
-                <td><img class="smallteamlogo" src="{{ rank.team.logo_url }}"></td>
-                <td ng-show="rank.change == 'SAME'"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
-                <td ng-show="rank.change == 'DOWN'"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
-                <td ng-show="rank.change == 'UP'"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+                ng-class-even="'even'" ng-click="clickrank(rank.id)">
+                <td>{{ rank.thisweek_position }}</td>
+                <td>{{ rank.name }}</td>
+                <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
+                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
+                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
+                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
             </tr>
         </table>
 
         <table class="ssmobilerank">
             <tr>
-                <th ng-click="sortType = 'position'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Position<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
@@ -98,12 +98,12 @@
                 </th>
             </tr>
             <tr ng-repeat="rank in rankingdata | orderBy:sortType:sortReverse | filter:searchRank" ng-class-odd="'odd'"
-                ng-class-even="'even'" ng-click="clickrank(rank.team.id)">
-                <td>{{ rank.position }}</td>
-                <td><img class="smallteamlogo" src="{{ rank.team.logo_url }}"></td>
-                <td ng-show="rank.change == 'SAME'"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
-                <td ng-show="rank.change == 'DOWN'"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
-                <td ng-show="rank.change == 'UP'"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+                ng-class-even="'even'" ng-click="clickrank(rank.id)">
+                <td>{{ rank.thisweek_position }}</td>
+                <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
+                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
+                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
+                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
             </tr>
         </table>
 

@@ -11,35 +11,78 @@
         <div class="moreteamdetails">
             <div class="currentranking">
                 <div>
-                    <span class="currentposition">{{ currentranking.position }}</span>
-                    <i ng-show="currentranking.change == 'SAME'" class="fa fa-minus fa-5x icon-height"
-                       aria-hidden="true"></i></span>
-                    <i ng-show="currentranking.change == 'DOWN'" class="fa fa-arrow-down fa-5x icon-height"
-                       aria-hidden="true"></i></span>
-                    <i ng-show="currentranking.change == 'UP'" class="fa fa-arrow-up fa-5x icon-height"
-                       aria-hidden="true"></i></span>
+                    <span class="currentposition">{{ details.thisweek_position }}</span>
+                    <i ng-show="featured.thisweek_position == featured.lastweek_position" class="fa fa-minus fa-5x" aria-hidden="true"></i>
+                    <i ng-show="featured.thisweek_position < featured.lastweek_position" class="fa fa-arrow-down fa-5x" aria-hidden="true"></i>
+                    <i ng-show="featured.thisweek_position > featured.lastweek_position" class="fa fa-arrow-up fa-5x" aria-hidden="true"></i>
+
                 </div>
-                <h4>{{ currentranking.rating }}</h4>
+                <h4>{{ details.thisweek_rating }}</h4>
             </div>
 
             <div class="historicranking">
                 <div class="historicrank">
                     <h5> Historic Max:</h5>
                     <hr class="historicline">
-                    <span><b>{{ history.max.position }}</b></span> - <span>{{ history.max.rating }}</span><br>
-                    <small>{{ history.max.date | date : "d-MMMM-yyyy" }}</small>
+                    <span><b>{{ details.max_position }}</b></span> - <span>{{ details.max_rating }}</span><br>
+                    <small>{{ details.max_date | date : "d-MMMM-yyyy" }}</small>
                 </div>
                 <div class="historicrank">
                     <h5> Historic Min:</h5>
                     <hr class="historicline">
-                    <span><b>{{ history.min.position }}</b></span> - <span>{{ history.min.rating }}</span><br>
-                    <small>{{ history.min.date | date : "d-MMMM-yyyy" }}</small>
+                    <span><b>{{ details.min_position }}</b></span> - <span>{{ details.min_rating }}</span><br>
+                    <small>{{ details.min_date | date : "d-MMMM-yyyy" }}</small>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="teamcontent">
+
+        <div class="team_main_stats">
+            <h3>{{ details.name }} Statistics</h3>
+            <div>
+                <h4>Match Statistics</h4>
+                <p><b>Home Win Percentage: </b>{{ information.home_win_precentage | number : 2}}%</p>
+                <p><b>Away Win Percentage: </b>{{ information.away_win_precentage | number : 2}}%</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Home</th>
+                            <th>Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Matches</td>
+                            <td>{{ information.home_matches }}</td>
+                            <td>{{ information.away_matches }}</td>
+                        </tr>
+                        <tr>
+                            <td>Wins</td>
+                            <td>{{ information.won_home }}</td>
+                            <td>{{ information.won_away }}</td>
+                        </tr>
+                        <tr>
+                            <td>Losses</td>
+                            <td>{{ information.lost_home }}</td>
+                            <td>{{ information.lost_away }}</td>
+                        </tr>
+                        <tr>
+                            <td>Draws</td>
+                            <td>{{ information.drew_home }}</td>
+                            <td>{{ information.drew_away }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <h4>Streak</h4>
+                <p>Max Streak: <b>{{ details.max_streak }}</b></p>
+                <p>Current Streak: <b>{{ details.current_streak }}</b></p>
+            </div>
+        </div>
+
         <div class="team_stadium">
             <h3>Stadium</h3>
             <div ng-repeat="stad in details.stadium">

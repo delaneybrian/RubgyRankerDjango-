@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from elo.models import Team, Match, Tournament, CurrentRankingTable
-from elo.serializers import MatchSerializer, TeamSerializer, RankingSerializer
+from elo.models import Team, Match, Tournament
+from elo.serializers import MatchSerializer, TeamSerializer, TeamRankingSerializer
 import random
 from django.db.models import Max, Min
 
@@ -9,16 +9,9 @@ from django.db.models import Max, Min
 @api_view(['GET'])
 def get_rankings_list(request, format=None):
         try:
-            rating_dates = CurrentRankingTable.objects.order_by('-date').distinct('date')[:1]
-            if len(rating_dates) == 1:
-                latest_date = rating_dates[0].date
-                week_rankings = CurrentRankingTable.objects.filter(date=str(latest_date)).order_by('-rating')[:15]
-                serializer = RankingSerializer(week_rankings, many=True)
-                return Response(serializer.data)
-            else:
-                print("Error: Error 1 Getting Ratings List")
-                dict = {}
-                return Response(dict)
+            teamsRankings = Team.objects.filter(active=True).order_by('thisweek_position')[:15]
+            serializer = TeamRankingSerializer(teamsRankings, many=True)
+            return Response(serializer.data)
         except:
             print("Error: Error 2 Getting Ratings List")
             dict = {}
@@ -52,6 +45,7 @@ def get_latest_matches(request, format=None):
     except:
         print("Error: Could Not Get Latest Matches")
         dict = {}
+
         return Response(dict)
 
 
@@ -59,20 +53,15 @@ def get_latest_matches(request, format=None):
 @api_view(['GET'])
 def get_featured_team(request, format=None):
     try:
-        ids = Team.objects.raw("SELECT id FROM elo_team;")
+        ids = Team.objects.raw("SELECT id FROM elo_team WHERE active=true;")
         id_store = []
         for id in ids:
             id_store.append(id.id)
         pk = random.choice(id_store)
+        print(pk)
         team = Team.objects.get(pk=pk)
         serializer = TeamSerializer(team)
-        teamranking = CurrentRankingTable.objects.filter(team=pk).order_by('-date').first()
-        teamranking = RankingSerializer(teamranking)
-        featured = {
-            "teamranking": teamranking.data,
-            "team": serializer.data
-        }
-        return Response(featured)
+        return Response(serializer.data)
     except:
         print("Error: Error Getting Random Team")
         dict = {}

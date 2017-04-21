@@ -41,6 +41,19 @@ class Team(models.Model):
     logo_url = models.CharField(max_length=400)
     description = models.TextField()
     website = models.CharField(max_length=400, default="Unknown")
+    max_rating = models.IntegerField(default=0)
+    max_position = models.IntegerField(default=4000)
+    max_date = models.DateTimeField(null=True, blank=True)
+    min_rating = models.IntegerField(default=4000)
+    min_position = models.IntegerField(default=0)
+    min_date = models.DateTimeField(null=True, blank=True)
+    lastweek_rating = models.IntegerField(default=1500)
+    thisweek_rating = models.IntegerField(default=1500)
+    lastweek_position = models.IntegerField(default=0)
+    thisweek_position = models.IntegerField(default=0)
+    current_streak = models.IntegerField(default=0)
+    max_streak = models.IntegerField(default=0)
+    played_matches = models.IntegerField(default=0)
 
 
     def __str__(self):
@@ -73,15 +86,6 @@ class Match(models.Model):
     def __str__(self):
         return  str(self.hometeam_score) + " v " + " " + str(self.awayteam_score) + " - " + str(self.match_date.date())
 
-class RatingTimestamp(models.Model):
-    team = models.ForeignKey(Team)
-    date = models.DateTimeField()
-    dated_rating = models.IntegerField()
-
-    def __str__(self):
-        return str(self.team.name) + " - " + str(self.dated_rating)
-
-
 class Rivals(models.Model):
     team_a = models.ForeignKey(Team, related_name="rival_A")
     team_b = models.ForeignKey(Team, related_name="rival_B")
@@ -91,17 +95,6 @@ class Rivals(models.Model):
 
     def __str__(self):
         return str(self.team_a + " - " + self.team_b)
-
-class CurrentRankingTable(models.Model):
-    team = models.ForeignKey(Team)
-    rating = models.IntegerField(default=1500)
-    date = models.DateTimeField()
-    position = models.IntegerField()
-    change = models.TextField(max_length=20)
-
-    def __str__(self):
-        return str(self.team.name + " - " + self.rating)
-
 
 class NewsletterEmails(models.Model):
     email_address = models.EmailField(primary_key=True)

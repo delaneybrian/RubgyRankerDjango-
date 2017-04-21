@@ -15,17 +15,17 @@
 
         <div class="featuredteam">
             <h3>Featured Team</h3>
-            <div class="featuredteamhover" ng-click="clickfeatured(featured.team.id)">
-                <h4 class="featuredteamname">{{ featured.team.name }} - {{ featured.teamranking.rating }}</h4>
-                <img class="largeteamlogo" src="{{ featured.team.logo_url }}" alt="{{ featured.team.name }} logo">
+            <div class="featuredteamhover" ng-click="clickfeatured(featured.id)">
+                <h4 class="featuredteamname">{{ featured.name }} - {{ featured.thisweek_rating }}</h4>
+                <img class="largeteamlogo" src="{{ featured.logo_url }}" alt="{{ featured.name }} logo">
                 <div class="rankingpositioncontainer">
                     <div class="homerankingposition">
-                        <span class="currentposition">{{ featured.teamranking.position }}</span>
-                        <i ng-show="featured.teamranking.change == 'SAME'" class="fa fa-minus fa-5x icon-height"
+                        <span class="currentposition">{{ featured.thisweek_position }}</span>
+                        <i ng-show="featured.thisweek_position == featured.lastweek_position" class="fa fa-minus fa-5x icon-height"
                            aria-hidden="true"></i>
-                        <i ng-show="featured.teamranking.change == 'DOWN'" class="fa fa-arrow-down fa-5x icon-height"
+                        <i ng-show="featured.thisweek_position < featured.lastweek_position" class="fa fa-arrow-down fa-5x icon-height"
                            aria-hidden="true"></i>
-                        <i ng-show="featured.teamranking.change == 'UP'" class="fa fa-arrow-up fa-5x icon-height"
+                        <i ng-show="featured.thisweek_position > featured.lastweek_position" class="fa fa-arrow-up fa-5x icon-height"
                            aria-hidden="true"></i>
                     </div>
                 </div>
@@ -89,16 +89,16 @@
                 </tr>
                 <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'"
                     ng-click="clickrank(rank.team.id)">
-                    <td>{{ rank.position }}</td>
-                    <td>{{ rank.team.name }}</td>
-                    <td><img class="smallteamlogo" src="{{ rank.team.logo_url }}"></td>
-                    <td>{{ rank.rating }}</td>
-                    <td><a ng-href="/countries/{{ rank.team.country.id }}"><img class="flag"
-                                                                                src="{{ rank.team.country.flag_url }}"></a>
+                    <td>{{ rank.thisweek_position }}</td>
+                    <td>{{ rank.name }}</td>
+                    <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
+                    <td>{{ rank.thisweek_rating }}</td>
+                    <td><a ng-href="/countries/{{ rank.country.id }}"><img class="flag"
+                                                                                src="{{ rank.country.flag_url }}"></a>
                     </td>
-                    <td ng-show="rank.change == 'SAME'"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
-                    <td ng-show="rank.change == 'DOWN'"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
-                    <td ng-show="rank.change == 'UP'"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+                    <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
+                    <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
+                    <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
 
                 </tr>
             </table>
@@ -116,11 +116,11 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'">
-                        <td><b>{{ rank.position }}</b></td>
-                        <td><img class="smallteamlogo" src="{{ rank.team.logo_url }}"></td>
-                        <td ng-show="rank.change == 'SAME'"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
-                        <td ng-show="rank.change == 'DOWN'"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
-                        <td ng-show="rank.change == 'UP'"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+                        <td><b>{{ rank.thisweek_position }}</b></td>
+                        <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
+                        <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
+                        <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
+                        <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
                     </tr>
                 </tbody>
             </table>

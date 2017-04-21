@@ -31,9 +31,6 @@ urlpatterns = [
     # DETAILS OF A SPECIFIC TEAM
     url(r'^teams/(?P<pk>[0-9]+)/details/$', team.get_team_detail),
 
-    # GET TEAM CURRENT RANKING
-    url(r'^teams/(?P<pk>[0-9]+)/currentranking/$', team.currentranking),
-
     # GET LIST OF LATEST HOMEGAMES FOR A GIVEN TEAM
     url(r'^teams/(?P<pk>[0-9]+)/matches/home/$', team.get_latest_home_matches),
 
@@ -45,9 +42,6 @@ urlpatterns = [
 
     # GET TEAM RIVALS TABLE
     url(r'^teams/(?P<pk>[0-9]+)/rivals/$', team.get_team_rivals),
-
-    # GET HIGHEST AND LOWEST EVER RANKINGS FOR A TEAM
-    url(r'^teams/(?P<pk>[0-9]+)/history/$', team.get_history),
 
 #******************************************COUNTRIES URLS ***********************************
     # GET LIST OF ALL COUNTRUES
@@ -80,7 +74,7 @@ urlpatterns = [
     #GET MOST RECENT GAMES FOR A TOURNAMENT
     url(r'^tournaments/(?P<pk>[0-9]+)/matches/$', tournament.get_touramanet_matches),
 
-    #GET LIST OF ALL TEAMS FILTERED BY TOURNAMENT
+    #GET LIST OF ALL TEAMS FILTERED BY TOURNAMENT -- NOT IMPLEMENTED
     url(r'^tournaments/(?P<pk>[0-9]+)/teams/$', tournament.get_team_list_by_tournament),
 
 #******************************************OTHER URLS**************************************
