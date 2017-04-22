@@ -32,7 +32,7 @@ def get_touramanet_matches(request, pk, format=None):
 @api_view(['GET'])
 def get_team_list_by_tournament(request,pk, format=None):
     try:
-        teams = Team.objects.filter(tournaments=pk)
+        teams = Team.objects.filter(tournaments=pk).order_by('thisweek_position')
         serializer = TeamShortSerializer(teams, many=True)
         return Response(serializer.data)
     except:

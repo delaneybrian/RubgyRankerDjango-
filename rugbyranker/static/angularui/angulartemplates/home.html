@@ -21,12 +21,9 @@
                 <div class="rankingpositioncontainer">
                     <div class="homerankingposition">
                         <span class="currentposition">{{ featured.thisweek_position }}</span>
-                        <i ng-show="featured.thisweek_position == featured.lastweek_position" class="fa fa-minus fa-5x icon-height"
-                           aria-hidden="true"></i>
-                        <i ng-show="featured.thisweek_position < featured.lastweek_position" class="fa fa-arrow-down fa-5x icon-height"
-                           aria-hidden="true"></i>
-                        <i ng-show="featured.thisweek_position > featured.lastweek_position" class="fa fa-arrow-up fa-5x icon-height"
-                           aria-hidden="true"></i>
+                        <span ng-show="featured.thisweek_position == featured.lastweek_position"><i class="fa fa-minus fa-5x icon-height" aria-hidden="true"></i><p>({{ featured.lastweek_position }})</p></span>
+                        <span ng-show="featured.thisweek_position > featured.lastweek_position"><i class="fa fa-arrow-down fa-5x icon-height" aria-hidden="true"></i><p>({{ featured.lastweek_position }})</p></span>
+                        <span ng-show="featured.thisweek_position < featured.lastweek_position"><i class="fa fa-arrow-up fa-5x icon-height" aria-hidden="true"></i><p>({{ featured.lastweek_position }})</p></span>
                     </div>
                 </div>
             </div>
@@ -88,7 +85,7 @@
                     <th>Movement</th>
                 </tr>
                 <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'"
-                    ng-click="clickrank(rank.team.id)">
+                    ng-click="clickrank(rank.id)">
                     <td>{{ rank.thisweek_position }}</td>
                     <td>{{ rank.name }}</td>
                     <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
@@ -96,9 +93,9 @@
                     <td><a ng-href="/countries/{{ rank.country.id }}"><img class="flag"
                                                                                 src="{{ rank.country.flag_url }}"></a>
                     </td>
-                    <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
-                    <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
-                    <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+                    <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
+                    <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
+                    <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
 
                 </tr>
             </table>
@@ -115,12 +112,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'">
+                    <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'" ng-click="clickrank(rank.id)">
                         <td><b>{{ rank.thisweek_position }}</b></td>
                         <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
-                        <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></td>
-                        <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></td>
-                        <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></td>
+                        <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
+                        <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
+                        <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
                     </tr>
                 </tbody>
             </table>

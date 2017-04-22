@@ -12,9 +12,12 @@
             <div class="currentranking">
                 <div>
                     <span class="currentposition">{{ details.thisweek_position }}</span>
-                    <i ng-show="featured.thisweek_position == featured.lastweek_position" class="fa fa-minus fa-5x" aria-hidden="true"></i>
-                    <i ng-show="featured.thisweek_position < featured.lastweek_position" class="fa fa-arrow-down fa-5x" aria-hidden="true"></i>
-                    <i ng-show="featured.thisweek_position > featured.lastweek_position" class="fa fa-arrow-up fa-5x" aria-hidden="true"></i>
+                    <i ng-show="featured.thisweek_position == featured.lastweek_position" class="fa fa-minus fa-5x"
+                       aria-hidden="true"></i>
+                    <i ng-show="featured.thisweek_position > featured.lastweek_position" class="fa fa-arrow-down fa-5x"
+                       aria-hidden="true"></i>
+                    <i ng-show="featured.thisweek_position < featured.lastweek_position" class="fa fa-arrow-up fa-5x"
+                       aria-hidden="true"></i>
 
                 </div>
                 <h4>{{ details.thisweek_rating }}</h4>
@@ -39,51 +42,58 @@
 
     <div class="teamcontent">
 
+        <h3>{{ details.name }} Statistics</h3>
         <div class="team_main_stats">
-            <h3>{{ details.name }} Statistics</h3>
-            <div>
-                <h4>Match Statistics</h4>
-                <p><b>Home Win Percentage: </b>{{ information.home_win_precentage | number : 2}}%</p>
-                <p><b>Away Win Percentage: </b>{{ information.away_win_precentage | number : 2}}%</p>
+            <div class="teamStats">
+                <div class="teamStat">
+                    <h4>Ranked Match Statistics</h4>
+                    <p><b>Home Win Percentage: </b>{{ information.home_win_precentage | number : 2 }}%</p>
+                    <p><b>Away Win Percentage: </b>{{ information.away_win_precentage | number : 2 }}%</p>
+                </div>
+                <div class="teamStat">
+                    <h4>Ranked Match Streak</h4>
+                    <p><b>Max Streak:</b> {{ details.max_streak }}</p>
+                    <p><b>Current Streak:</b> {{ details.current_streak }}</p>
+                </div>
+            </div>
+            <div class="teamStats">
+                <h4>Ranked Match Tracker</h4>
                 <table>
                     <thead>
-                        <tr>
-                            <th></th>
-                            <th>Home</th>
-                            <th>Away</th>
-                        </tr>
+                    <tr>
+                        <th></th>
+                        <th>Home</th>
+                        <th>Away</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Matches</td>
-                            <td>{{ information.home_matches }}</td>
-                            <td>{{ information.away_matches }}</td>
-                        </tr>
-                        <tr>
-                            <td>Wins</td>
-                            <td>{{ information.won_home }}</td>
-                            <td>{{ information.won_away }}</td>
-                        </tr>
-                        <tr>
-                            <td>Losses</td>
-                            <td>{{ information.lost_home }}</td>
-                            <td>{{ information.lost_away }}</td>
-                        </tr>
-                        <tr>
-                            <td>Draws</td>
-                            <td>{{ information.drew_home }}</td>
-                            <td>{{ information.drew_away }}</td>
-                        </tr>
+                    <tr>
+                        <td><b>Matches</b></td>
+                        <td>{{ information.home_matches }}</td>
+                        <td>{{ information.away_matches }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Wins</b></td>
+                        <td>{{ information.won_home }}</td>
+                        <td>{{ information.won_away }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Losses</b></td>
+                        <td>{{ information.lost_home }}</td>
+                        <td>{{ information.lost_away }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Draws</b></td>
+                        <td>{{ information.drew_home }}</td>
+                        <td>{{ information.drew_away }}</td>
+                    </tr>
 
                     </tbody>
                 </table>
-                <h4>Streak</h4>
-                <p>Max Streak: <b>{{ details.max_streak }}</b></p>
-                <p>Current Streak: <b>{{ details.current_streak }}</b></p>
             </div>
         </div>
 
-        <div class="team_stadium">
+        <div>
             <h3>Stadium</h3>
             <div ng-repeat="stad in details.stadium">
                 <h4>{{ stad.name }}</h4>
@@ -119,6 +129,22 @@
             </table>
         </div>
 
+        <div class="latestgamesMobile">
+            <h3>Latest Home Matches</h3>
+            <div class="mobilematch" ng-repeat="match in homematchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                <div class="mobileawayteam">
+                    <img class="smallteamlogo" src="{{ match.hometeam.logo_url }}">
+                    <span>{{ match.hometeam.name }}</span>
+                    <span><b>{{ match.hometeam_score }}</b></span>
+                </div>
+                <div class="mobilehometeam">
+                    <img class="smallteamlogo" src="{{ match.awayteam.logo_url }}">
+                    <span>{{ match.awayteam.name }}</span>
+                    <span><b>{{ match.awayteam_score }}</b></span>
+                </div>
+            </div>
+        </div>
+
         <div class="latestgames">
             <h3>Latest Away Matches</h3>
             <table>
@@ -145,6 +171,22 @@
             </table>
         </div>
 
+        <div class="latestgamesMobile">
+            <h3>Latest Away Matches</h3>
+            <div class="mobilematch" ng-repeat="match in awaymatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                <div class="mobileawayteam">
+                    <img class="smallteamlogo" src="{{ match.hometeam.logo_url }}">
+                    <span>{{ match.hometeam.name }}</span>
+                    <span><b>{{ match.hometeam_score }}</b></span>
+                </div>
+                <div class="mobilehometeam">
+                    <img class="smallteamlogo" src="{{ match.awayteam.logo_url }}">
+                    <span>{{ match.awayteam.name }}</span>
+                    <span><b>{{ match.awayteam_score }}</b></span>
+                </div>
+            </div>
+        </div>
+
 
         <div class="teamrivals">
             <h3>Rivals</h3>
@@ -159,7 +201,7 @@
                             <div class="sortbutton">Rival<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                         </button>
                     </th>
-                    <th></th>
+                    <th class="rivalMobileHide"></th>
                     <th ng-click="sortType = 'wins'; sortReverse = !sortReverse">
                         <button class="btn">
                             <div class="sortbutton">Wins<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
@@ -179,7 +221,7 @@
                 <tr ng-repeat="rival in rivals | orderBy:sortType:sortReverse | filter:searchRivals"
                     ng-class-odd="'odd'"
                     ng-class-even="'even'">
-                    <td>{{ rival.team_b.name }}</td>
+                    <td class="rivalMobileHide">{{ rival.team_b.name }}</td>
                     <td><img class="smallteamlogo" src="{{ rival.team_b.logo_url }}"></td>
                     <td>{{ rival.wins }}</td>
                     <td>{{ rival.losses }}</td>
@@ -187,5 +229,20 @@
                 </tr>
             </table>
         </div>
+
+        <div class="teamRivalsMobile">
+            <h3>Rivals</h3>
+            <div ng-repeat="rival in rivals" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'" class="mobileRival">
+                <p><img class="smallteamlogo" src="{{ rival.team_b.logo_url }}">{{ rival.team_b.name }}</p>
+                <div>
+                     <p>
+                         <span class="rivalInfo"><b>Wins: </b>{{ rival.wins }}</span>
+                         <span class="rivalInfo"><b> Losses: </b>{{ rival.losses }}</span>
+                         <span class="rivalInfo"><b> Draws: </b>{{ rival.draws }}</span>
+                     </p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

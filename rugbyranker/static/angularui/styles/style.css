@@ -254,6 +254,21 @@ footer a{
 
 
 /* Styles For Team Page */
+.team_main_stats{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.teamStats{
+    padding: 2% 6% 2% 6%;
+}
+
+.teamStat{
+    padding-bottom: 10%;
+}
+
+
 .contentcontainer{
     display: flex;
     flex-direction: column;
@@ -846,7 +861,29 @@ latestgamestable{
       display: none;
   }
 
+.tourRecentGamesMedium{
+    display: none;
+}
+
+@media (max-width: 1000px){
+    .tourrecentgames{
+        display: none;
+    }
+    .tourRecentGamesMedium{
+        display: block;
+    }
+}
+
+
 @media (max-width: 800px) {
+    .tourHideMobile{
+        display: none;
+    }
+
+    .tourrecentgamesrow img{
+        class: "smallteamlogo";
+    }
+
    .standardcontent{
        padding: 5%;
    }
@@ -898,8 +935,59 @@ latestgamestable{
 }
 
 
+/* Media Query for team mobile page */
+@media (max-width: 960px){
+    .latestgames{
+        display: none;
+    }
+
+    .latestgamesMobile{
+        display: block;
+    }
+}
+
+.teamRivalsMobile{
+    display: none;
+}
+
+@media(max-width: 600px){
+    .rivalMobileHide{
+        display: none;
+    }
+}
+
+@media(max-width: 420px){
+    .teamRivalsMobile{
+        display: block;
+        padding-top: 30px;
+    }
+    .teamrivals{
+        display: none;
+    }
+    .mobileRival{
+        display: flex;
+        padding: 5%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rivalInfo{
+        padding-left: 10px;
+    }
+}
+
+    /* END */
 
 @media (max-width: 500px) {
+
+    .countryStatSentence{
+        display: none;
+    }
+
+    .countrySentence{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
 
     .mobilerank{
       display: none;
