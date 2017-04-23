@@ -9,6 +9,7 @@
 
     <div class="rankingtables">
         <table class="fullwidthrank">
+            <thead>
             <tr>
                 <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
@@ -31,12 +32,14 @@
                         <div class="sortbutton">Country<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
-                <th ng-click="sortType = 'change'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'thisweek_position - lastweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Movement<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
             </tr>
+            </thead>
+            <tbody>
             <tr ng-repeat="rank in rankingdata | orderBy:sortType:sortReverse | filter:searchRank" ng-class-odd="'odd'"
                 ng-class-even="'even'" ng-click="clickrank(rank.id)">
                 <td>{{ rank.thisweek_position }}</td>
@@ -45,15 +48,23 @@
                 <td>{{ rank.thisweek_rating }}</td>
                 <td><span class="hide" {{ rank.country.name }}></span><a
                         ng-href="/countries/{{ rank.country.id }}"><img class="flag"
-                                                                             src="{{ rank.country.flag_url }}"></a>
+                                                                        src="{{ rank.country.flag_url }}"></a>
                 </td>
-                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x"
+                                                                                  aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x"
+                                                                                 aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x"
+                                                                                 aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
             </tr>
+            </tbody>
         </table>
 
         <table class="mobilerank">
+            <thead>
             <tr>
                 <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
@@ -66,24 +77,34 @@
                     </button>
                 </th>
                 <th ng-click=""></th>
-                <th ng-click="sortType = 'change'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'thisweek_position - lastweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Movement<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
             </tr>
+            </thead>
+            <tbody>
             <tr ng-repeat="rank in rankingdata | orderBy:sortType:sortReverse | filter:searchRank" ng-class-odd="'odd'"
                 ng-class-even="'even'" ng-click="clickrank(rank.id)">
                 <td>{{ rank.thisweek_position }}</td>
                 <td>{{ rank.name }}</td>
                 <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
-                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x"
+                                                                                  aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x"
+                                                                                 aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x"
+                                                                                 aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
             </tr>
+            </tbody>
         </table>
 
         <table class="ssmobilerank">
+            <thead>
             <tr>
                 <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
@@ -91,20 +112,29 @@
                     </button>
                 </th>
                 <th ng-click=""></th>
-                <th ng-click="sortType = 'change'; sortReverse = !sortReverse">
+                <th ng-click="sortType = 'thisweek_position - lastweek_position'; sortReverse = !sortReverse">
                     <button class="btn">
                         <div class="sortbutton">Movement<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
             </tr>
+            </thead>
+            <tbody>
             <tr ng-repeat="rank in rankingdata | orderBy:sortType:sortReverse | filter:searchRank" ng-class-odd="'odd'"
                 ng-class-even="'even'" ng-click="clickrank(rank.id)">
                 <td>{{ rank.thisweek_position }}</td>
                 <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
-                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x"
+                                                                                  aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x"
+                                                                                 aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
+                <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x"
+                                                                                 aria-hidden="true"></i>
+                    <p>({{ rank.lastweek_position }})</p></td>
             </tr>
+            </tbody>
         </table>
 
     </div>
