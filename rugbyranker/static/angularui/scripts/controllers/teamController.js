@@ -1,4 +1,4 @@
-sportModule.controller('teamController', function ($scope, $http, $routeParams) {
+sportModule.controller('teamController', function ($scope, $http, $routeParams, $location) {
 
     var teamId = String($routeParams.teamId);
 
@@ -55,6 +55,10 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams) 
     $scope.sortType     = 'position';
     $scope.sortReverse  = false;
     $scope.searchRivals   = '';
+
+    $scope.clickteam = function(teamid){
+        console.log($location.path("teams/"  + teamid))
+    };
 
 
 

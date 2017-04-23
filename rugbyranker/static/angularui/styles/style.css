@@ -997,6 +997,10 @@ latestgamestable{
     }
 }
 
+.latestgamesMobile{
+    display:none;
+}
+
 /* Media Query for team mobile page */
 @media (max-width: 960px){
 

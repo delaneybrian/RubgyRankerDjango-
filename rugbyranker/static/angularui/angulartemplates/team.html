@@ -220,7 +220,8 @@
                 </tr>
                 <tr ng-repeat="rival in rivals | orderBy:sortType:sortReverse | filter:searchRivals"
                     ng-class-odd="'odd'"
-                    ng-class-even="'even'">
+                    ng-class-even="'even'"
+                    ng-click="clickteam(rival.team_b.id)">
                     <td class="rivalMobileHide">{{ rival.team_b.name }}</td>
                     <td><img class="smallteamlogo" src="{{ rival.team_b.logo_url }}"></td>
                     <td>{{ rival.wins }}</td>
@@ -232,7 +233,7 @@
 
         <div class="teamRivalsMobile">
             <h3>Rivals</h3>
-            <div ng-repeat="rival in rivals" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'" class="mobileRival">
+            <div ng-repeat="rival in rivals" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'" class="mobileRival" ng-click="clickteam(rival.team_b.id)">
                 <p><img class="smallteamlogo" src="{{ rival.team_b.logo_url }}">{{ rival.team_b.name }}</p>
                 <div>
                      <p>
