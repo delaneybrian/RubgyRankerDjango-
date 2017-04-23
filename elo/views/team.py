@@ -63,7 +63,7 @@ def get_team_information(request, pk, format=None):
 @api_view(['GET'])
 def get_team_rivals(request, pk, format=None):
     try:
-        teams_rivals = Rivals.objects.filter(team_a=pk).order_by('-wins')
+        teams_rivals = Rivals.objects.filter(team_a=pk).order_by('team_b__name')
         serializer = RivalsSerializer(teams_rivals, many=True)
         return Response(serializer.data)
     except:
