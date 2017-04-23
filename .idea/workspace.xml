@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df72f643-8516-4158-ab11-ea47407c3c9f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elo/templates/angularui/index.html" afterPath="$PROJECT_DIR$/elo/templates/angularui/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +23,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="488">
               <caret line="1174" column="24" lean-forward="false" selection-start-line="1174" selection-start-column="24" selection-end-line="1174" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/elo/templates/angularui/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -118,7 +126,6 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" />
         <option value="$PROJECT_DIR$/elo/views/tournament.py" />
         <option value="$PROJECT_DIR$/templates/angularui/layout.html" />
-        <option value="$PROJECT_DIR$/elo/templates/angularui/index.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/newsletterController.js" />
         <option value="$PROJECT_DIR$/elo/urls.py" />
         <option value="$PROJECT_DIR$/elo/models.py" />
@@ -128,6 +135,7 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
+        <option value="$PROJECT_DIR$/elo/templates/angularui/index.html" />
       </list>
     </option>
   </component>
@@ -261,6 +269,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="angulartemplates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rugbyranker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rugbyranker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rugbyranker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rugbyranker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angularui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -877,14 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elo/templates/angularui/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="42" column="94" lean-forward="false" selection-start-line="42" selection-start-column="94" selection-end-line="42" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/newsletterController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1031,6 +1067,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
           <caret line="1174" column="24" lean-forward="false" selection-start-line="1174" selection-start-column="24" selection-end-line="1174" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elo/templates/angularui/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
           <folding />
         </state>
       </provider>
