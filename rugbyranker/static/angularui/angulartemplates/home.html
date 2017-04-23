@@ -16,16 +16,17 @@
         <div class="featuredteam">
             <h3>Featured Team</h3>
             <div class="featuredteamhover" ng-click="clickfeatured(featured.id)">
-                <h4 class="featuredteamname">{{ featured.name }} - {{ featured.thisweek_rating }}</h4>
+                <h4 class="featuredteamname"><b>{{ featured.name }} - {{ featured.thisweek_rating }}</b></h4>
                 <img class="largeteamlogo" src="{{ featured.logo_url }}" alt="{{ featured.name }} logo">
                 <div class="rankingpositioncontainer">
                     <div class="homerankingposition">
                         <span class="currentposition">{{ featured.thisweek_position }}</span>
-                        <span ng-show="featured.thisweek_position == featured.lastweek_position"><i class="fa fa-minus fa-5x icon-height" aria-hidden="true"></i><p>({{ featured.lastweek_position }})</p></span>
-                        <span ng-show="featured.thisweek_position > featured.lastweek_position"><i class="fa fa-arrow-down fa-5x icon-height" aria-hidden="true"></i><p>({{ featured.lastweek_position }})</p></span>
-                        <span ng-show="featured.thisweek_position < featured.lastweek_position"><i class="fa fa-arrow-up fa-5x icon-height" aria-hidden="true"></i><p>({{ featured.lastweek_position }})</p></span>
+                        <span ng-show="featured.thisweek_position == featured.lastweek_position"><i class="fa fa-minus fa-5x icon-height" aria-hidden="true"></i></span>
+                        <span ng-show="featured.thisweek_position > featured.lastweek_position"><i class="fa fa-arrow-down fa-5x icon-height" aria-hidden="true"></i></span>
+                        <span ng-show="featured.thisweek_position < featured.lastweek_position"><i class="fa fa-arrow-up fa-5x icon-height" aria-hidden="true"></i></span>
                     </div>
                 </div>
+                <div><p>({{ featured.lastweek_position }})</p></div>
             </div>
         </div>
     </div>

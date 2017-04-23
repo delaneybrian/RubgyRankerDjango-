@@ -12,11 +12,11 @@
             <div class="currentranking">
                 <div>
                     <span class="currentposition">{{ details.thisweek_position }}</span>
-                    <i ng-show="featured.thisweek_position == featured.lastweek_position" class="fa fa-minus fa-5x"
+                    <i ng-show="featured.thisweek_position == featured.lastweek_position" class="fa fa-minus fa-5x teamchangepos"
                        aria-hidden="true"></i>
-                    <i ng-show="featured.thisweek_position > featured.lastweek_position" class="fa fa-arrow-down fa-5x"
+                    <i ng-show="featured.thisweek_position > featured.lastweek_position" class="fa fa-arrow-down fa-5x teamchangepos"
                        aria-hidden="true"></i>
-                    <i ng-show="featured.thisweek_position < featured.lastweek_position" class="fa fa-arrow-up fa-5x"
+                    <i ng-show="featured.thisweek_position < featured.lastweek_position" class="fa fa-arrow-up fa-5x teamchangepos"
                        aria-hidden="true"></i>
 
                 </div>
@@ -37,6 +37,16 @@
                     <small>{{ details.min_date | date : "d-MMMM-yyyy" }}</small>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="centerstadium">
+        <h3>Stadium</h3>
+        <div ng-repeat="stad in details.stadium">
+            <h4>{{ stad.name }}</h4>
+            <img src="{{ stad.image_url }}">
+            <p>Capacity: {{ stad.capacity }}</p>
+            <p>Location: <img class="flag" src="{{ stad.country.flag_url }}"></p>
         </div>
     </div>
 
@@ -90,16 +100,6 @@
 
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-        <div>
-            <h3>Stadium</h3>
-            <div ng-repeat="stad in details.stadium">
-                <h4>{{ stad.name }}</h4>
-                <img src="{{ stad.image_url }}">
-                <p>Capacity: {{ stad.capacity }}</p>
-                <p>Location: <img class="flag" src="{{ stad.country.flag_url }}"></p>
             </div>
         </div>
 
