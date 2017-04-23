@@ -1,6 +1,30 @@
 <div class="standardcontent">
     <h3>Rankings</h3>
 
+    <div class="rankingChanges">
+        <div class="rankingChangeTeam">
+            <h4 class="changeHeading"><b>This Weeks Biggest Climber</b></h4>
+            <div class="rankingChangeTeamContent" ng-click="clickrank(highestlowest.biggestGain.id)">
+                <h4><b>{{ highestlowest.biggestGain.name }}</b></h4>
+                <div class="logocontainer">
+                    <img class="midteamlogo" src="{{ highestlowest.biggestGain.logo_url }}">
+                </div>
+                <p class="green"><b> UP {{ (highestlowest.biggestGain.thisweek_position - highestlowest.biggestGain.lastweek_position) * -1 }} </b></p>
+                <p class="currentRatingChange"><b>{{ highestlowest.biggestGain.thisweek_position }}</b></p>
+            </div>
+        </div>
+        <div class="rankingChangeTeam">
+            <h4 class="changeHeading"><b>This Weeks Biggest Faller</b></h4>
+            <div class="rankingChangeTeamContent" ng-click="clickrank(highestlowest.biggestLoss.id)">
+                <h4><b>{{ highestlowest.biggestLoss.name }}</b></h4>
+                <div class="logocontainer">
+                    <img class="midteamlogo" src="{{ highestlowest.biggestLoss.logo_url }}">
+                </div>
+                <p class="red"><b> DOWN {{ highestlowest.biggestLoss.thisweek_position - highestlowest.biggestLoss.lastweek_position }} </b></p>
+                <p class="currentRatingChange"><b>{{ highestlowest.biggestLoss.thisweek_position }}</b></p>
+            </div>
+        </div>
+    </div>
 
     <div class="input-group margin-bottom-sm rankingsearch">
         <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span>

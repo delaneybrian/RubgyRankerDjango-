@@ -7,6 +7,13 @@ sportModule.controller('rankingsController', function ($scope, $http, $location)
             console.log(response.data);
         });
 
+    $http.get("/api/rankings/highest/")
+        .then(function (response) {
+            $scope.highestlowest = response.data;
+            console.log("Http Sucess");
+            console.log(response.data);
+        });
+
     $scope.sortType     = 'position';
     $scope.sortReverse  = false;
     $scope.searchRanking   = '';

@@ -21,6 +21,9 @@ urlpatterns = [
     #GET ALL RANKED TEAMS
     url(r'^rankings/$', rankings.get_rankings_list),
 
+    #GET BIGGEST FALLER AND BIGGEST GAINER
+    url(r'^rankings/highest/$', rankings.get_gains_losses),
+
 
 #******************************************TEAMS URLS**************************************
     #LIST OF ALL TEAMS
