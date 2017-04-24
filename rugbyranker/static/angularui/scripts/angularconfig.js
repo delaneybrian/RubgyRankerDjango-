@@ -56,5 +56,3 @@ sportModule.config(['$routeProvider', '$locationProvider', '$httpProvider',
 
 
 
-
-

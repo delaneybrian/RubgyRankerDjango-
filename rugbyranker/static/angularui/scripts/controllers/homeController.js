@@ -64,6 +64,14 @@ sportModule.controller('navController', function ($scope, $http, $location) {
         }
     ];
 
+    $scope.navshow = function(){
+        $("#datadropdown").slideToggle();
+    }
+
+    $scope.navhide = function(){
+        $("#datadropdown").hide();
+    };
+
     $scope.setActive = function(menuItem) {
         $scope.activeMenu = menuItem;
         console.log($scope.activeMenu);

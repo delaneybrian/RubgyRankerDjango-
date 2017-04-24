@@ -100,6 +100,14 @@ li {
     width: 100px;
 }
 
+.xtramedteamlogo {
+    height: auto;
+    min-height: 50px;
+    max-height: 225px;
+    min-width: 50px;
+    width: 225px;
+}
+
 .largeteamlogo {
     width: 300px;
     height: auto
@@ -631,6 +639,10 @@ latestgamestable{
     background-color: #021628;
 }
 
+#custom-bootstrap-menu.navbar-default {
+    border-radius: 0px;
+}
+
 .navbar {
     margin: 0px;
     border: 0px;
@@ -1011,15 +1023,47 @@ latestgamestable{
     .latestgamesMobile{
         display: block;
     }
+
 }
 
 .teamRivalsMobile{
     display: none;
 }
 
+.midlogoshow{
+    display: none;
+}
+
 @media(max-width: 600px){
+
+    .homestats{
+        max-width: 80%;
+    }
+
     .rivalMobileHide{
         display: none;
+    }
+
+    .largelogoshow{
+        display: none;
+    }
+    .midlogoshow{
+        display: block;
+    }
+
+    .newsletter{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sociallink{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footerlink{
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .headline{

@@ -4,12 +4,14 @@
         <div class="homestats">
             <div class="headlinetext">
                 <h1 class="headline">Currently ranking <b>{{ details.Teams }} Teams </b> Accros <b>{{ details.Tournaments }} Global Tournaments </b> In <b>{{ details.Matches }} Matches.</b></h1>
+                <br>
+                <h1 class="headline">See the full rankings <a ng-href="/rankings/"><b>Here</b></a></h1>
             </div>
             <br>
             <br>
             <div class="rankingdates">
-                <h4 class="headlineDate">First Ranked Match: <b><span>{{ details.FirstMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
-                <h4 class="headlineDate">Latest Ranked Match: <b><span>{{ details.LastMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
+                <h4 class="headlineDate">First Ranked Match: <b><br><span>{{ details.FirstMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
+                <h4 class="headlineDate">Latest Ranked Match: <b><br><span>{{ details.LastMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
             </div>
         </div>
 
@@ -17,7 +19,8 @@
             <h3>Featured Team</h3>
             <div class="featuredteamhover" ng-click="clickfeatured(featured.id)">
                 <h4 class="featuredteamname"><b>{{ featured.name }} - {{ featured.thisweek_rating }}</b></h4>
-                <img class="largeteamlogo" src="{{ featured.logo_url }}" alt="{{ featured.name }} logo">
+                <img class="largeteamlogo largelogoshow" src="{{ featured.logo_url }}" alt="{{ featured.name }} logo">
+                <img class="xtramedteamlogo midlogoshow" src="{{ featured.logo_url }}" alt="{{ featured.name }} logo">
                 <div class="rankingpositioncontainer">
                     <div class="homerankingposition">
                         <span class="currentposition">{{ featured.thisweek_position }}</span>
