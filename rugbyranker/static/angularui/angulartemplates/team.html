@@ -7,7 +7,10 @@
                                                                                           src="{{ details.country.flag_url }}"
                                                                                           alt="{{ details.country.name }} Flag"></a>
             </h2>
-            <a target="_blank" ng-href="{{ details.website }}"><img class="largeteamlogo" src="{{ details.logo_url }}"></a>
+            <a target="_blank" ng-href="{{ details.website }}">
+                <img class="hideLargeLogo largeteamlogo" src="{{ details.logo_url }}">
+                <img class="hidemidLogo midteamlogo" src="{{ details.logo_url }}">
+            </a>
         </div>
 
         <div class="moreteamdetails">

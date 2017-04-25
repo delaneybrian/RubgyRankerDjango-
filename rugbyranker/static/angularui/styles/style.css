@@ -11,6 +11,7 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 150%;
     font-weight: bold;
+    max-width: 100%;
 }
 
 .standardcontent{
@@ -603,6 +604,7 @@ latestgamestable{
 
 .viewarea{
     min-height: 800px;
+    max-width: 100%;
 }
 
 .aftersort{
@@ -1054,7 +1056,19 @@ latestgamestable{
     display: none;
 }
 
+.hidemidLogo{
+        display: none;
+    }
+
 @media(max-width: 600px){
+
+    .hideLargeLogo{
+        display: none;
+    }
+
+    .hidemidLogo{
+        display: block;
+    }
 
     .homestats{
         max-width: 80%;
