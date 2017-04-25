@@ -1,4 +1,4 @@
-var sportModule = angular.module('sportModule', ['ngRoute']);
+var sportModule = angular.module('sportModule', ['ngRoute', 'chart.js']);
 
 sportModule.config(['$routeProvider', '$locationProvider', '$httpProvider',
     function ($routeProvider, $locationProvider, $httpProvider) {
@@ -42,6 +42,10 @@ sportModule.config(['$routeProvider', '$locationProvider', '$httpProvider',
     });
     }
 ]);
+
+(function (ChartJsProvider) {
+  ChartJsProvider.setOptions({ colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
+});
 
 
 

@@ -8,6 +8,9 @@ html{
 
 body{
     border-top: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
 }
 
 .standardcontent{
@@ -226,7 +229,9 @@ footer a{
     align-items: center;
 }
 
-
+.featuredteamMobile{
+    display: none;
+}
 
 .social{
     padding-right: 10%;
@@ -276,10 +281,17 @@ footer a{
 
 .teamStats{
     padding: 2% 6% 2% 6%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .teamStat{
-    padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 
@@ -400,6 +412,7 @@ img {
 }
 
 .homestats{
+    padding-top: 50px;
     max-width: 50%;
 }
 
@@ -938,6 +951,13 @@ latestgamestable{
     .tourHideMobile{
         display: none;
     }
+    .featuredteamMobile{
+        display: block;
+    }
+
+    .featuredteam{
+        display: none;
+    }
 
     .tourrecentgamesrow img{
         class: "smallteamlogo";
@@ -1221,4 +1241,49 @@ latestgamestable{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+/* Backgrounds */
+.bgimagehome {
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('/static/images/background/background1.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-filter: blur(2px) opacity(40%);
+    -moz-filter: blur(2px) opacity(40%);
+    -o-filter: blur(2px) opacity(40%);
+    filter: blur(2px) opacity(40%);
+    z-index: -1;
+}
+
+.bgimageteam{
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('/static/images/background/teambackground.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-filter: blur(2px) opacity(40%);
+    -moz-filter: blur(2px) opacity(40%);
+    -o-filter: blur(2px) opacity(40%);
+    filter: blur(2px) opacity(40%);
+    z-index: -1;
+}
+
+.contentcon{
+    height: 100vh;
+}
+
+
+/* Chart */
+.maxChartSize{
+    max-height: 300px;
+    max-width: 300px;
 }

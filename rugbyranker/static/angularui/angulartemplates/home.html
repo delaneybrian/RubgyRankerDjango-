@@ -1,17 +1,22 @@
-<div class="standardcontent">
-
+<div class="bgimagehome">
+</div>
+<div class="contentcon standardcontent">
     <div class="introcontainer">
         <div class="homestats">
             <div class="headlinetext">
-                <h1 class="headline">Currently ranking <b>{{ details.Teams }} Teams </b> Accros <b>{{ details.Tournaments }} Global Tournaments </b> In <b>{{ details.Matches }} Matches.</b></h1>
+                <h1 class="headline">Currently ranking <b>{{ details.Teams }} Teams </b> Accros
+                    <b>{{ details.Tournaments }}
+                        Global Tournaments </b> In <b>{{ details.Matches }} Matches.</b></h1>
                 <br>
                 <h1 class="headline">See the full rankings <a ng-href="/rankings/"><b>Here</b></a></h1>
             </div>
             <br>
             <br>
             <div class="rankingdates">
-                <h4 class="headlineDate">First Ranked Match: <b><br><span>{{ details.FirstMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
-                <h4 class="headlineDate">Latest Ranked Match: <b><br><span>{{ details.LastMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
+                <h4 class="headlineDate">First Ranked Match:
+                    <b><br><span>{{ details.FirstMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
+                <h4 class="headlineDate">Latest Ranked Match:
+                    <b><br><span>{{ details.LastMatch | date : "d-MMMM-yyyy" }}</span></b></h4>
             </div>
         </div>
 
@@ -19,21 +24,46 @@
             <h3>Featured Team</h3>
             <div class="featuredteamhover" ng-click="clickfeatured(featured.id)">
                 <h4 class="featuredteamname"><b>{{ featured.name }} - {{ featured.thisweek_rating }}</b></h4>
-                <img class="largeteamlogo largelogoshow" src="{{ featured.logo_url }}" alt="{{ featured.name }} logo">
-                <img class="xtramedteamlogo midlogoshow" src="{{ featured.logo_url }}" alt="{{ featured.name }} logo">
+                <img class="largeteamlogo" src="{{ featured.logo_url }}"
+                     alt="{{ featured.name }} logo">
                 <div class="rankingpositioncontainer">
                     <div class="homerankingposition">
                         <span class="currentposition">{{ featured.thisweek_position }}</span>
-                        <span ng-show="featured.thisweek_position == featured.lastweek_position"><i class="fa fa-minus fa-5x icon-height" aria-hidden="true"></i></span>
-                        <span ng-show="featured.thisweek_position > featured.lastweek_position"><i class="fa fa-arrow-down fa-5x icon-height" aria-hidden="true"></i></span>
-                        <span ng-show="featured.thisweek_position < featured.lastweek_position"><i class="fa fa-arrow-up fa-5x icon-height" aria-hidden="true"></i></span>
+                        <span ng-show="featured.thisweek_position == featured.lastweek_position"><i
+                                class="fa fa-minus fa-5x icon-height" aria-hidden="true"></i></span>
+                        <span ng-show="featured.thisweek_position > featured.lastweek_position"><i
+                                class="fa fa-arrow-down fa-5x icon-height" aria-hidden="true"></i></span>
+                        <span ng-show="featured.thisweek_position < featured.lastweek_position"><i
+                                class="fa fa-arrow-up fa-5x icon-height" aria-hidden="true"></i></span>
                     </div>
                 </div>
                 <div><p>({{ featured.lastweek_position }})</p></div>
             </div>
         </div>
     </div>
+</div>
 
+<div class="standardcontent">
+    <div class="featuredteamMobile">
+            <h3>Featured Team</h3>
+            <div class="featuredteamhover" ng-click="clickfeatured(featured.id)">
+                <h4 class="featuredteamname"><b>{{ featured.name }} - {{ featured.thisweek_rating }}</b></h4>
+                <img class="xtramedteamlogo" src="{{ featured.logo_url }}"
+                     alt="{{ featured.name }} logo">
+                <div class="rankingpositioncontainer">
+                    <div class="homerankingposition">
+                        <span class="currentposition">{{ featured.thisweek_position }}</span>
+                        <span ng-show="featured.thisweek_position == featured.lastweek_position"><i
+                                class="fa fa-minus fa-5x icon-height" aria-hidden="true"></i></span>
+                        <span ng-show="featured.thisweek_position > featured.lastweek_position"><i
+                                class="fa fa-arrow-down fa-5x icon-height" aria-hidden="true"></i></span>
+                        <span ng-show="featured.thisweek_position < featured.lastweek_position"><i
+                                class="fa fa-arrow-up fa-5x icon-height" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+                <div><p>({{ featured.lastweek_position }})</p></div>
+            </div>
+        </div>
     <div class="homecontent">
         <div class="homelatestmatches">
             <h3>Latest Ranked Matches</h3>
@@ -95,11 +125,17 @@
                     <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
                     <td>{{ rank.thisweek_rating }}</td>
                     <td><a ng-href="/countries/{{ rank.country.id }}"><img class="flag"
-                                                                                src="{{ rank.country.flag_url }}"></a>
+                                                                           src="{{ rank.country.flag_url }}"></a>
                     </td>
-                    <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                    <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                    <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
+                    <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x"
+                                                                                      aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></td>
+                    <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x"
+                                                                                     aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></td>
+                    <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x"
+                                                                                     aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></td>
 
                 </tr>
             </table>
@@ -109,20 +145,27 @@
             <h3>Top 15 Teams</h3>
             <table>
                 <thead>
-                    <tr>
-                        <th>Team</th>
-                        <th>Ranking</th>
-                        <th>Change</th>
-                    </tr>
+                <tr>
+                    <th>Team</th>
+                    <th>Ranking</th>
+                    <th>Change</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'" ng-click="clickrank(rank.id)">
-                        <td><b>{{ rank.thisweek_position }}</b></td>
-                        <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
-                        <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                        <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                        <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i><p>({{ rank.lastweek_position }})</p></td>
-                    </tr>
+                <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'"
+                    ng-click="clickrank(rank.id)">
+                    <td><b>{{ rank.thisweek_position }}</b></td>
+                    <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
+                    <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x"
+                                                                                      aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></td>
+                    <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x"
+                                                                                     aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></td>
+                    <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x"
+                                                                                     aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></td>
+                </tr>
                 </tbody>
             </table>
         </div>

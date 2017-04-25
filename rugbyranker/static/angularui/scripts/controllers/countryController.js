@@ -26,6 +26,9 @@ sportModule.controller('countryController', function ($scope, $http, $routeParam
     $http.get("/api/country/" + countryId + "/information/")
         .then(function (response) {
             $scope.information = response.data;
+
+            //generate chart here
+
             console.log("Http Sucess");
             console.log(response.data);
         });
