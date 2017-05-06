@@ -1,0 +1,81 @@
+<div class="standardcontent">
+    <div class="latestgames">
+        <h3>{{ details.name }} Ranked Matches</h3>
+        <div class="input-group margin-bottom-sm rankingsearch">
+            <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span>
+            <input class="form-control" type="text" placeholder="Search Ranked Matches" ng-model="searchRankedMatches">
+        </div>
+        <table>
+            <tr>
+                <th ng-click="sortType = 'hometeam.name'; sortReverse = !sortReverse">
+                    <button class="btn">
+                        <div class="sortbutton">Hometeam<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                    </button>
+                </th>
+                <th></th>
+                <th ng-click="sortType = 'hometeam_score'; sortReverse = !sortReverse">
+                    <button class="btn">
+                        <div class="sortbutton">Score<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                    </button>
+                </th>
+                <th></th>
+                <th ng-click="sortType = 'awayteam_score'; sortReverse = !sortReverse">
+                    <button class="btn">
+                        <div class="sortbutton">Score<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                    </button>
+                </th>
+                <th ng-click="sortType = 'awayteam.name'; sortReverse = !sortReverse">
+                    <button class="btn">
+                        <div class="sortbutton">Awayteam<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                    </button>
+                </th>
+                <th></th>
+                <th ng-click="sortType = 'match_date'; sortReverse = !sortReverse">
+                    <button class="btn">
+                        <div class="sortbutton">Date<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                    </button>
+                </th>
+                <th>
+                        <div class="sortbutton">Rating Change</div>
+                </th>
+                <th>
+                        <div class="sortbutton">Rating</div>
+                </th>
+            </tr>
+            <tr ng-repeat="match in teamRankedMatches | orderBy:sortType:sortReverse | filter:searchRankedMatches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
+                <td class="teamname">{{ match.hometeam.name }}</td>
+                <td>{{ match.hometeam_score }}</td>
+                <td>-</td>
+                <td>{{ match.awayteam_score }}</td>
+                <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></td>
+                <td class="teamname">{{ match.awayteam.name }}</td>
+                <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
+                <td ng-class="{green: (match.hometeam_rating_after - match.hometeam_rating_before > 0), red: (match.hometeam_rating_after - match.hometeam_rating_before < 0)}"
+                    ng-show="teamId == match.hometeam.id">
+                    {{ match.hometeam_rating_after - match.hometeam_rating_before }}</td>
+                <td ng-class="{green: (match.hometeam_rating_after - match.hometeam_rating_before < 0), red: (match.hometeam_rating_after - match.hometeam_rating_before > 0)}"
+                    ng-show="teamId == match.awayteam.id">
+                    {{ match.awayteam_rating_after - match.awayteam_rating_before }}</td>
+                <td ng-show="teamId == match.hometeam.id">{{ match.hometeam_rating_after }}</td>
+                <td ng-show="teamId == match.awayteam.id">{{ match.awayteam_rating_after }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="latestgamesMobile">
+        <h3>Latest Ranked Matches</h3>
+        <div class="mobilematch" ng-repeat="match in teamRankedMatches" ng-class-odd="'oddmatch'"
+             ng-class-even="'evenmatch'">
+            <div class="mobileawayteam">
+                <img class="smallteamlogo" src="{{ match.hometeam.logo_url }}">
+                <span>{{ match.hometeam.name }}</span>
+                <span><b>{{ match.hometeam_score }}</b></span>
+            </div>
+            <div class="mobilehometeam">
+                <img class="smallteamlogo" src="{{ match.awayteam.logo_url }}">
+                <span>{{ match.awayteam.name }}</span>
+                <span><b>{{ match.awayteam_score }}</b></span>
+            </div>
+        </div>
+    </div>
+</div>

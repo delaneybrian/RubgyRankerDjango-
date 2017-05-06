@@ -34,17 +34,21 @@ urlpatterns = [
     # DETAILS OF A SPECIFIC TEAM
     url(r'^teams/(?P<pk>[0-9]+)/details/$', team.get_team_detail),
 
-    # GET LIST OF LATEST HOMEGAMES FOR A GIVEN TEAM
-    url(r'^teams/(?P<pk>[0-9]+)/matches/home/$', team.get_latest_home_matches),
-
-    # GET LIST OF LATEST AWAYGAMES FOR A GIVEN TEAM
-    url(r'^teams/(?P<pk>[0-9]+)/matches/away/$', team.get_latest_away_matches),
+    # GET LIST OF LATEST GAMES FOR A GIVEN TEAM
+    url(r'^teams/(?P<pk>[0-9]+)/matches/$', team.get_latest_matches),
 
     # GET INTERESTING INFOMRATION ON A SPECIFIC TEAM
     url(r'^teams/(?P<pk>[0-9]+)/information/$', team.get_team_information),
 
     # GET TEAM RIVALS TABLE
     url(r'^teams/(?P<pk>[0-9]+)/rivals/$', team.get_team_rivals),
+
+#*****************************************TEAM RANKED MATCH HISTORY**************************
+    # GET ALL RANKED MATCHES FOR A GIVEN TEAM (PAGNATION?)
+    url(r'^teams/(?P<pk>[0-9]+)/rankedmatches/$', team.get_all_matches),
+
+    # GET RANKED MATCHES FOR DIAGRAM
+    url(r'^teams/(?P<pk>[0-9]+)/rankhistory/$', team.get_team_ranking_history),
 
 #******************************************COUNTRIES URLS ***********************************
     # GET LIST OF ALL COUNTRUES

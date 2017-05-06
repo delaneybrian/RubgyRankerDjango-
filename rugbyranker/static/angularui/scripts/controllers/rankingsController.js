@@ -23,10 +23,5 @@ sportModule.controller('rankingsController', function ($scope, $http, $location)
         console.log($location.path("teams/"  + name))
     };
 
-    $scope.clicktournament = function(){
-
-        alert("HERE");
-
-    };
 
 });

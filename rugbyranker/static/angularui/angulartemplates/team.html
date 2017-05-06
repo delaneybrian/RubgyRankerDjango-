@@ -59,8 +59,10 @@
         </div>
     </div>
 
-    <div class="teamcontent">
 
+
+
+    <div class="teamcontent">
         <h3>{{ details.name }} Statistics</h3>
         <div class="team_main_stats">
             <div class="teamStats">
@@ -68,17 +70,15 @@
                     <h4>Home Record</h4>
                     <p>Total Home Matches: {{ information.home_matches }}</p>
                     <p><b>Home Win Percentage: </b>{{ information.home_win_precentage | number : 2 }}%</p>
-                    <canvas id="pie" class="chart chart-pie maxChartSize"
-                            chart-data="homeMatchData" chart-labels="homeMatchLabels" chart-options="options">
-                    </canvas>
+                    <canvas class="maxChartSize" id="homeCtxChart" width="400" height="400"></canvas>
+
                 </div>
                 <div class="teamStat">
                     <h4>Away Record</h4>
                     <p>Total Away Matches: {{ information.away_matches }}</p>
                     <p><b>Away Win Percentage: </b>{{ information.away_win_precentage | number : 2 }}%</p>
-                    <canvas id="pie" class="chart chart-pie maxChartSize"
-                            chart-data="awayMatchData" chart-labels="awayMatchLabels" chart-options="options">
-                    </canvas>
+                    <canvas class="maxChartSize" id="awayCtxChart" width="400" height="400"></canvas>
+
                 </div>
                 <div class="teamStat">
                     <h4>Ranked Match Streak</h4>
@@ -88,51 +88,13 @@
             </div>
         </div>
 
-        <div class="latestgames">
-            <h3>Latest Home Matches</h3>
-            <table class="latestgamestable">
-                <tr>
-                    <th>Hometeam</th>
-                    <th></th>
-                    <th>Score</th>
-                    <th></th>
-                    <th>Score</th>
-                    <th>Awayteam</th>
-                    <th></th>
-                    <th>Date</th>
-                </tr>
-                <tr ng-repeat="match in homematchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
-                    <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
-                    <td class="teamname">{{ match.hometeam.name }}</td>
-                    <td>{{ match.hometeam_score }}</td>
-                    <td>-</td>
-                    <td>{{ match.awayteam_score }}</td>
-                    <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></td>
-                    <td class="teamname">{{ match.awayteam.name }}</td>
-                    <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="latestgamesMobile">
-            <h3>Latest Home Matches</h3>
-            <div class="mobilematch" ng-repeat="match in homematchdata" ng-class-odd="'oddmatch'"
-                 ng-class-even="'evenmatch'">
-                <div class="mobileawayteam">
-                    <img class="smallteamlogo" src="{{ match.hometeam.logo_url }}">
-                    <span>{{ match.hometeam.name }}</span>
-                    <span><b>{{ match.hometeam_score }}</b></span>
-                </div>
-                <div class="mobilehometeam">
-                    <img class="smallteamlogo" src="{{ match.awayteam.logo_url }}">
-                    <span>{{ match.awayteam.name }}</span>
-                    <span><b>{{ match.awayteam_score }}</b></span>
-                </div>
-            </div>
+        <div class="teamRankHistoryChart">
+            <h3>Ranking History</h3>
+            <canvas class="maxHistoryChartSize" id="myLineChart" width="400" height="400"></canvas>
         </div>
 
         <div class="latestgames">
-            <h3>Latest Away Matches</h3>
+            <h3>Latest Ranked Matches</h3>
             <table>
                 <tr>
                     <th>Hometeam</th>
@@ -144,7 +106,7 @@
                     <th></th>
                     <th>Date</th>
                 </tr>
-                <tr ng-repeat="match in awaymatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                <tr ng-repeat="match in teammatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
                     <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
                     <td class="teamname">{{ match.hometeam.name }}</td>
                     <td>{{ match.hometeam_score }}</td>
@@ -155,11 +117,12 @@
                     <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
                 </tr>
             </table>
+            <button type="button" class="btn allRankedMatchesButton"><a ng-href="/teams/{{ details.id }}/matches">All Ranked Matches</a></button>
         </div>
 
         <div class="latestgamesMobile">
-            <h3>Latest Away Matches</h3>
-            <div class="mobilematch" ng-repeat="match in awaymatchdata" ng-class-odd="'oddmatch'"
+            <h3>Latest Ranked Matches</h3>
+            <div class="mobilematch" ng-repeat="match in teammatchdata" ng-class-odd="'oddmatch'"
                  ng-class-even="'evenmatch'">
                 <div class="mobileawayteam">
                     <img class="smallteamlogo" src="{{ match.hometeam.logo_url }}">

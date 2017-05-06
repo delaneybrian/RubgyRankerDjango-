@@ -16,16 +16,9 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
             console.log(response.data);
         });
 
-    $http.get("/api/teams/" + teamId + '/matches/home/')
+    $http.get("/api/teams/" + teamId + '/matches/')
         .then(function (response) {
-            $scope.homematchdata = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
-        });
-
-    $http.get("/api/teams/" + teamId + '/matches/away/')
-        .then(function (response) {
-            $scope.awaymatchdata = response.data;
+            $scope.teammatchdata = response.data;
             console.log("Http Sucess");
             console.log(response.data);
         });
@@ -34,16 +27,65 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
         .then(function (response) {
             $scope.information = response.data;
 
-            //For Home Chart
-            $scope.homeMatchLabels = ["Home Wins", "Home Losses", "Home Draws"];
-            $scope.homeMatchData = [response.data.won_home, response.data.lost_home, response.data.drew_home];
+            var homeCtx = document.getElementById("homeCtxChart");
+            var awayCtx = document.getElementById("awayCtxChart");
 
-            //For Away Chart
-            $scope.awayMatchLabels = ["Away Wins", "Away Losses", "Away Draws"];
-            $scope.awayMatchData = [response.data.won_away, response.data.lost_away, response.data.drew_away];
+            var homeData = {
+                labels: [
+                    "Wins",
+                    "Losses",
+                    "Draws"
+                ],
+                datasets: [
+                    {
+                        data: [response.data.won_home, response.data.lost_home, response.data.drew_home],
+                        backgroundColor: [
+                            "#FF6384",
+                            "#36A2EB",
+                            "#FFCE56"
+                        ],
+                        hoverBackgroundColor: [
+                            "#FF6384",
+                            "#36A2EB",
+                            "#FFCE56"
+                        ]
+                    }]
+            };
 
+            var awayData = {
+                labels: [
+                    "Wins",
+                    "Losses",
+                    "Draws"
+                ],
+                datasets: [
+                    {
+                        data: [response.data.won_away, response.data.lost_away, response.data.drew_away],
+                        backgroundColor: [
+                            "#FF6384",
+                            "#36A2EB",
+                            "#FFCE56"
+                        ],
+                        hoverBackgroundColor: [
+                            "#FF6384",
+                            "#36A2EB",
+                            "#FFCE56"
+                        ]
+                    }]
+            };
+
+            var homeCtxChart = new Chart(homeCtx, {
+                type: 'doughnut',
+                data: homeData
+            });
+
+            var awayCtxChart = new Chart(awayCtx, {
+                type: 'doughnut',
+                data: awayData
+            });
             console.log("Http Sucess");
             console.log(response.data);
+
         });
 
     $http.get("/api/teams/" + teamId + '/rivals/')
@@ -60,20 +102,70 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
             console.log(response.data);
         });
 
-    $http.get("/api/teams/" + teamId + '/currentranking/')
-        .then(function (response) {
-            $scope.currentranking = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
-        });
+    $scope.sortType = 'position';
+    $scope.sortReverse = false;
+    $scope.searchRivals = '';
 
-    $scope.sortType     = 'position';
-    $scope.sortReverse  = false;
-    $scope.searchRivals   = '';
-
-    $scope.clickteam = function(teamid){
-        console.log($location.path("teams/"  + teamid))
+    $scope.clickteam = function (teamid) {
+        console.log($location.path("teams/" + teamid))
     };
+
+
+    //GRAPH CONTROLLER
+    $http.get("/api/teams/" + teamId + '/rankhistory/')
+        .then(function (response) {
+            rankhistory = response.data;
+            dates = [];
+            ratings = [];
+            rankhistory = JSON.parse(rankhistory);
+            rankhistory.forEach(function (arrayItem) {
+                var rating = arrayItem.rating;
+                var date = arrayItem.date;
+                dates.push(date);
+                ratings.push(rating);
+            });
+
+            var options = {
+                fill: true,
+            };
+
+            var data = {
+                labels: dates,
+                datasets: [
+                    {
+                        label: "Rating",
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(2, 22, 40, 0.6)",
+                        borderColor: "rgba(2, 22, 40, 1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(2, 22, 40, 1)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(2, 22, 40, 1)",
+                        pointHoverBorderColor: "rgba(2, 22, 40, 1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data: ratings,
+                        spanGaps: false,
+                        fill: true,
+                        cubicInterpolationMode: 'default',
+                    }
+                ]
+            };
+            var rankingHistoryCtx = document.getElementById("myLineChart");
+            var myLineChart = new Chart(rankingHistoryCtx, {
+                type: 'line',
+                data: data,
+                options: options
+            });
+
+            console.log("Http Sucess");
+        });
 
 });
 

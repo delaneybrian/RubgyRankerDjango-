@@ -82,6 +82,10 @@ class Match(models.Model):
     tournament = models.ForeignKey(Tournament, null=True, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     calculated = models.BooleanField(default=False)
+    hometeam_rating_after = models.IntegerField(default=0)
+    awayteam_rating_after = models.IntegerField(default=0)
+    hometeam_rating_before = models.IntegerField(default=0)
+    awayteam_rating_before = models.IntegerField(default=0)
 
     def __str__(self):
         return  str(self.hometeam_score) + " v " + " " + str(self.awayteam_score) + " - " + str(self.match_date.date())
@@ -94,7 +98,7 @@ class Rivals(models.Model):
     draws = models.IntegerField(default=0)
 
     def __str__(self):
-        return str(self.team_a + " - " + self.team_b)
+        return str(str(self.team_a) + " - " + str(self.team_b))
 
 class NewsletterEmails(models.Model):
     email_address = models.EmailField(primary_key=True)

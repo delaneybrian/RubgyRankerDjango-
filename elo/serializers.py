@@ -55,6 +55,11 @@ class TournamentShortSerializer(serializers.ModelSerializer):
         model = Tournament
         fields = ('id', 'name', 'logo_url', 'countries')
 
+class TournamentSuperShortSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Tournament
+        fields = ('id', 'name', 'logo_url')
 
 class MatchSerializer(serializers.ModelSerializer):
     hometeam = TeamShortSerializer(read_only=True)
@@ -64,6 +69,32 @@ class MatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Match
         fields = ('hometeam', 'hometeam_score', 'awayteam', 'awayteam_score', 'match_date', 'tournament')
+
+
+class MatchShortSerializer(serializers.ModelSerializer):
+    hometeam = TeamShortSerializer(read_only=True)
+    awayteam = TeamShortSerializer(read_only=True)
+    tournament = TournamentSuperShortSerializer(read_only=True)
+
+    class Meta:
+        model = Match
+        fields = ('hometeam', 'hometeam_score', 'awayteam', 'awayteam_score', 'match_date', 'tournament')
+
+class MatchLargeSerializer(serializers.ModelSerializer):
+    hometeam = TeamShortSerializer(read_only=True)
+    awayteam = TeamShortSerializer(read_only=True)
+    tournament = TournamentSuperShortSerializer(read_only=True)
+
+    class Meta:
+        model = Match
+        fields = ('hometeam', 'hometeam_score', 'awayteam', 'awayteam_score', 'match_date', 'tournament', 'hometeam_rating_before', 'awayteam_rating_before', 'hometeam_rating_after', 'awayteam_rating_after')
+
+
+class MatchDiagramSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Match
+        fields = ('hometeam', 'awayteam', 'match_date', 'hometeam_rating_after', 'awayteam_rating_after')
 
 
 class NewsletterSerializer(serializers.ModelSerializer):

@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from elo.models import Team, Match, Tournament, Country
-from elo.serializers import  TeamShortSerializer, TournamentShortSerializer, CountrySerializer
+from elo.models import Team, Match, Tournament, Country, Rivals
+from elo.serializers import  TeamShortSerializer, TournamentShortSerializer, CountrySerializer, RivalsSerializer
 from django.db.models import F
 from django.db.models import Q
 

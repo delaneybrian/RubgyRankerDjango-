@@ -2,8 +2,10 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from elo.models import Team, Match, Rivals
-from elo.serializers import TeamSerializer, MatchSerializer, RivalsSerializer
-from django.db.models import Q, F, Max, Min
+from elo.serializers import TeamSerializer, MatchSerializer, RivalsSerializer, MatchLargeSerializer, MatchDiagramSerializer
+from django.db.models import Q, F
+import json
+import datetime
 
 #GET DETAILS OF A SPECIFIC TEAM
 @api_view(['GET'])
@@ -17,17 +19,11 @@ def get_team_detail(request, pk, format=None):
         serializer = TeamSerializer(team)
         return Response(serializer.data)
 
-#GET LIST OF LATEST HOMEGAMES FOR A SPECIFIC TEAM
-@api_view(['GET'])
-def get_latest_home_matches(request, pk, format=None):
-    matches = Match.objects.filter(hometeam=pk).order_by('-match_date')[:5]
-    serializer = MatchSerializer(matches, many=True)
-    return Response(serializer.data)
 
-#GET LIST OF LATEST AWAYGAMES FOR A SPECIFIC TEAM
+#GET LIST OF LATEST GAMES FOR A SPECIFIC TEAM
 @api_view(['GET'])
-def get_latest_away_matches(request, pk, format=None):
-    matches = Match.objects.filter(awayteam=pk).order_by('-match_date')[:5]
+def get_latest_matches(request, pk, format=None):
+    matches = Match.objects.filter(Q(awayteam=pk) | Q(hometeam=pk)).order_by('-match_date')[:10]
     serializer = MatchSerializer(matches, many=True)
     return Response(serializer.data)
 
@@ -70,3 +66,58 @@ def get_team_rivals(request, pk, format=None):
         dict = {}
         print("ERROR")
         return Response(dict)
+
+
+#GET ALL RANKED MATCHES FOR A TEAM
+@api_view(['GET'])
+def get_all_matches(request, pk, format=None):
+    try:
+        matches = Match.objects.filter(Q(awayteam=pk) | Q(hometeam=pk)).order_by('-match_date')
+        serializer = MatchLargeSerializer(matches, many=True)
+        return Response(serializer.data)
+    except:
+        dict = {}
+        print("ERROR")
+        return Response(dict)
+
+
+#GET RANKING HISTORY FOR A TEAM
+@api_view(['GET'])
+def get_team_ranking_history(request, pk, format=None):
+
+        array_of_tuples = []
+        homematches = Match.objects.filter(hometeam=pk)
+        for match in homematches:
+            if int(match.hometeam.id) == int(pk):
+                matchtup = (match.match_date.date(), match.hometeam.id, match.hometeam_rating_after)
+                array_of_tuples.append(matchtup)
+        awaymatches = Match.objects.filter(awayteam=pk)
+        for match in awaymatches:
+            if int(match.awayteam.id) == int(pk):
+                matchtup = (match.match_date.date(), match.awayteam.id, match.awayteam_rating_after)
+                array_of_tuples.append(matchtup)
+
+        #sort array of tuples by date
+        array_of_tuples = sorted(array_of_tuples, key=lambda tup: tup[0]) #reverse=True
+
+        list_of_dicts = []
+        for tuple in array_of_tuples:
+            print(tuple[0])
+            datadict = {
+                "date" : str(tuple[0]),
+                "teamid" : tuple[1],
+                "rating" : tuple[2]
+            }
+            list_of_dicts.append(datadict)
+
+        dict = json.dumps(list_of_dicts)
+        return Response(dict)
+    #except:
+      #  dict = {}
+      #  print("Error")
+      #  return Response(dict)
+
+def datetime_handler(x):
+    if isinstance(x, datetime.datetime):
+        return x.isoformat()
+    raise TypeError("Unknown type")
