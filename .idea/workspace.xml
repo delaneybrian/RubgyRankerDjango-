@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df72f643-8516-4158-ab11-ea47407c3c9f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/teamAllMatchesController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elo/models.py" afterPath="$PROJECT_DIR$/elo/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elo/serializers.py" afterPath="$PROJECT_DIR$/elo/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elo/templates/angularui/index.html" afterPath="$PROJECT_DIR$/elo/templates/angularui/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elo/urls.py" afterPath="$PROJECT_DIR$/elo/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elo/views/country.py" afterPath="$PROJECT_DIR$/elo/views/country.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elo/views/team.py" afterPath="$PROJECT_DIR$/elo/views/team.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/country.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/country.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/angularconfig.js" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/angularconfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/rankingsController.js" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/rankingsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/teamController.js" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/teamController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/about.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/faq.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/faq.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,48 +28,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="1358" column="1" lean-forward="true" selection-start-line="1358" selection-start-column="1" selection-end-line="1358" selection-end-column="1" />
+            <state relative-caret-position="463">
+              <caret line="1384" column="24" lean-forward="false" selection-start-line="1384" selection-start-column="24" selection-end-line="1384" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html">
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/teamController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="135" column="38" lean-forward="false" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamallmatches.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="41" column="54" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tournament.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="29" />
+            <state relative-caret-position="264">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -101,8 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>teamStatteamStat</find>
-      <find>latestmatches</find>
       <find>600</find>
       <find>hidemid</find>
       <find>midlogo</find>
@@ -131,6 +86,8 @@
       <find>bgim</find>
       <find>all ra</find>
       <find>.a</find>
+      <find>hover</find>
+      <find>justify</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,7 +119,6 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/rankings.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/navquery.js" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/homeController.js" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/faq.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/countries.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/countryController.js" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
@@ -180,6 +136,8 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/teamController.js" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/faq.html" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/about.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
       </list>
     </option>
@@ -191,9 +149,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1932" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -321,6 +280,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="angularui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -740,10 +703,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25646552" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18045112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38165346" sideWeight="0.1557465" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -751,7 +714,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13631158" sideWeight="0.8442535" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13476783" sideWeight="0.8442535" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -796,13 +759,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/elo/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angularui/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -912,13 +868,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/navquery.js" />
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/faq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/countries.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1135,10 +1084,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/faq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="1358" column="1" lean-forward="true" selection-start-line="1358" selection-start-column="1" selection-end-line="1358" selection-end-column="1" />
+        <state relative-caret-position="463">
+          <caret line="1384" column="24" lean-forward="false" selection-start-line="1384" selection-start-column="24" selection-end-line="1384" selection-end-column="24" />
           <folding />
         </state>
       </provider>

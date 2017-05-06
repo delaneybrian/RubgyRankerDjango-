@@ -1376,3 +1376,12 @@ a {
     color: white;
 }
 
+.thickHr{
+    border-top: 1px solid rgba(2, 22, 40, 1);
+}
+
+.aboutpara{
+    padding-top: 20px;
+    text-align: justify;
+}
+
