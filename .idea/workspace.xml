@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df72f643-8516-4158-ab11-ea47407c3c9f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/urls.py" afterPath="$PROJECT_DIR$/rugbyranker/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,17 +23,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="1384" column="24" lean-forward="false" selection-start-line="1384" selection-start-column="24" selection-end-line="1384" selection-end-column="24" />
+            <state relative-caret-position="551">
+              <caret line="1388" column="25" lean-forward="false" selection-start-line="1388" selection-start-column="25" selection-end-line="1388" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/faq.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/about.html" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
         <option value="$PROJECT_DIR$/rugbyranker/urls.py" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
       </list>
     </option>
   </component>
@@ -1101,18 +1101,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="1384" column="24" lean-forward="false" selection-start-line="1384" selection-start-column="24" selection-end-line="1384" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="1388" column="25" lean-forward="false" selection-start-line="1388" selection-start-column="25" selection-end-line="1388" selection-end-column="25" />
           <folding />
         </state>
       </provider>
