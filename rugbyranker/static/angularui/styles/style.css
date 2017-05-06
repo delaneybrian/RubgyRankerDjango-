@@ -1269,7 +1269,7 @@ latestgamestable{
 .bgimagehome {
     position: absolute;
     height: 100vh;
-    width:100vw;
+    width:100%;
     background-image: url('/static/images/background/background1.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1285,7 +1285,7 @@ latestgamestable{
 .bgimageteam{
     position: absolute;
     height: 100vh;
-    width:100vw;
+    width:100%;
     background-image: url('/static/images/background/teambackground.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1301,7 +1301,7 @@ latestgamestable{
 .bgimagecountry {
     position: absolute;
     height: 100vh;
-    width:100vw;
+    width:100%;
     background-image: url('/static/images/background/countrybackground.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1317,7 +1317,7 @@ latestgamestable{
 .bgimagetournament {
     position: absolute;
     height: 100vh;
-    width:100vw;
+    width:100%;
     background-image: url('/static/images/background/tournamentbackground.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
