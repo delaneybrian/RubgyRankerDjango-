@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/login/040619900863300816', admin.site.urls),
     url(r'^api/', include('elo.urls')),
     url(r'^', include('angularui.urls')),
 ]
