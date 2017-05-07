@@ -91,7 +91,14 @@ li {
     padding: 5%;
 }
 
-
+.smalltournamentlogo2 {
+    height: auto;
+    max-height: 50px;
+    width: 50px;
+    min-width: 50px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
 
 
 .smallteamlogo {

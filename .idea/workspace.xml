@@ -31,8 +31,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="931" column="24" lean-forward="false" selection-start-line="931" selection-start-column="24" selection-end-line="931" selection-end-column="24" />
+            <state relative-caret-position="166">
+              <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -41,28 +41,28 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="106" column="18" lean-forward="true" selection-start-line="94" selection-start-column="12" selection-end-line="106" selection-end-column="18" />
+            <state relative-caret-position="423">
+              <caret line="96" column="120" lean-forward="true" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="120" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tournament.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html">
+      <file leaf-file-name="teamallmatches.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="97" column="18" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="97" selection-end-column="18" />
+            <state relative-caret-position="352">
+              <caret line="58" column="52" lean-forward="false" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="team.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="124" column="70" lean-forward="false" selection-start-line="124" selection-start-column="70" selection-end-line="124" selection-end-column="70" />
+            <state relative-caret-position="254">
+              <caret line="125" column="120" lean-forward="false" selection-start-line="125" selection-start-column="120" selection-end-line="125" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -125,12 +125,12 @@
       <find>.nav</find>
       <find>mobilematch</find>
       <find>mobilematch</find>
-      <find>smallteamlogo</find>
       <find>mobileawayteam</find>
       <find>search</find>
-      <find>smallTeamlogo</find>
       <find>mobilemat</find>
       <find>mobile</find>
+      <find>smallTeamlogo</find>
+      <find>smallteamlogo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,11 +179,11 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teams.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/rankings.html" />
         <option value="$PROJECT_DIR$/elo/templates/angularui/index.html" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html" />
       </list>
     </option>
   </component>
@@ -1043,14 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="69" column="16" lean-forward="true" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/rankings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -1059,34 +1051,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="931" column="24" lean-forward="false" selection-start-line="931" selection-start-column="24" selection-end-line="931" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="106" column="18" lean-forward="true" selection-start-line="94" selection-start-column="12" selection-end-line="106" selection-end-column="18" />
+        <state relative-caret-position="254">
+          <caret line="125" column="120" lean-forward="false" selection-start-line="125" selection-start-column="120" selection-end-line="125" selection-end-column="120" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="97" column="18" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="97" selection-end-column="18" />
+        <state relative-caret-position="256">
+          <caret line="87" column="84" lean-forward="false" selection-start-line="87" selection-start-column="84" selection-end-line="87" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html">
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="124" column="70" lean-forward="false" selection-start-line="124" selection-start-column="70" selection-end-line="124" selection-end-column="70" />
+        <state relative-caret-position="423">
+          <caret line="96" column="120" lean-forward="true" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="58" column="52" lean-forward="false" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
           <folding />
         </state>
       </provider>

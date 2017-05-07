@@ -123,6 +123,7 @@
         <div class="latestgamesMobile">
             <h3>Latest Ranked Matches</h3>
             <div class="mobilematch" ng-repeat="match in teammatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                <div class="matchInfo">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</div>
                 <div class="mobileawayteam">
                     <span class="firstMatch"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></span>
                     <span class="secondMatch">{{ match.hometeam.name }}</span>

@@ -35,6 +35,11 @@
                         <div class="sortbutton">Date<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
                     </button>
                 </th>
+                <th ng-click="sortType = 'tournament.name'; sortReverse = !sortReverse">
+                    <button class="btn">
+                        <div class="sortbutton">Tournament<i class="fa fa-sort aftersort" aria-hidden="true"></i></div>
+                    </button>
+                </th>
                 <th>
                         <div class="sortbutton">Rating Change</div>
                 </th>
@@ -43,14 +48,15 @@
                 </th>
             </tr>
             <tr ng-repeat="match in teamRankedMatches | orderBy:sortType:sortReverse | filter:searchRankedMatches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'" ng-show="match.awayteam_rating_after != 0">
-                <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
+                <td><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo" src="{{ match.hometeam.logo_url }}"></td>
                 <td class="teamname">{{ match.hometeam.name }}</td>
                 <td>{{ match.hometeam_score }}</td>
                 <td>-</td>
                 <td>{{ match.awayteam_score }}</td>
-                <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></td>
+                <td><img class="smallteamlogo"  alt="{{ match.awayteam.name }} logo" src="{{ match.awayteam.logo_url }}"></td>
                 <td class="teamname">{{ match.awayteam.name }}</td>
                 <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
+                <td><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo" src="{{ match.tournament.logo_url }}"></td>
                 <td ng-class="{green: (match.hometeam_rating_after - match.hometeam_rating_before > 0), red: (match.hometeam_rating_after - match.hometeam_rating_before < 0)}"
                     ng-show="teamId == match.hometeam.id">
                     {{ match.hometeam_rating_after - match.hometeam_rating_before }}</td>
