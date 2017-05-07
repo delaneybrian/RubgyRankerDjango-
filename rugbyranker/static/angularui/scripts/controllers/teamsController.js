@@ -21,10 +21,16 @@ sportModule.controller('teamsController', function ($scope, $http, $location, te
     };
 
     $scope.search = function(){
+            if ($scope.keywords.length >= 2){
             teamSearchService.search($scope.keywords).then(function(response){
                 $scope.searchResponse = response.data;
+                $scope.searchReponseLength = response.data.length;
                 console.log($scope.searchResponse);
             });
+            }
+            else{
+                $scope.searchResponse = null;
+            }
         };
 
 

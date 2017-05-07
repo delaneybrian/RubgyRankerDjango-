@@ -2,7 +2,9 @@
 html{
      position: relative;
      min-height: 100%;
-    min-width: 100%;
+     min-width: 100%;
+        max-width: 100vw;
+        max-height: 100vh;
 }
 
 
@@ -210,6 +212,7 @@ footer{
     padding: 5% 5% 2% 5%;
     background-color: rgba(2, 22, 40, 1);
     color: white;
+    width: 100%;
     max-width: 100%;
 }
 
@@ -670,6 +673,15 @@ latestgamestable{
     border: 0px;
 }
 
+.nav{
+
+}
+
+.navbar-header{
+
+
+}
+
 /* Country CSS */
 
 .countryintro {
@@ -860,7 +872,10 @@ latestgamestable{
 /* ranking style */
 
 .rankingsearch{
-    padding-bottom: 5%;
+}
+
+.rankSearch{
+    padding: 5%;
 }
 
 .fa-ellipsis-v{
@@ -1204,6 +1219,10 @@ latestgamestable{
         padding-left: 5px;
     }
 
+    .contacttext{
+        display: none;
+    }
+
 }
 
 /* Styles for ranking change teams */
@@ -1389,3 +1408,8 @@ a:hover{
     text-decoration: none;
 }
 
+@media (max-width: 450px){
+    .tournamentcountries{
+        display: none;
+    }
+}
