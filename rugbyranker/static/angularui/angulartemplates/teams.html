@@ -2,6 +2,10 @@
     <div class="teamsContainer">
         <div class="teamTable">
             <h3>Teams</h3>
+            <div class="input-group margin-bottom-sm rankingsearch">
+                <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span>
+                <input class="form-control" type="text" placeholder="Search Teams" ng-model="keywords" ng-change="search()">
+            </div>
             <table>
                 <tr>
                     <th>Team Name</th>
@@ -13,7 +17,8 @@
                     <td>{{ team.name }}</td>
                     <td><img class="smallteamlogo" src="{{ team.logo_url }}"></td>
                     <td class="teamsmobilehide"><a ng-href="/countries/{{ team.country.id }}"><img class="flag"
-                                                                           src="{{ team.country.flag_url }}"></a></td>
+                                                                                                   src="{{ team.country.flag_url }}"></a>
+                    </td>
                 </tr>
             </table>
         </div>

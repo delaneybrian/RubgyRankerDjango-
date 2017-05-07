@@ -1,4 +1,4 @@
-sportModule.controller('teamsController', function ($scope, $http, $location) {
+sportModule.controller('teamsController', function ($scope, $http, $location, teamSearchService) {
 
     $http.get("/api/teams/")
         .then(function (response) {
@@ -19,5 +19,13 @@ sportModule.controller('teamsController', function ($scope, $http, $location) {
     $scope.clickteam = function(teamid){
         console.log($location.path("teams/"  + teamid))
     };
+
+    $scope.search = function(){
+            teamSearchService.search($scope.keywords).then(function(response){
+                $scope.searchResponse = response.data;
+                console.log($scope.searchResponse);
+            });
+        };
+
 
 });

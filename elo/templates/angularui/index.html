@@ -5,7 +5,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BIG WARNING NEEDS TO BE UPDATED  *&%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
     <base href="/">
     <title>Rugby Ranker</title>
     <meta name="description" content="The Most Advanced Rugby Ranking System For Club Rugby In The World">
@@ -21,8 +20,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
     <!-- Chart JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
-    <!-- Angular Chart -->
-    <script src="{% static 'angularui/scripts/angular-chart.min.js' %}"></script>
     <!-- Custom Angular -->
     <script src="{% static 'angularui/scripts/angularconfig.js' %}"></script>
     <script src="{% static 'angularui/scripts/controllers/homeController.js' %}"></script>
@@ -36,13 +33,15 @@
     <script src="{% static 'angularui/scripts/controllers/countriesController.js' %}"></script>
     <script src="{% static 'angularui/scripts/controllers/otherController.js' %}"></script>
     <script src="{% static 'angularui/scripts/controllers/teamAllMatchesController.js' %}"></script>
+    <!-- Angular Services -->
+    <script src="{% static 'angularui/scripts/services/teamSearchService.js' %}"></script>
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font Awsome Icons -->
     <script src="https://use.fontawesome.com/fb67ec2c8e.js"></script>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
+    <link rel="shortcut icon" href="/static/images/favicon/android.ico" />
 </head>
 {% verbatim %}
 <body ng-app="sportModule" display="column" class="{{ bodyClass }}" ng-cloak class="container">

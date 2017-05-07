@@ -40,13 +40,13 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
                     {
                         data: [response.data.won_home, response.data.lost_home, response.data.drew_home],
                         backgroundColor: [
-                            "#FF6384",
                             "#36A2EB",
+                            "#FF6384",
                             "#FFCE56"
                         ],
                         hoverBackgroundColor: [
-                            "#FF6384",
                             "#36A2EB",
+                            "#FF6384",
                             "#FFCE56"
                         ]
                     }]
@@ -62,13 +62,13 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
                     {
                         data: [response.data.won_away, response.data.lost_away, response.data.drew_away],
                         backgroundColor: [
-                            "#FF6384",
                             "#36A2EB",
+                            "#FF6384",
                             "#FFCE56"
                         ],
                         hoverBackgroundColor: [
-                            "#FF6384",
                             "#36A2EB",
+                            "#FF6384",
                             "#FFCE56"
                         ]
                     }]
@@ -133,7 +133,7 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
                 labels: dates,
                 datasets: [
                     {
-                        label: "Rating",
+                        label: "Ranking",
                         lineTension: 0.1,
                         backgroundColor: "rgba(2, 22, 40, 0.6)",
                         borderColor: "rgba(2, 22, 40, 1)",

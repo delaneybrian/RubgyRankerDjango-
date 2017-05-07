@@ -1,4 +1,4 @@
-var sportModule = angular.module('sportModule', ['ngRoute', 'chart.js']);
+var sportModule = angular.module('sportModule', ['ngRoute']);
 
 sportModule.config(['$routeProvider', '$locationProvider', '$httpProvider',
     function ($routeProvider, $locationProvider, $httpProvider) {

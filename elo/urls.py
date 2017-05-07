@@ -29,6 +29,9 @@ urlpatterns = [
     #LIST OF ALL TEAMS
     url(r'^teams/$', teams.get_team_list),
 
+    #SEARCH TEAM BY NAME
+    url(r'^teams/search$', teams.search_team_by_name),
+
 
 #******************************************TEAM URLS**************************************
     # DETAILS OF A SPECIFIC TEAM
