@@ -1440,3 +1440,9 @@ a:hover{
         display: none;
     }
 }
+
+.teamStadium{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
