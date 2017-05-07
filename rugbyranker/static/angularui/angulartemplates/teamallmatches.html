@@ -42,7 +42,7 @@
                         <div class="sortbutton">Rating</div>
                 </th>
             </tr>
-            <tr ng-repeat="match in teamRankedMatches | orderBy:sortType:sortReverse | filter:searchRankedMatches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+            <tr ng-repeat="match in teamRankedMatches | orderBy:sortType:sortReverse | filter:searchRankedMatches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'" ng-show="match.awayteam_rating_after != 0">
                 <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
                 <td class="teamname">{{ match.hometeam.name }}</td>
                 <td>{{ match.hometeam_score }}</td>

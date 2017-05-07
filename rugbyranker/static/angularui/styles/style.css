@@ -898,23 +898,41 @@ latestgamestable{
 
 .mobilematch {
     padding: 1% 5% 1% 5%;
+    min-height: 130px;
 }
 
+
 .mobilehometeam{
-    min-height: 50px;
-    padding: 2%;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    */
 }
 
 .mobileawayteam{
-    min-height: 50px;
-    padding: 2%;
+    height: 60px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+}
+
+.firstMatch{
+    padding-right: 40px;
+}
+
+.secondMatch{
+    width: 200px;
+    padding-right: 40px;
+}
+
+.thirdMatch{
 }
 
 

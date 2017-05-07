@@ -83,17 +83,17 @@
     </div>
 
     <div class="tourRecentGamesMedium">
-        <h4>Latest Matches:</h4>
+        <h3>Latest Ranked Matches</h3>
             <div class="mobilematch" ng-repeat="match in tournamentmatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
                 <div class="mobileawayteam">
-                    <img class="smallteamlogo" src="{{ match.hometeam.logo_url }}">
-                    <span>{{ match.hometeam.name }}</span>
-                    <span><b>{{ match.hometeam_score }}</b></span>
+                    <span class="firstMatch"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></span>
+                    <span class="secondMatch">{{ match.hometeam.name }}</span>
+                    <span class="thirdMatch"><b>{{ match.hometeam_score }}</b></span>
                 </div>
                 <div class="mobilehometeam">
-                    <img class="smallteamlogo" src="{{ match.awayteam.logo_url }}">
-                    <span>{{ match.awayteam.name }}</span>
-                    <span><b>{{ match.awayteam_score }}</b></span>
+                    <span class="firstMatch"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></span>
+                    <span class="secondMatch">{{ match.awayteam.name }}</span>
+                    <span class="thirdMatch">{{ match.awayteam_score }}</span>
                 </div>
             </div>
     </div>
