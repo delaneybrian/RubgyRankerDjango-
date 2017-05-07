@@ -76,16 +76,18 @@
                     <th>Score</th>
                     <th>Awayteam</th>
                     <th class="matchHide"></th>
+                    <th>Tournament</th>
                     <th>Date</th>
                 </tr>
                 <tr ng-repeat="match in matches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
-                    <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></td>
+                    <td><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo" src="{{ match.hometeam.logo_url }}"></td>
                     <td class="matchHide" class="teamname">{{ match.hometeam.name }}</td>
                     <td>{{ match.hometeam_score }}</td>
                     <td class="matchHide">-</td>
                     <td>{{ match.awayteam_score }}</td>
-                    <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></td>
+                    <td><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo" src="{{ match.awayteam.logo_url }}"></td>
                     <td class="matchHide" class="teamname">{{ match.awayteam.name }}</td>
+                    <td><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo" src="{{ match.tournament.logo_url }}"</td>
                     <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
                 </tr>
             </table>
