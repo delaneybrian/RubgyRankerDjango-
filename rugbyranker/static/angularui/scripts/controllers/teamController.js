@@ -119,14 +119,16 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
             ratings = [];
             rankhistory = JSON.parse(rankhistory);
             rankhistory.forEach(function (arrayItem) {
-                var rating = arrayItem.rating;
-                var date = arrayItem.date;
-                dates.push(date);
-                ratings.push(rating);
+                if (arrayItem.rating > 5){
+                    var rating = arrayItem.rating;
+                    var date = arrayItem.date;
+                    dates.push(date);
+                    ratings.push(rating);
+                }
             });
 
             var options = {
-                fill: true,
+                fill: true
             };
 
             var data = {

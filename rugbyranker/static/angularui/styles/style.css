@@ -447,6 +447,7 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 400px;
 }
 
 
@@ -998,11 +999,16 @@ latestgamestable{
         display: none;
     }
     .featuredteamMobile{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
     }
 
     .featuredteam{
         display: none;
+        max-width: 400px;
     }
 
     .tourrecentgamesrow img{
