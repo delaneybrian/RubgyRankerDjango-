@@ -1,4 +1,7 @@
 /*GENERAL SECTION CSS */
+/*
+*{border: 1px solid red}
+*/
 html{
      position: relative;
      min-height: 100%;
@@ -289,6 +292,7 @@ footer a{
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    max-width: 100%;
 }
 
 .teamStat{
@@ -671,16 +675,9 @@ latestgamestable{
 .navbar {
     margin: 0px;
     border: 0px;
+    width: 100%;
 }
 
-.nav{
-
-}
-
-.navbar-header{
-
-
-}
 
 /* Country CSS */
 
@@ -1358,8 +1355,7 @@ latestgamestable{
 .maxChartSize{
     max-height: 300px;
     max-width: 300px;
-    min-width: 300px;
-    min-height: 300px;
+
 }
 
 .maxHistoryChartSize{
