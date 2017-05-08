@@ -49,18 +49,16 @@
     </div>
 </div>
 <div class="standardcontent">
+
     <div class="centerstadium">
         <h3>Stadium</h3>
         <div ng-repeat="stad in details.stadium">
             <h4>{{ stad.name }}</h4>
-            <img class="teamStadium" src="/static/images/stadiums/{{ stad.image_url }}">
+            <img alt="{{ stad.name }}" class="teamStadium" src="/static/images/stadiums/{{ stad.image_url }}">
             <p>Capacity: {{ stad.capacity }}</p>
-            <p>Location: <img class="flag" src="{{ stad.country.flag_url }}"></p>
+            <p>Location: <a ng-href="/countries/{{ stad.country.id }}" ><img alt="{{ stad.country.name }} flag" class="flag" src="{{ stad.country.flag_url }}"></a></p>
         </div>
     </div>
-
-
-
 
     <div class="teamcontent">
         <h3>{{ details.name }} Statistics</h3>
