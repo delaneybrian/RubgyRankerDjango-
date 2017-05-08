@@ -7,6 +7,9 @@ sportModule.controller('countryController', function ($scope, $http, $routeParam
             $scope.country = response.data;
             console.log("Http Sucess");
             console.log(response.data);
+        }, function errorCallback(response) {
+            console.log(response);
+            $location.url('/error');
         });
 
     $http.get("/api/country/" + countryId + "/teams/")

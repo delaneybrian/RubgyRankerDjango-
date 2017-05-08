@@ -4,18 +4,24 @@ from elo.models import Team, Match, Tournament, Country, Rivals
 from elo.serializers import  TeamShortSerializer, TournamentShortSerializer, CountrySerializer, RivalsSerializer
 from django.db.models import F
 from django.db.models import Q
+from rest_framework import status
+import elo
+
 
 #GET Country
 @api_view(['GET'])
 def get_country_basic(request, pk, format=None):
-        try:
-            country = Country.objects.get(pk=pk)
-            serializer = CountrySerializer(country)
-            return Response(serializer.data)
-        except:
-            print("Error: Getting List of Countries")
-            dict = {}
-            return Response(dict)
+    try:
+        country = Country.objects.get(pk=pk)
+        serializer = CountrySerializer(country)
+        return Response(serializer.data)
+    except Country.DoesNotExist:
+        content = "Country Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
+    except:
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 #GET LIST OF TEAMS BY COUNTRY
 @api_view(['GET'])
@@ -24,10 +30,12 @@ def get_team_list_by_country(request, pk, format=None):
         teams = Team.objects.filter(country=pk).order_by("-name")
         serializer = TeamShortSerializer(teams, many=True)
         return Response(serializer.data)
+    except Team.DoesNotExist:
+        content = "Team Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
     except:
-        print("Error: Error getting teams for country")
-        dict = {}
-        return Response(dict)
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 #GET LIST OF COMPENTITIONS THAT A COUNTRY IS PART OF
@@ -37,10 +45,12 @@ def get_tournament_list_by_country(request, pk, format=None):
         tournaments = Tournament.objects.filter(countries=pk)
         serializer = TournamentShortSerializer(tournaments, many=True)
         return Response(serializer.data)
+    except Tournament.DoesNotExist:
+        content = "Tournament Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
     except:
-        print("Error: Error getting tournaments for country")
-        dict = {}
-        return Response(dict)
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 #GET COUNTRY Stat Information
@@ -72,7 +82,9 @@ def get_country_information(request, pk, format=None):
 
         dict = {"country_home_win_precentage" : country_home_win_precentage, "country_away_win_precentage": country_away_win_precentage, }
         return Response(dict)
+    except Match.DoesNotExist:
+        content = "Match Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
     except:
-        dict = {}
-        print("Error: Error Calculating Country Information")
-        return Response(dict)
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

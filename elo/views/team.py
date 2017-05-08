@@ -12,21 +12,29 @@ import datetime
 def get_team_detail(request, pk, format=None):
     try:
         team = Team.objects.get(pk=pk)
-    except Team.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    if request.method == 'GET':
         serializer = TeamSerializer(team)
         return Response(serializer.data)
+    except Team.DoesNotExist:
+        content = "Team Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
+    except:
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 #GET LIST OF LATEST GAMES FOR A SPECIFIC TEAM
 @api_view(['GET'])
 def get_latest_matches(request, pk, format=None):
-    matches = Match.objects.filter(Q(awayteam=pk) | Q(hometeam=pk)).order_by('-match_date')[:10]
-    serializer = MatchSerializer(matches, many=True)
-    return Response(serializer.data)
-
+    try:
+        matches = Match.objects.filter(Q(awayteam=pk) | Q(hometeam=pk)).order_by('-match_date')[:10]
+        serializer = MatchSerializer(matches, many=True)
+        return Response(serializer.data)
+    except Match.DoesNotExist:
+        content = "Matches Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
+    except:
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 #GET SOME INTERESTING DATA ON A SPECIFIC TEAM
 @api_view(['GET'])
@@ -49,10 +57,12 @@ def get_team_information(request, pk, format=None):
         dict = {"home_matches" : home_matches, "won_home" : won_home, "drew_home" : drew_home, "lost_home" : lost_home, "home_win_precentage" : home_win_precentage,
                 "away_matches" : away_matches, "won_away" : won_away, "drew_away": drew_away, "lost_away": lost_away, "away_win_precentage": away_win_precentage}
         return Response(dict)
+    except Match.DoesNotExist:
+        content = "Matches Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
     except:
-        dict = {}
-        print("ERROR")
-        return Response(dict)
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 #GET RIVALS TABLE FOR SPECIFIC TEAM
@@ -62,10 +72,12 @@ def get_team_rivals(request, pk, format=None):
         teams_rivals = Rivals.objects.filter(team_a=pk).order_by('team_b__name')
         serializer = RivalsSerializer(teams_rivals, many=True)
         return Response(serializer.data)
+    except Rivals.DoesNotExist:
+        content = "Rivals Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
     except:
-        dict = {}
-        print("ERROR")
-        return Response(dict)
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 #GET ALL RANKED MATCHES FOR A TEAM
@@ -75,16 +87,18 @@ def get_all_matches(request, pk, format=None):
         matches = Match.objects.filter(Q(awayteam=pk) | Q(hometeam=pk)).order_by('-match_date')
         serializer = MatchLargeSerializer(matches, many=True)
         return Response(serializer.data)
+    except Match.DoesNotExist:
+        content = "Matches Not Found"
+        return Response(content, status=status.HTTP_404_NOT_FOUND)
     except:
-        dict = {}
-        print("ERROR")
-        return Response(dict)
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 #GET RANKING HISTORY FOR A TEAM
 @api_view(['GET'])
 def get_team_ranking_history(request, pk, format=None):
-
+    try:
         array_of_tuples = []
         homematches = Match.objects.filter(hometeam=pk)
         for match in homematches:
@@ -112,10 +126,9 @@ def get_team_ranking_history(request, pk, format=None):
 
         dict = json.dumps(list_of_dicts)
         return Response(dict)
-    #except:
-      #  dict = {}
-      #  print("Error")
-      #  return Response(dict)
+    except:
+        content = "Server Error"
+        return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 def datetime_handler(x):
     if isinstance(x, datetime.datetime):

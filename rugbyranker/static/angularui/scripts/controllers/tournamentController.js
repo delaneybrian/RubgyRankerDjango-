@@ -7,6 +7,9 @@ sportModule.controller('tournamentController', function ($scope, $http, $routePa
             $scope.tournamentdata = response.data;
             console.log("Http Sucess");
             console.log(response.data);
+        }, function errorCallback(response) {
+            console.log(response);
+            $location.url('/error');
         });
 
     console.log("/api/tournaments/" + tournamentId + "/teams/");

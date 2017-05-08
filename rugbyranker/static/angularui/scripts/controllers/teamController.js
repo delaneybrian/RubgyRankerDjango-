@@ -14,6 +14,9 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
 
             console.log("Http Sucess");
             console.log(response.data);
+        }, function errorCallback(response) {
+            console.log(response);
+            $location.url('/error');
         });
 
     $http.get("/api/teams/" + teamId + '/matches/')
