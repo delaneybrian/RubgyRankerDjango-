@@ -1186,6 +1186,7 @@ latestgamestable{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        min-height: 105px;
     }
     .rivalInfo{
         padding-left: 10px;
@@ -1445,4 +1446,21 @@ a:hover{
     width: 100%;
     max-width: 600px;
     height: auto;
+}
+
+.mobileRivalName{
+    width: 100%;
+}
+
+.mobileRivalImage{
+    padding-left: 40px;
+}
+
+.mobileRivalTeamName{
+    padding-left: 30px;
+}
+
+.rivalsDivider{
+    margin-top: 2px;
+    margin-bottom: 2px;
 }

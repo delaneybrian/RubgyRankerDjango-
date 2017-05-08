@@ -185,7 +185,15 @@
             <h3>Rivals</h3>
             <div ng-repeat="rival in rivals" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'" class="mobileRival"
                  ng-click="clickteam(rival.team_b.id)">
-                <p><img class="smallteamlogo" src="{{ rival.team_b.logo_url }}">{{ rival.team_b.name }}</p>
+                <div class="mobileRivalName">
+                    <span class="mobileRivalImage">
+                        <img class="smallteamlogo" src="{{ rival.team_b.logo_url }}">
+                    </span>
+                    <span class="mobileRivalTeamName">
+                        {{ rival.team_b.name }}
+                    </span>
+                </div>
+                <hr class="rivalsDivider">
                 <div>
                     <p>
                         <span class="rivalInfo"><b>Wins: </b>{{ rival.wins }}</span>
