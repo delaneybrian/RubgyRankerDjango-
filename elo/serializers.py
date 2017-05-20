@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from elo.models import Team, Tournament, Match, Country, Stadium, NewsletterEmails, FAQ, Rivals
+from elo.models import Team, Tournament, Match, Country, Stadium, NewsletterEmails, FAQ, Rivals, Article
 
 class CountrySerializer(serializers.ModelSerializer):
     class Meta:
@@ -117,3 +117,15 @@ class RivalsSerializer(serializers.ModelSerializer):
         model = Rivals
         fields  = ('wins', 'losses', 'draws', 'team_a', 'team_b')
 
+
+class FullArticleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Article
+        fields = ('mainheading', 'mainimage', 'subimage', 'subheading', 'htmlcontent', 'author', 'footer', 'date')
+
+class SmallArticleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Article
+        fields = ('mainheading', 'mainimage', 'summary', 'subheading', 'author', 'date')

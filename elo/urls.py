@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
-from elo.views import tournaments, home, teams, team, other, tournament, country, rankings, countries
+from elo.views import tournaments, home, teams, team, other, tournament, country, rankings, countries, article, articles
 
 urlpatterns = [
 #******************************************HOME URLS**************************************
@@ -86,6 +86,14 @@ urlpatterns = [
 
     #GET LIST OF ALL TEAMS FILTERED BY TOURNAMENT -- NOT IMPLEMENTED
     url(r'^tournaments/(?P<pk>[0-9]+)/teams/$', tournament.get_team_list_by_tournament),
+
+#********************************************ARTICLES*********************************************
+    # GET ARTICLE
+    url(r'^articles/(?P<pk>[0-9]+)/$', article.get_article),
+
+    # GET MOST RECENT GAMES FOR A TOURNAMENT
+    url(r'^articles/$', articles.get_articles),
+
 
 #******************************************OTHER URLS**************************************
     #ADD EMAIL TO NEWSLETTER Q

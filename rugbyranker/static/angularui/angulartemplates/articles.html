@@ -1,0 +1,13 @@
+<div class="standardcontent">
+
+    <div class="allArticles">
+        <div ng-repeat="article in articles.results">
+            <h3>{{ article.mainheading }}</h3>
+            <img src="{{ article.mainimage }}">
+            <h4>{{ article.subheading }}</h4>
+            <p>{{ article.summary }}</p>
+            <small>{{ article.author }} - {{ article.date }}</small>
+        </div>
+    </div>
+
+</div>

@@ -40,6 +40,12 @@ sportModule.config(['$routeProvider', '$locationProvider', '$httpProvider',
         }).when('/teams/:teamId/matches', {
             templateUrl: '/static/angularui/angulartemplates/teamallmatches.html',
             controller: 'teamAllMatchesController'
+        }).when('/articles/', {
+            templateUrl: '/static/angularui/angulartemplates/articles.html',
+            controller: 'articlesController'
+        }).when('/articles/:articleId/', {
+            templateUrl: '/static/angularui/angulartemplates/article.html',
+            controller: 'articleController'
         }).otherwise({
             templateUrl: '/static/angularui/angulartemplates/error.html'
     });

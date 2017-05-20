@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
             'debug': DEBUG,
         },
@@ -135,6 +136,18 @@ ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+
+"""
+MEDIA FILES
+"""
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
+
+MEDIAFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, "media"),
+]
+
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [

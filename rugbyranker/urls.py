@@ -15,9 +15,19 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/login/040619900863300816', admin.site.urls),
     url(r'^api/', include('elo.urls')),
     url(r'^', include('angularui.urls')),
 ]
+
+if settings.DEBUG:
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+    from django.conf.urls.static import static
+
+    urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

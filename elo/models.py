@@ -113,3 +113,17 @@ class FAQ(models.Model):
 
     def __str__(self):
         return str(self.question)
+
+class Article(models.Model):
+    mainheading = models.CharField(max_length=1000)
+    mainimage = models.FileField(null=True, blank=True)
+    subimage = models.FileField(null=True, blank=True)
+    subheading = models.CharField(max_length=1000, null=True, blank=True)
+    htmlcontent = models.TextField()
+    author = models.CharField(max_length=100)
+    footer = models.TextField(null=True, blank=True)
+    date = models.DateTimeField(default=timezone.now)
+    summary = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.mainheading)
