@@ -9,7 +9,7 @@ from rest_framework import status
 @api_view(['GET'])
 def get_articles(request, format=None):
     paginator = PageNumberPagination()
-    paginator.page_size = 10
+    paginator.page_size = 2
     articles = Article.objects.all().order_by('date')
     result_page = paginator.paginate_queryset(articles, request)
     serializer = SmallArticleSerializer(result_page, many=True)

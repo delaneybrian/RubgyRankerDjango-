@@ -1,10 +1,21 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from elo.models import Team, Match, Tournament
-from elo.serializers import MatchSerializer, TeamSerializer, TeamRankingSerializer
+from elo.models import Team, Match, Tournament, Article
+from elo.serializers import MatchSerializer, TeamSerializer, TeamRankingSerializer, SmallArticleSerializer
 import random
 from django.db.models import Max, Min
+from rest_framework import status
 
+
+@api_view(['GET'])
+def get_articles(request, format=None):
+        #try:
+            article = Article.objects.filter().order_by('date')[:3]
+            serializer = SmallArticleSerializer(article, many=True)
+            return Response(serializer.data)
+        #except:
+        #    content = "Server Error"
+         #   return Response(content, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(['GET'])
 def get_rankings_list(request, format=None):

@@ -1,0 +1,26 @@
+<div class="standardcontent">
+
+    <div class="mainArticle">
+        <div class="articleContainer">
+            <h2 class="articleHeading">{{ article.mainheading }}</h2>
+            <div>
+                <div class="articleImage">
+                    <img src="{{ article.mainimage }}">
+                </div>
+                <div>
+                    <h3>{{ article.subheading }}</h3>
+                </div>
+                <hr class="articleHr">
+                <div class="articleContent">
+                    {{ article.htmlcontent }}
+                </div>
+                <hr class="articleHr">
+                <div class="articleFooter">
+                    <p>{{ article.author }} - {{ article.date | date : "d-MMMM-yyyy" }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -2,12 +2,29 @@
 
     <div class="allArticles">
         <div ng-repeat="article in articles.results">
-            <h3>{{ article.mainheading }}</h3>
-            <img src="{{ article.mainimage }}">
-            <h4>{{ article.subheading }}</h4>
-            <p>{{ article.summary }}</p>
-            <small>{{ article.author }} - {{ article.date }}</small>
+            <div class="articleSmall" ng-click="clickarticle(article.id)">
+                <div class="articlesMainHeader">
+                    <a href="/articles/{{ article.id }}"><h3>{{ article.mainheading }}</h3></a>
+                </div>
+                <div class="articleContentAreaSmall">
+                    <img class="articleImageSmall" src="{{ article.mainimage }}">
+                    <div class="articleContentSmall">
+                        <p>{{ article.summary }}</p>
+                        <p><a href="/articles/{{ article.id }}">Read More</a></p>
+                        <small>{{ article.author }} - {{ article.date | date : "d-MMMM-yyyy" }}</small>
+                    </div>
+                </div>
+            </div>
+            <hr class="articlesHr">
         </div>
+    </div>
+
+    <div class="teamPagination">
+        <span class="btn btn-default btn-sm pagbutton" ng-show="articles.previous"
+              ng-click="newpage(articles.previous)"><i
+                class="fa fa-chevron-left"></i> Previous</span>
+        <span class="btn btn-default btn-sm pagbutton" ng-show="articles.next" ng-click="newpage(articles.next)">Next <i
+                class="fa fa-chevron-right"></i></span>
     </div>
 
 </div>

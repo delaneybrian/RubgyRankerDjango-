@@ -45,26 +45,41 @@
 
 <div class="standardcontent">
     <div class="featuredteamMobile">
-            <h3>Featured Team</h3>
-            <div class="featuredteamhover" ng-click="clickfeatured(featured.id)">
-                <h4 class="featuredteamname"><b>{{ featured.name }} - {{ featured.thisweek_rating }}</b></h4>
-                <img class="xtramedteamlogo" src="{{ featured.logo_url }}"
-                     alt="{{ featured.name }} logo">
-                <div class="rankingpositioncontainer">
-                    <div class="homerankingposition">
-                        <span class="currentposition">{{ featured.thisweek_position }}</span>
-                        <span ng-show="featured.thisweek_position == featured.lastweek_position"><i
-                                class="fa fa-minus fa-5x icon-height" aria-hidden="true"></i></span>
-                        <span ng-show="featured.thisweek_position > featured.lastweek_position"><i
-                                class="fa fa-arrow-down fa-5x icon-height" aria-hidden="true"></i></span>
-                        <span ng-show="featured.thisweek_position < featured.lastweek_position"><i
-                                class="fa fa-arrow-up fa-5x icon-height" aria-hidden="true"></i></span>
+        <h3>Featured Team</h3>
+        <div class="featuredteamhover" ng-click="clickfeatured(featured.id)">
+            <h4 class="featuredteamname"><b>{{ featured.name }} - {{ featured.thisweek_rating }}</b></h4>
+            <img class="xtramedteamlogo" src="{{ featured.logo_url }}"
+                 alt="{{ featured.name }} logo">
+            <div class="rankingpositioncontainer">
+                <div class="homerankingposition">
+                    <span class="currentposition">{{ featured.thisweek_position }}</span>
+                    <span ng-show="featured.thisweek_position == featured.lastweek_position"><i
+                            class="fa fa-minus fa-5x icon-height" aria-hidden="true"></i></span>
+                    <span ng-show="featured.thisweek_position > featured.lastweek_position"><i
+                            class="fa fa-arrow-down fa-5x icon-height" aria-hidden="true"></i></span>
+                    <span ng-show="featured.thisweek_position < featured.lastweek_position"><i
+                            class="fa fa-arrow-up fa-5x icon-height" aria-hidden="true"></i></span>
+                </div>
+            </div>
+            <div><p>({{ featured.lastweek_position }})</p></div>
+        </div>
+    </div>
+    <div class="homecontent">
+        <div class="homeArticles">
+            <h3>Latest News</h3>
+            <div class="homeCara">
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                            <img class="bigImage" ng-src="{{ slide.image }}" style="margin:auto;">
+                            <div class="carousel-caption">
+                                <a ng-href="/articles/{{ slide.articleId }}" ><h2>{{ slide.text }}</h2></a>
+                                <p>{{ slide.date | date : "d-MMMM-yyyy" }}</p>
+                            </div>
                     </div>
                 </div>
-                <div><p>({{ featured.lastweek_position }})</p></div>
             </div>
         </div>
-    <div class="homecontent">
+
         <div class="homelatestmatches">
             <h3>Latest Ranked Matches</h3>
             <table>
@@ -80,14 +95,17 @@
                     <th>Date</th>
                 </tr>
                 <tr ng-repeat="match in matches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
-                    <td><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo" src="{{ match.hometeam.logo_url }}"></td>
+                    <td><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
+                             src="{{ match.hometeam.logo_url }}"></td>
                     <td class="matchHide" class="teamname">{{ match.hometeam.name }}</td>
                     <td>{{ match.hometeam_score }}</td>
                     <td class="matchHide">-</td>
                     <td>{{ match.awayteam_score }}</td>
-                    <td><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo" src="{{ match.awayteam.logo_url }}"></td>
+                    <td><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
+                             src="{{ match.awayteam.logo_url }}"></td>
                     <td class="matchHide" class="teamname">{{ match.awayteam.name }}</td>
-                    <td><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo" src="{{ match.tournament.logo_url }}"</td>
+                    <td><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo"
+                             src="{{ match.tournament.logo_url }}"</td>
                     <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
                 </tr>
             </table>

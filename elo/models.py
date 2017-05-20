@@ -116,8 +116,8 @@ class FAQ(models.Model):
 
 class Article(models.Model):
     mainheading = models.CharField(max_length=1000)
-    mainimage = models.FileField(null=True, blank=True)
-    subimage = models.FileField(null=True, blank=True)
+    mainimage = models.CharField(null=True, blank=True, max_length=1000)
+    subimage = models.CharField(null=True, blank=True, max_length=1000)
     subheading = models.CharField(max_length=1000, null=True, blank=True)
     htmlcontent = models.TextField()
     author = models.CharField(max_length=100)

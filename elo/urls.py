@@ -16,6 +16,9 @@ urlpatterns = [
     #GET FEATURED TEAM
     url(r'^home/featured/$', home.get_featured_team),
 
+    #GET LATEST 3 ARTICLES
+    url(r'^home/articles/$', home.get_articles),
+
 
 #*****************************************RANKING URLS************************************
     #GET ALL RANKED TEAMS

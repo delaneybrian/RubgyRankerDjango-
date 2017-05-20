@@ -122,10 +122,10 @@ class FullArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ('mainheading', 'mainimage', 'subimage', 'subheading', 'htmlcontent', 'author', 'footer', 'date')
+        fields = ('id', 'mainheading', 'mainimage', 'subimage', 'subheading', 'htmlcontent', 'author', 'footer', 'date')
 
 class SmallArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ('mainheading', 'mainimage', 'summary', 'subheading', 'author', 'date')
+        fields = ('id', 'mainheading', 'mainimage', 'summary', 'subheading', 'author', 'date')

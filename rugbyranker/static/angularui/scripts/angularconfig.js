@@ -1,4 +1,4 @@
-var sportModule = angular.module('sportModule', ['ngRoute']);
+var sportModule = angular.module('sportModule', ['ngRoute', 'ui.bootstrap']);
 
 sportModule.config(['$routeProvider', '$locationProvider', '$httpProvider',
     function ($routeProvider, $locationProvider, $httpProvider) {
