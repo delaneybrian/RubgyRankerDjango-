@@ -66,17 +66,18 @@
     </div>
     <div class="homecontent">
         <div class="homeArticles">
-            <h3>Latest News</h3>
-            <div class="homeCara">
-                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                            <img class="bigImage" ng-src="{{ slide.image }}" style="margin:auto;">
-                            <div class="carousel-caption">
-                                <a ng-href="/articles/{{ slide.articleId }}" ><h2>{{ slide.text }}</h2></a>
-                                <p>{{ slide.date | date : "d-MMMM-yyyy" }}</p>
-                            </div>
+            <b><h3>Latest News</h3></b>
+            <hr class="articlesHr">
+            <div ng-repeat="article in articles">
+                <a href="/articles/{{ article.id }}">
+                    <div>
+                        <h3>{{ article.mainheading }}</h3>
+                        <img src="{{ article.mainimage }}">
+                        <p>{{ article.summary }}</p>
+                        <small>{{ article.author }} - {{ article.date | date : "d-MMMM-yyyy" }}</small>
                     </div>
-                </div>
+                </a>
+                <hr class="articlesHr">
             </div>
         </div>
 

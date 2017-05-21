@@ -3,34 +3,9 @@ sportModule.controller('homeController', function ($scope, $http, $location) {
     $http.get("api/home/articles/")
         .then(function (response) {
             $scope.articles = response.data;
-            var articles = response.data;
-            var i = 0;
-            articles.forEach(function(element) {
-                addSlide(i, element);
-                i++;
-            });
             console.log("Http Sucess");
             console.log(response.data);
         });
-
-    $scope.myInterval = 5000;
-    $scope.noWrapSlides = false;
-    $scope.active = 0;
-    var slides = $scope.slides = [];
-    var currIndex = 0;
-
-    addSlide = function (i, element) {
-        console.log(element.mainheading);
-        slides.push({
-            image: element.mainimage,
-            articleId: element.id,
-            text: element.mainheading,
-            date: element.date,
-            id: i
-        });
-    };
-
-
 
 
 

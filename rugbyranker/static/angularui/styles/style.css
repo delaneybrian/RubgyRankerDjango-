@@ -1568,25 +1568,14 @@ a:hover{
 
 
 /********************************* CARASOUL ****************************/
-#slides_control > div{
-  height: 200px;
-}
-img{
-  margin:auto;
-  width: 400px;
-}
-#slides_control {
-  position:absolute;
-  width: 400px;
-  left:50%;
-  top:20px;
- margin-left:-200px;
-}
+
 
 /*********************8 carasoul *******************/
 
 .bigImage{
     width: 800px;
+    max-width: 800px;
     -webkit-filter: grayscale(35%); /* Safari 6.0 - 9.0 */
     filter: grayscale(35%);
 }
+
