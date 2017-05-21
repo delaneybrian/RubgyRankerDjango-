@@ -1471,7 +1471,7 @@ a:hover{
 /* STYLES FOR ARTICLES PAGE */
 
 .articleSmall{
-    margin: 5%;
+    margin: 5% 5% 1% 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1492,6 +1492,7 @@ a:hover{
 .articleImageSmall{
     max-width: 50%;
     max-height: 250px;
+    margin-top: 0px;
 }
 
 .articleContentSmall{
@@ -1514,6 +1515,25 @@ a:hover{
     margin-bottom: 2px;
 
 }
+
+@media (max-width: 700px){
+    .articleContentAreaSmall{
+        flex-direction: column;
+    }
+    .articleImageSmall{
+        max-width: 100%;
+        width: 100%;
+    }
+    .articleContentSmall{
+        max-width: 100%;
+        width: 100%;
+}
+    .articleContentSmall{
+        padding: 0%;
+        padding-top: 6px;
+    }
+}
+
 /* STYLES FOR ARTICLE PAGE */
 
 .articleImage{
