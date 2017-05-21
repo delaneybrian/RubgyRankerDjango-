@@ -1516,12 +1516,19 @@ a:hover{
 }
 /* STYLES FOR ARTICLE PAGE */
 
+.articleImage{
+    width: 100%;
+}
+
 .mainArticle{
-    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.articleContainer{
+    max-width: 800px;
 }
 
 .articleHr{
