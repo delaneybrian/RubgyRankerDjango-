@@ -69,14 +69,13 @@
             <b><h3>Latest News</h3></b>
             <hr class="articlesHr">
             <div ng-repeat="article in articles">
-                <a href="/articles/{{ article.id }}">
-                    <div>
+                    <div class="articleHomeContent">
                         <h3>{{ article.mainheading }}</h3>
                         <img src="{{ article.mainimage }}">
                         <p>{{ article.summary }}</p>
+                        <a href="/articles/{{ article.id }}"><p>Read More...</p></a>
                         <small>{{ article.author }} - {{ article.date | date : "d-MMMM-yyyy" }}</small>
                     </div>
-                </a>
                 <hr class="articlesHr">
             </div>
         </div>

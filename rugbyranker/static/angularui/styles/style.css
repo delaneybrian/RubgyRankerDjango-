@@ -1579,3 +1579,7 @@ a:hover{
     filter: grayscale(35%);
 }
 
+.articleHomeContent{
+    padding-top: 6px;
+}
+
