@@ -1283,6 +1283,8 @@ latestgamestable{
     border-radius: 3%;
     background-color: #A5B7CA;
     max-height: 290px;
+    width: 270px;
+    max-width:  270px;
 }
 
 .green{
