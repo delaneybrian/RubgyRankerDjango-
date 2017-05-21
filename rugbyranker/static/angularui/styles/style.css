@@ -1471,7 +1471,7 @@ a:hover{
 /* STYLES FOR ARTICLES PAGE */
 
 .articleSmall{
-    margin: 5% 5% 1% 5%;
+    margin: 2% 5% 1% 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1535,6 +1535,14 @@ a:hover{
 }
 
 /* STYLES FOR ARTICLE PAGE */
+
+
+.articlesPagination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 .articleImage{
     width: 100%;

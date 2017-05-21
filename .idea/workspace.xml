@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df72f643-8516-4158-ab11-ea47407c3c9f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elo/views/articles.py" afterPath="$PROJECT_DIR$/elo/views/articles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/articles.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/articles.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +28,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="1532" column="22" lean-forward="false" selection-start-line="1532" selection-start-column="22" selection-end-line="1532" selection-end-column="22" />
+            <state relative-caret-position="185">
+              <caret line="1473" column="13" lean-forward="false" selection-start-line="1473" selection-start-column="13" selection-end-line="1473" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articles.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elo/views/articles.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -53,6 +65,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="articles.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/articles.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -66,7 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>navbar</find>
       <find>5%</find>
       <find>.nav</find>
       <find>mobilematch</find>
@@ -92,10 +113,11 @@
       <find>articlesMainHeader</find>
       <find>homeArticles</find>
       <find>articleContentAreaSmall</find>
-      <find>articleSmall</find>
       <find>ng-href</find>
       <find>mainArticle</find>
       <find>articleImage</find>
+      <find>teamPagination</find>
+      <find>articleSmall</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,7 +160,6 @@
         <option value="$PROJECT_DIR$/elo/urls.py" />
         <option value="$PROJECT_DIR$/elo/views/home.py" />
         <option value="$PROJECT_DIR$/elo/models.py" />
-        <option value="$PROJECT_DIR$/elo/views/articles.py" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/articlesController.js" />
         <option value="$PROJECT_DIR$/elo/serializers.py" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/directives/carousel.html" />
@@ -151,9 +172,10 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/homeController.js" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/articleController.js" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/articles.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/angularconfig.js" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/article.html" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/articles.html" />
+        <option value="$PROJECT_DIR$/elo/views/articles.py" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
       </list>
     </option>
@@ -1036,14 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elo/views/articles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elo/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -1112,14 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/articlesController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -1132,6 +1138,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="74" lean-forward="false" selection-start-line="0" selection-start-column="74" selection-end-line="0" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1152,10 +1166,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/elo/views/articles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="1532" column="22" lean-forward="false" selection-start-line="1532" selection-start-column="22" selection-end-line="1532" selection-end-column="22" />
+        <state relative-caret-position="185">
+          <caret line="1473" column="13" lean-forward="false" selection-start-line="1473" selection-start-column="13" selection-end-line="1473" selection-end-column="13" />
           <folding />
         </state>
       </provider>

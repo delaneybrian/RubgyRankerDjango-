@@ -10,7 +10,7 @@
                     <img class="articleImageSmall" src="{{ article.mainimage }}">
                     <div class="articleContentSmall">
                         <p>{{ article.summary }}</p>
-                        <p><a href="/articles/{{ article.id }}">Read More</a></p>
+                        <h4><a href="/articles/{{ article.id }}">Read More</a></h4>
                         <small>{{ article.author }} - {{ article.date | date : "d-MMMM-yyyy" }}</small>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div class="teamPagination">
+    <div class="articlesPagination">
         <span class="btn btn-default btn-sm pagbutton" ng-show="articles.previous"
               ng-click="newpage(articles.previous)"><i
                 class="fa fa-chevron-left"></i> Previous</span>
