@@ -1913,9 +1913,37 @@ a:hover{
 
 }
 
+.tableContent{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
 .mobileComparisonRow{
     margin-bottom: 10px;
 }
+
+
+.mobileComparisonDataRank{
+    text-align: left;
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    max-width: 100%;
+}
+
+.mobileComparisonRowRank{
+    margin-bottom: 10px;
+}
+
+.mobileComparisonRowRank:hover td{
+    background-color: #7189A5;
+}
+
+
+
+
 
 .comparisonMobileTable{
     border-collapse: separate;

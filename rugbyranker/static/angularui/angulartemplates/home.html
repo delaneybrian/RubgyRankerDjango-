@@ -130,6 +130,7 @@
 
         <div class="rankingsnip">
             <h3>Top 15 Teams</h3>
+            <!--
             <table>
                 <tr>
                     <th>Position</th>
@@ -160,10 +161,42 @@
 
                 </tr>
             </table>
+            -->
+            <table class="comparisonMobileTable">
+                <tr>
+                    <th>Position</th>
+                    <th>Team</th>
+                    <th></th>
+                    <th>Rating</th>
+                    <th>Country</th>
+                    <th>Movement</th>
+                </tr>
+                <tr ng-repeat="rank in rankings" class="mobileComparisonRowRank"
+                    ng-click="clickrank(rank.id)">
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ rank.thisweek_position }}</div></td>
+                    <td class="mobileComparisonDataRank">{{ rank.name }}</td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent"><img class="smallteamlogo" src="{{ rank.logo_url }}"></div></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ rank.thisweek_rating }}</div></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent"><a ng-href="/countries/{{ rank.country.id }}"><img class="flag"
+                                                                                                                                      src="{{ rank.country.flag_url }}"></a></div>
+                    </td>
+                    <td class="mobileComparisonDataRank" ng-show="rank.thisweek_position == rank.lastweek_position"><div class="tableContent"><i class="fa fa-minus fa-2x"
+                                                                                      aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></div></td>
+                    <td class="mobileComparisonDataRank" ng-show="rank.thisweek_position > rank.lastweek_position"><div class="tableContent"><i class="fa fa-arrow-down fa-2x"
+                                                                                     aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></div></td>
+                    <td class="mobileComparisonDataRank" ng-show="rank.thisweek_position < rank.lastweek_position"><div class="tableContent"><i class="fa fa-arrow-up fa-2x"
+                                                                                     aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></div></td>
+
+                </tr>
+            </table>
         </div>
 
         <div class="rankingsnipmobile">
             <h3>Top 15 Teams</h3>
+            <!--
             <table>
                 <thead>
                 <tr>
@@ -186,6 +219,32 @@
                     <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x"
                                                                                      aria-hidden="true"></i>
                         <p>({{ rank.lastweek_position }})</p></td>
+                </tr>
+                </tbody>
+            </table>
+            -->
+             <table class="comparisonMobileTable">
+                <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>Ranking</th>
+                    <th>Change</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="rank in rankings" class="mobileComparisonRowRank"
+                    ng-click="clickrank(rank.id)">
+                    <td class="mobileComparisonDataRank"><div class="tableContent"><b>{{ rank.thisweek_position }}</b></div></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent"><img class="smallteamlogo" src="{{ rank.logo_url }}"></div></td>
+                    <td class="mobileComparisonDataRank" ng-show="rank.thisweek_position == rank.lastweek_position"><div class="tableContent"><i class="fa fa-minus fa-2x"
+                                                                                      aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></div></td>
+                    <td class="mobileComparisonDataRank" ng-show="rank.thisweek_position > rank.lastweek_position"><div class="tableContent"><i class="fa fa-arrow-down fa-2x"
+                                                                                     aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></div></td>
+                    <td class="mobileComparisonDataRank" ng-show="rank.thisweek_position < rank.lastweek_position"><div class="tableContent"><i class="fa fa-arrow-up fa-2x"
+                                                                                     aria-hidden="true"></i>
+                        <p>({{ rank.lastweek_position }})</p></div></td>
                 </tr>
                 </tbody>
             </table>
