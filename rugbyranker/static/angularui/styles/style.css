@@ -1923,6 +1923,9 @@ a:hover{
     margin-bottom: 10px;
 }
 
+.warningSign{
+    padding-rignt: 10px;
+}
 
 .mobileComparisonDataRank{
     text-align: left;

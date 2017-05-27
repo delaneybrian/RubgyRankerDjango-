@@ -50,21 +50,21 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
 
             var homeData = {
                 labels: [
-                    "Wins",
-                    "Losses",
-                    "Draws"
+                    "Wins: " + response.data.won_home,
+                    "Losses: " + response.data.lost_home,
+                    "Draws: " + response.data.drew_home
                 ],
                 datasets: [
                     {
                         data: [response.data.won_home, response.data.lost_home, response.data.drew_home],
                         backgroundColor: [
-                            "#36A2EB",
-                            "#FF6384",
+                            "rgba(2, 22, 40, 1)",
+                            "#A5B7CA",
                             "#FFCE56"
                         ],
                         hoverBackgroundColor: [
-                            "#36A2EB",
-                            "#FF6384",
+                            "rgba(2, 22, 40, 1)",
+                            "#A5B7CA",
                             "#FFCE56"
                         ]
                     }]
@@ -72,34 +72,37 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
 
             var awayData = {
                 labels: [
-                    "Wins",
-                    "Losses",
-                    "Draws"
+                    "Wins: " + response.data.won_away,
+                    "Losses: " + response.data.lost_away,
+                    "Draws: " + response.data.drew_away
                 ],
                 datasets: [
                     {
                         data: [response.data.won_away, response.data.lost_away, response.data.drew_away],
                         backgroundColor: [
-                            "#36A2EB",
-                            "#FF6384",
+                            "rgba(2, 22, 40, 1)",
+                            "#A5B7CA",
                             "#FFCE56"
                         ],
                         hoverBackgroundColor: [
-                            "#36A2EB",
-                            "#FF6384",
+                            "rgba(2, 22, 40, 1)",
+                            "#A5B7CA",
                             "#FFCE56"
                         ]
                     }]
             };
 
+            var options = { tooltips: {enabled: false }};
             var homeCtxChart = new Chart(homeCtx, {
                 type: 'doughnut',
-                data: homeData
+                data: homeData,
+                options: options
             });
 
             var awayCtxChart = new Chart(awayCtx, {
                 type: 'doughnut',
-                data: awayData
+                data: awayData,
+                options: options
             });
             console.log("Http Sucess");
             console.log(response.data);

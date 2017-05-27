@@ -16,17 +16,20 @@ sportModule.controller('comparisonController', function ($scope, $http, $locatio
 
     $scope.addTeam = function (team) {
         $scope.errorMessage = null;
+        $scope.showSearchWarning = false;
 
         var included = $scope.selectedTeams.indexOf(team);
 
         if ($scope.selectedTeams.length >= 2) {
-            $scope.errorMessage = "Cannot Compare More Than Two Teams"
+            $scope.errorMessage = "Cannot Compare More Than Two Teams";
+            $scope.showSearchWarning = true;
         }
         else if (included != -1) {
             $scope.errorMessage = "Cannot Compare A Team Against Itself"
         }
         else {
             $scope.keywordsA = "";
+            $scope.searchResponseA = null;
             $scope.selectedTeams.push(team);
         }
     };
@@ -39,6 +42,8 @@ sportModule.controller('comparisonController', function ($scope, $http, $locatio
 
     $scope.compareTeams = function () {
         $scope.errorMessage = null;
+        $scope.showSearchWarning = false;
+
 
         if ($scope.selectedTeams.length == 2) {
             teamA = $scope.selectedTeams[0];
@@ -48,6 +53,7 @@ sportModule.controller('comparisonController', function ($scope, $http, $locatio
         }
         else {
             $scope.errorMessage = "Need At Least Two Teams To Compare"
+            $scope.showSearchWarning = true;
         }
     }
 
@@ -436,10 +442,12 @@ sportModule.controller('comparisonSelectionController', function ($scope, $route
                     }]
             };
 
+            var options = { tooltips: {enabled: false }};
             var teamAWinsCtx = document.getElementById("teamAWinsTable");
             var teamAWinsTable = new Chart(teamAWinsCtx, {
                 type: 'pie',
-                data: teamAWinData
+                data: teamAWinData,
+                options: options
             });
         });
 
@@ -483,11 +491,12 @@ sportModule.controller('comparisonSelectionController', function ($scope, $route
                         ]
                     }]
             };
-
+            var options = { tooltips: {enabled: false }};
             var teamBWinsCtx = document.getElementById("teamBWinsTable");
             var teamBWinsTable = new Chart(teamBWinsCtx, {
                 type: 'pie',
-                data: teamBWinData
+                data: teamBWinData,
+                options: options
             });
         });
 

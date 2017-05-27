@@ -1,6 +1,9 @@
 <div class="standardcontent">
     <h3>Select Teams To Compare</h3>
-
+    <hr class="articleHr">
+    <div>
+        <h4 ng-show="showSearchWarning"><i class="fa fa-exclamation-triangle warningSign" aria-hidden="true"></i><span>{{ errorMessage }}</span></h4>
+    </div>
     <div>
         <br>
         <div class="input-group margin-bottom-sm rankingsearch">
@@ -17,9 +20,6 @@
                 </tr>
             </table>
         </div>
-    </div>
-    <div>
-        <h4>{{ errorMessage }}</h4>
     </div>
     <div>
         <h3>Current Selection</h3>
