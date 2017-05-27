@@ -1,0 +1,39 @@
+<div class="standardcontent">
+    <h3>Select Teams To Compare</h3>
+
+    <div>
+        <br>
+        <div class="input-group margin-bottom-sm rankingsearch">
+            <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span>
+            <input class="form-control" type="text" placeholder="Search Teams" ng-model="keywordsA"
+                   ng-change="searchA()">
+        </div>
+        <div ng-if="searchReponseLengthA > 0">
+            <table class="teamComparisonSearchResults">
+                <tr ng-repeat="team in searchResponseA" ng-class-odd="'oddNoHover'" ng-class-even="'evenNoHover'">
+                    <td>{{ team.name }}</td>
+                    <td><img class="smallteamlogo" src="{{ team.logo_url }}"></td>
+                    <td ng-click="addTeam(team)"><i class="fa fa-plus-square fa-2x hoverChange" aria-hidden="true"></i></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div>
+        <h4>{{ errorMessage }}</h4>
+    </div>
+    <div>
+        <h3>Current Selection</h3>
+        <table class="teamComparisonSearchResults">
+            <tr ng-repeat="team in selectedTeams" ng-class-odd="'oddNoHover'" ng-class-even="'evenNoHover'">
+                <td>{{ team.name }}</td>
+                <td><img class="smallteamlogo" src="{{ team.logo_url }}"></td>
+                <td ng-click="removeTeam(team)"><i class="fa fa-minus-square fa-2x hoverChange" aria-hidden="true"></i></td>
+            </tr>
+        </table>
+        <br>
+        <div class="centerSearch">
+            <input class="btn btn-default" type="submit" value="CompareTeams" ng-click="compareTeams()">
+        </div>
+    </div>
+
+</div>

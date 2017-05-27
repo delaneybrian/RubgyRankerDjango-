@@ -69,6 +69,11 @@ sportModule.controller('navController', function ($scope, $http, $location) {
             icon: "fa-users"
         },
         {
+            name: "Comparison",
+            link: "/comparison",
+            icon: "fa-pie-chart"
+        },
+        {
             name: "Countries",
             link: "/countries",
             icon: "fa-flag"

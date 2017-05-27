@@ -450,6 +450,13 @@ img {
     max-width: 400px;
 }
 
+.teamBChartColour{
+    color: #A5B7CA;
+}
+
+.teamAChartColour{
+    color: rgba(2, 22, 40, 1);;
+}
 
 
 .featuredteamhover:hover{
@@ -467,6 +474,10 @@ img {
 
 .currentranking{
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .historicline{
@@ -1117,10 +1128,6 @@ latestgamestable{
         display: none;
     }
 
-    .hidemidLogo{
-        display: block;
-    }
-
     .homestats{
         max-width: 80%;
     }
@@ -1397,6 +1404,14 @@ latestgamestable{
     max-width: 700px;
 }
 
+.chartSizeMax350{
+    max-width: 350px;
+}
+
+.chartSizeMax450{
+    max-width: 450px;
+}
+
 @media (max-width: 1100px) {
     .teamStats{
         flex-direction: column;
@@ -1585,3 +1600,321 @@ a:hover{
     padding-top: 6px;
 }
 
+.wonMatchRecord{
+    color: #00b300;
+}
+
+.lostMatchRecord{
+    color: #ff0000;
+}
+
+.drewMatchRecord{
+    color: #e68a00;
+}
+
+
+.teamComparisonSearchResults{
+    width: 100%;
+}
+
+.centerSearch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparisonTeams{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.versus{
+    font-size: 500%;
+}
+
+.comparisonTeam{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.comparisonWins{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparisonWinsTeam{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.comparisonHr{
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+.comparisonStreak{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparisonStreakTeam{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 100%;
+}
+
+.chartLabels{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.labelName{
+    padding-left: 6px;
+    padding-right: 10px;
+}
+
+.labelDash{
+    padding-left: 6px;
+}
+
+
+
+.scoringRateComparison{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pictureSizer{
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.imgLogoMax{
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.centerTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.recentFormContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerHistory{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hideWhenLarge{
+    display: none;
+}
+
+@media (max-width: 1075px){
+    .hideWhenLarge{
+        display: block;
+    }
+    .showWhenLarge{
+        display: none;
+    }
+
+    .comparisonStreak{
+        flex-direction: column;
+    }
+    .scoringRateComparison{
+        flex-direction: column;
+    }
+    .comparisonWins{
+        flex-direction: column;
+    }
+}
+
+
+.recentFormHeadToHeadMobile{
+        display: none;
+    }
+
+.recentFormGeneralMobile{
+    display: none;
+}
+
+@media (max-width: 600px){
+    .recentFormHeadToHeadMobile{
+        display: block;
+    }
+    .recentFormHeadToHead{
+        display: none;
+    }
+    .recentFormGeneralMobile{
+        display: block;
+    }
+    .recentFormGeneral{
+        display: none;
+    }
+}
+
+
+.smallComparisonArrow{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .comparisonTeams{
+        flex-direction: column;
+    }
+    .imgLogoMax{
+        display: none;
+    }
+    .currentposition {
+        font-size: 250%;
+    }
+    .versus {
+        font-size: 250%;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .hidemidLogo{
+        display: block;
+    }
+    .smallComparisonArrow{
+        display: block;
+    }
+    .largeComparisonArrow{
+        display: none;
+    }
+    .hideflag{
+        display: none;
+    }
+}
+
+.numberAndArrowContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.scoringRateComparisonTeam{
+    max-width: 100%;
+}
+
+
+.recentFormHeadToHeadMobileSmall {
+    display: none;
+}
+
+.recentFormGeneralMobileSmall{
+    display: none;
+}
+
+@media (max-width: 340px) {
+    .recentFormHeadToHeadMobile{
+        display: none;
+    }
+    .recentFormHeadToHeadMobileSmall{
+        display: block;
+    }
+    .recentFormGeneralMobile{
+        display: none;
+    }
+    .recentFormGeneralMobileSmall{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexSquares{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+.comparisonStreakMobile{
+    display: none;
+}
+
+.scoringRateComparisonMobile{
+    display: none;
+}
+
+@media (max-width: 430px) {
+    .comparisonStreakMobile{
+        display: block;
+    }
+    .scoringRateComparisonMobile{
+        display: block;
+    }
+    .comparisonStreak{
+        display: none;
+    }
+    .scoringRateComparison{
+        display: none;
+    }
+}
+
+
+.mobileComparisonData{
+    text-align: left;
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.mobileComparisonRow{
+    margin-bottom: 10px;
+}
+
+.comparisonMobileTable{
+    border-collapse: separate;
+    border-spacing: .5em .5em;
+}
+
+.smallSpacing{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.oddNoHover{
+    background-color: #7189A5;
+}
+
+.evenNoHover{
+    background-color: #A5B7CA;
+}
+
+.hoverChange:hover{
+    color: black;
+}

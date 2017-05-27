@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
-from elo.views import tournaments, home, teams, team, other, tournament, country, rankings, countries, article, articles
+from elo.views import tournaments, home, teams, team, other, \
+    tournament, country, rankings, countries, article, articles, teamcomparison
 
 urlpatterns = [
 #******************************************HOME URLS**************************************
@@ -104,6 +105,11 @@ urlpatterns = [
 
     #GET FAQS
     url(r'^faq/$', other.get_faq),
+
+#******************************************TEAM COMPARISON URLS *****************************
+    #Get Average Socirng for teams
+    url(r'^comparison/$', teamcomparison.getMainDetails)
+
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

@@ -12,6 +12,21 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
             $scope.streakSeries = [];
             $scope.streakData = [[response.data.max_streak], [response.data.current_streak]];
 
+            //For Current Position Arrows
+            var thisweek = response.data.thisweek_position;
+            var lastweek = response.data.lastweek_position;
+
+            if (thisweek == lastweek){
+                $scope.changesame = true;
+            }
+            else if (thisweek < lastweek){
+                $scope.changeup = true;
+            }
+            else{
+                $scope.changedown = true;
+            }
+
+
             console.log("Http Sucess");
             console.log(response.data);
         }, function errorCallback(response) {
@@ -158,7 +173,7 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
                         data: ratings,
                         spanGaps: false,
                         fill: true,
-                        cubicInterpolationMode: 'default',
+                        cubicInterpolationMode: 'default'
                     }
                 ]
             };

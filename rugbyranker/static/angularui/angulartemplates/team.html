@@ -17,15 +17,9 @@
             <div class="currentranking">
                 <div>
                     <span class="currentposition">{{ details.thisweek_position }}</span>
-                    <i ng-show="featured.thisweek_position == featured.lastweek_position"
-                       class="fa fa-minus fa-5x teamchangepos"
-                       aria-hidden="true"></i>
-                    <i ng-show="featured.thisweek_position > featured.lastweek_position"
-                       class="fa fa-arrow-down fa-5x teamchangepos"
-                       aria-hidden="true"></i>
-                    <i ng-show="featured.thisweek_position < featured.lastweek_position"
-                       class="fa fa-arrow-up fa-5x teamchangepos"
-                       aria-hidden="true"></i>
+                    <i ng-show="changesame" class="fa fa-minus fa-5x teamchangepos" aria-hidden="true"></i>
+                    <i ng-show="changedown" class="fa fa-arrow-down fa-5x teamchangepos" aria-hidden="true"></i>
+                    <i ng-show="changeup" class="fa fa-arrow-up fa-5x teamchangepos" aria-hidden="true"></i>
 
                 </div>
                 <h4>{{ details.thisweek_rating }}</h4>

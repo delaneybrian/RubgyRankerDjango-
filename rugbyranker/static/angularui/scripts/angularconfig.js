@@ -43,6 +43,12 @@ sportModule.config(['$routeProvider', '$locationProvider', '$httpProvider',
         }).when('/articles/', {
             templateUrl: '/static/angularui/angulartemplates/articles.html',
             controller: 'articlesController'
+        }).when('/comparison/', {
+            templateUrl: '/static/angularui/angulartemplates/comparisonselector.html',
+            controller: 'comparisonController'
+        }).when('/comparison/teamA/:teamAId/teamB/:teamBId', {
+            templateUrl: '/static/angularui/angulartemplates/comparisonpage.html',
+            controller: 'comparisonSelectionController'
         }).when('/articles/:articleId/', {
             templateUrl: '/static/angularui/angulartemplates/article.html',
             controller: 'articleController'

@@ -1,0 +1,443 @@
+<div class="standardcontent">
+
+    <div class="comparisonTeams">
+        <div class="comparisonTeam">
+            <div class="team_details">
+                <h2>{{ teamDetails.teamAData.name }} <a
+                        ng-href="/countries/{{ teamDetails.teamAData.country.id }}/"><img
+                        class="flag hideflag"
+                        src="{{ teamDetails.teamAData.country.flag_url }}"
+                        alt="{{ teamDetails.teamAData.country.name }} Flag"></a>
+                </h2>
+                <a target="_blank" ng-href="{{ teamDetails.teamAData.website }}">
+                    <div class="imgLogoMax"><img class="hideLargeLogo largeteamlogo"
+                                                 src="{{ teamDetails.teamAData.logo_url }}"></div>
+                    <img class="hidemidLogo midteamlogo" src="{{ teamDetails.teamAData.logo_url }}">
+                </a>
+            </div>
+            <div class="currentranking">
+                <div class="numberAndArrowContainer">
+                    <span class="currentposition">{{ teamDetails.teamAData.thisweek_position }}</span>
+                    <span class="largeComparisonArrow"><i ng-show="changesameA" class="fa fa-minus fa-5x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="largeComparisonArrow"><i ng-show="changedownA"
+                                                          class="fa fa-arrow-down fa-5x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="largeComparisonArrow"><i ng-show="changeupA" class="fa fa-arrow-up fa-5x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="smallComparisonArrow"><i ng-show="changesameA" class="fa fa-minus fa-3x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="smallComparisonArrow"><i ng-show="changedownA"
+                                                          class="fa fa-arrow-down fa-3x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="smallComparisonArrow"><i ng-show="changeupA" class="fa fa-arrow-up fa-3x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                </div>
+                <h4>{{ teamDetails.teamAData.thisweek_rating }}</h4>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="versus">VS</h1>
+        </div>
+
+        <div class="comparisonTeam">
+            <div class="team_details">
+                <h2>{{ teamDetails.teamBData.name }} <a
+                        ng-href="/countries/{{ teamDetails.teamBData.country.id }}/"><img
+                        class="flag hideflag"
+                        src="{{ teamDetails.teamBData.country.flag_url }}"
+                        alt="{{ teamDetails.teamBData.country.name }} Flag"></a>
+                </h2>
+                <a target="_blank" ng-href="{{ teamDetails.teamBData.website }}">
+                    <div class="imgLogoMax"><img class="hideLargeLogo largeteamlogo"
+                                                 src="{{ teamDetails.teamBData.logo_url }}"></div>
+                    <img class="hidemidLogo midteamlogo" src="{{ teamDetails.teamBData.logo_url }}">
+                </a>
+            </div>
+            <div class="currentranking">
+                <div class="numberAndArrowContainer">
+                    <span class="currentposition">{{ teamDetails.teamBData.thisweek_position }}</span>
+                    <span class="largeComparisonArrow"><i ng-show="changesameA" class="fa fa-minus fa-5x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="largeComparisonArrow"><i ng-show="changedownA"
+                                                          class="fa fa-arrow-down fa-5x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="largeComparisonArrow"><i ng-show="changeupA" class="fa fa-arrow-up fa-5x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="smallComparisonArrow"><i ng-show="changesameA" class="fa fa-minus fa-3x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="smallComparisonArrow"><i ng-show="changedownA"
+                                                          class="fa fa-arrow-down fa-3x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                    <span class="smallComparisonArrow"><i ng-show="changeupA" class="fa fa-arrow-up fa-3x teamchangepos"
+                                                          aria-hidden="true"></i></span>
+                </div>
+                <h4>{{ teamDetails.teamBData.thisweek_rating }}</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="centerTitle">
+        <h3>Win Rates</h3>
+    </div>
+    <hr class="articlesHr">
+    <div class="comparisonWins">
+        <div class="comparisonWinsTeam">
+            <h3>{{ teamAName }}</h3>
+            <hr class="articlesHr">
+            <div>
+                <p>Overall Win Precentage: {{ teamAWinPrecentage | number : 2 }}%</p>
+                <p>Home Win Precentage: {{ teamAHomeWinPrecentage | number : 2 }}%</p>
+                <p>Away Win Precentage: {{ teamAAwayWinPrecentage | number : 2 }}%</p>
+            </div>
+            <div>
+                <canvas class="chartSizeMax350" id="teamAWinsTable"></canvas>
+            </div>
+        </div>
+        <div class="comparisonWinsTeam">
+            <h3>{{ teamBName }}</h3>
+            <hr class="articlesHr">
+            <div>
+                <p>Overall Win Precentage: {{ teamBWinPrecentage | number : 2 }}%</p>
+                <p>Home Win Precentage: {{ teamBHomeWinPrecentage | number : 2 }}%</p>
+                <p>Away Win Precentage: {{ teamBAwayWinPrecentage | number : 2 }}%</p>
+            </div>
+            <div>
+                <canvas class="chartSizeMax350" id="teamBWinsTable"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="centerTitle">
+            <h3>Scoring Rate</h3>
+        </div>
+        <hr class="articlesHr">
+        <div class="scoringRateComparison">
+            <div class="scoringRateComparisonTeam">
+                <h4>Overall Scoring Rate</h4>
+                <div>
+                    <div class="chartLabels">
+                        <i class="fa fa-square fa-2x teamAChartColour" aria-hidden="true"></i> <span
+                            class="labelDash">-</span>
+                        <span class="labelName">{{ teamAName }}</span>
+                        <i class="fa fa-square fa-2x teamBChartColour" aria-hidden="true"></i> <span
+                            class="labelDash">-</span>
+                        <span class="labelName">{{ teamBName }}</span>
+                    </div>
+                    <div>
+                        <canvas class="chartSizeMax450" id="myScoringRateChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scoringRateComparisonTeam">
+                <h4>Head To Head Scoring Rate</h4>
+                <div>
+                    <div class="chartLabels">
+                        <i class="fa fa-square fa-2x teamAChartColour" aria-hidden="true"></i> <span
+                            class="labelDash">-</span>
+                        <span class="labelName">{{ teamAName }}</span>
+                        <i class="fa fa-square fa-2x teamBChartColour" aria-hidden="true"></i> <span
+                            class="labelDash">-</span>
+                        <span class="labelName">{{ teamBName }}</span>
+                    </div>
+                    <div>
+                        <canvas class="chartSizeMax450" id="myHtoHScoringRateChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scoringRateComparisonMobile">
+            <div class="scoringRateComparisonTeam">
+                <h4>Overall Scoring Rate</h4>
+                <div>
+                    <table class="comparisonMobileTable">
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamAName }} Average Score:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.allGamesAverage.teamAAllAverageScore }}</td>
+                        </tr>
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamBName }} Average Score:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.allGamesAverage.teamBAllAverageScore }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div ng-show="displayVsScoringRates" class="scoringRateComparisonTeam">
+                <h4>Head To Head Scoring Rate</h4>
+                <div>
+                    <table class="comparisonMobileTable">
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamAName }} Average Score:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.vsScoresDict.teamAAvreageScore }}</td>
+                        </tr>
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamBName }} Average Score:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.vsScoresDict.teamBAvreageScore }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recentFormSection">
+        <div class="centerTitle">
+            <h3>Recent Form</h3>
+        </div>
+        <hr class="articlesHr">
+        <div class="recentFormContainer">
+            <div ng-hide="DoNotDisplayForm" class="recentFormHeadToHead">
+                <h4>{{ teamAName }} vs {{ teamBName }}</h4>
+                <span ng-repeat="record in teamDetails.headToHeadForm track by $index">
+                <span ng-show="record == 'W'"><i class="fa fa-square fa-3x wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'L'"><i class="fa fa-square fa-3x lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'D'"><i class="fa fa-square fa-3x drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+            </div>
+            <div ng-hide="DoNotDisplayForm" class="recentFormHeadToHeadMobile">
+                <h4>{{ teamAName }} vs {{ teamBName }}</h4>
+                <span ng-repeat="record in teamDetails.headToHeadForm track by $index">
+                <span ng-show="record == 'W'"><i class="fa fa-square fa-2x wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'L'"><i class="fa fa-square fa-2x lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'D'"><i class="fa fa-square fa-2x drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+            </div>
+            <div ng-hide="DoNotDisplayForm" class="recentFormHeadToHeadMobileSmall">
+                <h4>{{ teamAName }} vs {{ teamBName }}</h4>
+                <div class="flexSquares">
+                <span ng-repeat="record in teamDetails.headToHeadForm track by $index">
+                <span class="smallSpacing" ng-show="record == 'W'"><i class="fa fa-square fa wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span class="smallSpacing" ng-show="record == 'L'"><i class="fa fa-square fa lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span class="smallSpacing" ng-show="record == 'D'"><i class="fa fa-square fa drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+                </div>
+            </div>
+            <div class="recentFormGeneral">
+                <h4>{{ teamAName }} vs All Teams</h4>
+                <span ng-repeat="record in teamDetails.recentMatchRecord.teamARecentAny track by $index">
+                <span ng-show="record == 'W'"><i class="fa fa-square fa-3x wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'L'"><i class="fa fa-square fa-3x lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'D'"><i class="fa fa-square fa-3x drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+                <h4>{{ teamBName }} vs All Teams</h4>
+                <span ng-repeat="record in teamDetails.recentMatchRecord.teamBRecentAny track by $index">
+                <span ng-show="record == 'W'"><i class="fa fa-square fa-3x wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'L'"><i class="fa fa-square fa-3x lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'D'"><i class="fa fa-square fa-3x drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+            </div>
+            <div class="recentFormGeneralMobile">
+                <h4>{{ teamAName }} vs All Teams</h4>
+                <span ng-repeat="record in teamDetails.recentMatchRecord.teamARecentAny track by $index">
+                <span ng-show="record == 'W'"><i class="fa fa-square fa-2x wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'L'"><i class="fa fa-square fa-2x lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'D'"><i class="fa fa-square fa-2x drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+                <h4>{{ teamBName }} vs All Teams</h4>
+                <span ng-repeat="record in teamDetails.recentMatchRecord.teamBRecentAny track by $index">
+                <span ng-show="record == 'W'"><i class="fa fa-square fa-2x wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'L'"><i class="fa fa-square fa-2x lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span ng-show="record == 'D'"><i class="fa fa-square fa-2x drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+            </div>
+            <div class="recentFormGeneralMobileSmall">
+                <h4>{{ teamAName }} vs All Teams</h4>
+                <div class="flexSquares">
+                <span ng-repeat="record in teamDetails.recentMatchRecord.teamARecentAny track by $index">
+                <span class="smallSpacing" ng-show="record == 'W'"><i class="fa fa-square fa wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span class="smallSpacing" ng-show="record == 'L'"><i class="fa fa-square fa lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span class="smallSpacing" ng-show="record == 'D'"><i class="fa fa-square fa drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+                </div>
+                <h4>{{ teamBName }} vs All Teams</h4>
+                <div class="flexSquares">
+                <span  ng-repeat="record in teamDetails.recentMatchRecord.teamBRecentAny track by $index">
+                <span class="smallSpacing" ng-show="record == 'W'"><i class="fa fa-square fa wonMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span class="smallSpacing" ng-show="record == 'L'"><i class="fa fa-square fa lostMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                <span class="smallSpacing" ng-show="record == 'D'"><i class="fa fa-square fa drewMatchRecord"
+                                                 aria-hidden="true"></i></span>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="comparisonStreakSection">
+        <div class="centerTitle">
+            <h3>Streak</h3>
+        </div>
+        <hr class="articlesHr">
+        <div class="comparisonStreak">
+            <div class="comparisonStreakTeam">
+                <h4>Head To Head</h4>
+                <div>
+                    <div class="chartLabels">
+                        <i class="fa fa-square fa-2x teamAChartColour" aria-hidden="true"></i> <span
+                            class="labelDash">-</span> <span class="labelName">{{ teamAName }}</span>
+                        <i class="fa fa-square fa-2x teamBChartColour" aria-hidden="true"></i> <span
+                            class="labelDash">-</span> <span class="labelName">{{ teamBName }}</span>
+                    </div>
+                    <div>
+                        <canvas class="chartSizeMax350" id="headToHeadStreakChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="comparisonStreakTeam">
+                <h4>Vs All Teams</h4>
+                <div>
+                    <div class="chartLabels">
+                        <i class="fa fa-square fa-2x teamAChartColour" aria-hidden="true"></i> <span
+                            class="labelDash">-</span> <span class="labelName">{{ teamAName }}</span>
+                        <i class="fa fa-square fa-2x teamBChartColour" aria-hidden="true"></i> <span
+                            class="labelDash">-</span> <span class="labelName">{{ teamBName }}</span>
+                    </div>
+                    <div>
+                        <canvas class="chartSizeMax350" id="generalStreakChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comparisonStreakMobile">
+            <div ng-show="displayVsScoringRates" class="comparisonStreakTeam">
+                <h4>Head To Head</h4>
+                <div>
+                    <table class="comparisonMobileTable">
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamAName }} Current Streak Vs {{ teamBName }}:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.streakAndWins.teamACurrentStreak }}</td>
+                        </tr>
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamAName }} Max Streak Vs {{ teamBName }}:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.streakAndWins.teamAMaxStreak }}</td>
+                        </tr>
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamBName }} Max Streak Vs {{ teamAName }}:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.streakAndWins.teamBMaxStreak }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="comparisonStreakTeam">
+                <h4>Vs All Teams</h4>
+                <div>
+                    <table class="comparisonMobileTable">
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamAName }} Current Streak:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.teamAData.current_streak }}</td>
+                        </tr>
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamAName }} Max Streak:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.teamAData.max_streak }}</td>
+                        </tr>
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamBName }} Current Streak:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.teamBData.current_streak }}</td>
+                        </tr>
+                        <tr class="mobileComparisonRow">
+                            <td class="mobileComparisonData">{{ teamBName }} Max Streak:</td>
+                            <td class="mobileComparisonData">{{ teamDetails.teamBData.max_streak }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="historicComparison">
+        <div class="historicComparisonSection">
+            <div class="centerTitle">
+                <h3>Historic</h3>
+            </div>
+            <hr class="articlesHr">
+            <div>
+                <h4>{{ teamDetails.teamAData.name }} Historic Max Position: {{ teamDetails.teamAData.max_position }}
+                    ({{ teamDetails.teamAData.max_rating }})
+                    on {{ teamDetails.teamAData.max_date |  date : "d-MMMM-yyyy" }}</h4>
+                <h4>{{ teamDetails.teamBData.name }} Historic Max Position: {{ teamDetails.teamBData.max_position }}
+                    ({{ teamDetails.teamBData.max_rating }})
+                    on {{ teamDetails.teamBData.max_date |  date : "d-MMMM-yyyy" }}</h4>
+            </div>
+            <div class="centerHistory">
+                <canvas class="maxHistoryChartSize" id="myLineChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div ng-hide="DoNotDisplayMatches" class="allGamesComparison">
+        <div class="centerTitle">
+            <h3>All {{ teamAName }} vs {{ teamBName }} Matches</h3>
+        </div>
+        <hr class="articlesHr">
+        <table class="showWhenLarge">
+            <tr>
+                <th>Hometeam</th>
+                <th></th>
+                <th>Score</th>
+                <th></th>
+                <th>Score</th>
+                <th>Awayteam</th>
+                <th></th>
+                <th>Tournament</th>
+                <th>Date</th>
+            </tr>
+            <tr ng-repeat="match in teamDetails.recentMatches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
+                <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}" alt="{{ match.hometeam.name }} logo">
+                </td>
+                <td class="teamname">{{ match.hometeam.name }}</td>
+                <td>{{ match.hometeam_score }}</td>
+                <td>-</td>
+                <td>{{ match.awayteam_score }}</td>
+                <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}" alt="{{ match.awayteam.name }} logo">
+                </td>
+                <td class="teamname">{{ match.awayteam.name }}</td>
+                <td><img class="smallteamlogo" src="{{ match.tournament.logo_url }}"
+                         alt="{{ match.tournament.name }} logo"></td>
+                <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
+            </tr>
+        </table>
+        <div class="mobilematch hideWhenLarge" ng-repeat="match in teamDetails.recentMatches" ng-class-odd="'oddmatch'"
+             ng-class-even="'evenmatch'">
+            <div class="matchInfo">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</div>
+            <div class="mobileawayteam">
+                <span class="firstMatch"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></span>
+                <span class="secondMatch">{{ match.hometeam.name }}</span>
+                <span class="thirdMatch"><b>{{ match.hometeam_score }}</b></span>
+            </div>
+            <div class="mobilehometeam">
+                <span class="firstMatch"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></span>
+                <span class="secondMatch">{{ match.awayteam.name }}</span>
+                <span class="thirdMatch">{{ match.awayteam_score }}</span>
+            </div>
+        </div>
+    </div>
+</div>
