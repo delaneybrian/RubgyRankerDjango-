@@ -6,8 +6,9 @@ html{
      position: relative;
      min-height: 100%;
      min-width: 100%;
-        max-width: 100vw;
-        max-height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    max-width: 100%;
 }
 
 
@@ -644,6 +645,9 @@ latestgamestable{
     padding-left: 10px;
 }
 
+.nav{
+    max-width: 100%;
+}
 
 /* navbar */
 #custom-bootstrap-menu.navbar-default .navbar-brand {
@@ -985,6 +989,8 @@ latestgamestable{
 
     .footermain{
         flex-direction: column;
+        width: 100%;
+        max-width: 100%;
     }
 
     .newsletter{
@@ -1704,6 +1710,8 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+        max-width: 100%;
+
 }
 
 .pictureSizer{
@@ -1727,6 +1735,8 @@ a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+        max-width: 100%;
+
 }
 
 .centerHistory{
@@ -1762,10 +1772,14 @@ a:hover{
 
 .recentFormHeadToHeadMobile{
         display: none;
+        max-width: 100%;
+
     }
 
 .recentFormGeneralMobile{
     display: none;
+        max-width: 100%;
+
 }
 
 @media (max-width: 600px){
@@ -1829,10 +1843,14 @@ a:hover{
 
 .recentFormHeadToHeadMobileSmall {
     display: none;
+        max-width: 100%;
+
 }
 
 .recentFormGeneralMobileSmall{
     display: none;
+        max-width: 100%;
+
 }
 
 @media (max-width: 340px) {
@@ -1891,6 +1909,8 @@ a:hover{
     color: white;
     padding-top: .5em;
     padding-bottom: .5em;
+    max-width: 100%;
+
 }
 
 .mobileComparisonRow{
@@ -1900,6 +1920,7 @@ a:hover{
 .comparisonMobileTable{
     border-collapse: separate;
     border-spacing: .5em .5em;
+    max-width: 100%;
 }
 
 .smallSpacing{
