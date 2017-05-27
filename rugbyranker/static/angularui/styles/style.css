@@ -1936,6 +1936,7 @@ a:hover{
     max-width: 100%;
 }
 
+
 .mobileComparisonRowRank{
     margin-bottom: 10px;
 }
@@ -1944,7 +1945,13 @@ a:hover{
     background-color: #7189A5;
 }
 
+.mobileComparisonRowNoHover{
+    margin-bottom: 10px;
+}
 
+.paddingMatch{
+    padding-left: 20px;
+}
 
 
 

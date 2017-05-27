@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df72f643-8516-4158-ab11-ea47407c3c9f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonselector.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonselector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/teamController.js" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/teamController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comparisonController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="498" column="32" lean-forward="false" selection-start-line="498" selection-start-column="32" selection-end-line="498" selection-end-column="32" />
+            <state relative-caret-position="389">
+              <caret line="112" column="3" lean-forward="false" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -59,8 +57,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="1925" column="12" lean-forward="false" selection-start-line="1925" selection-start-column="1" selection-end-line="1925" selection-end-column="12" />
+            <state relative-caret-position="373">
+              <caret line="1952" column="17" lean-forward="false" selection-start-line="1952" selection-start-column="17" selection-end-line="1952" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -79,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>flag</find>
       <find>scoring</find>
       <find>comparisonStreakTeam</find>
       <find>comparisonStreakSection</find>
@@ -98,7 +95,6 @@
       <find>nav</find>
       <find>comparisonWinsTeam</find>
       <find>mobilecompar</find>
-      <find>mobileComparisonData</find>
       <find>hover</find>
       <find>mobileComparisonRowRank</find>
       <find>tableContent</find>
@@ -107,8 +103,10 @@
       <find>fa-exclamation-triangle</find>
       <find>displayVsScoringRates</find>
       <find>options</find>
-      <find>dou</find>
       <find>pie</find>
+      <find>mobileComparisonData</find>
+      <find>dou</find>
+      <find>smallteam</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,11 +161,11 @@
         <option value="$PROJECT_DIR$/elo/templates/angularui/index.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/rankings.html" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonselector.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/teamController.js" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
       </list>
     </option>
   </component>
@@ -723,7 +721,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26160815" sideWeight="0.80872846" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27633068" sideWeight="0.80872846" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1082,26 +1080,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="225" column="49" lean-forward="false" selection-start-line="225" selection-start-column="49" selection-end-line="225" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="1925" column="12" lean-forward="false" selection-start-line="1925" selection-start-column="1" selection-end-line="1925" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonselector.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="144" lean-forward="false" selection-start-line="4" selection-start-column="144" selection-end-line="4" selection-end-column="144" />
+        <state relative-caret-position="317">
+          <caret line="498" column="32" lean-forward="false" selection-start-line="498" selection-start-column="32" selection-end-line="498" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1114,10 +1096,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js">
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="498" column="32" lean-forward="false" selection-start-line="498" selection-start-column="32" selection-end-line="498" selection-end-column="32" />
+        <state relative-caret-position="373">
+          <caret line="1952" column="17" lean-forward="false" selection-start-line="1952" selection-start-column="17" selection-end-line="1952" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonselector.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="144" lean-forward="false" selection-start-line="4" selection-start-column="144" selection-end-line="4" selection-end-column="144" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="112" column="3" lean-forward="false" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
           <folding />
         </state>
       </provider>
