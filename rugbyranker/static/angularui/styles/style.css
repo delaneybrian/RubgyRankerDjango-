@@ -1918,3 +1918,10 @@ a:hover{
 .hoverChange:hover{
     color: black;
 }
+
+
+@media (max-width:812px) and (min-width:767px) {
+    .standardcontent {
+        padding-top: 95px;
+    }
+}​
