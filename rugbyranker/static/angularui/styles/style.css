@@ -2165,6 +2165,10 @@ a:hover{
     align-items: center;
 }
 
+.centerText{
+    text-align: center;
+}
+
 
 .DrewMatch{
     background-color: #e68a00;

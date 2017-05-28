@@ -25,21 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1338">
-              <caret line="134" column="20" lean-forward="true" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comparisonController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="comparisonController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="578">
+              <caret line="80" column="50" lean-forward="false" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -48,8 +38,8 @@
       <file leaf-file-name="comparisonpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="29" />
+            <state relative-caret-position="374">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,8 +48,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="2164" column="23" lean-forward="false" selection-start-line="2164" selection-start-column="23" selection-end-line="2164" selection-end-column="23" />
+            <state relative-caret-position="538">
+              <caret line="2168" column="22" lean-forward="false" selection-start-line="2168" selection-start-column="22" selection-end-line="2168" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -164,9 +154,9 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/tournamentsController.js" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
         <option value="$PROJECT_DIR$/elo/views/teamcomparison.py" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js" />
       </list>
     </option>
   </component>
@@ -1137,34 +1127,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js">
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="29" />
+        <state relative-caret-position="1866">
+          <caret line="134" column="20" lean-forward="true" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="2164" column="23" lean-forward="false" selection-start-line="2164" selection-start-column="23" selection-end-line="2164" selection-end-column="23" />
+        <state relative-caret-position="538">
+          <caret line="2168" column="22" lean-forward="false" selection-start-line="2168" selection-start-column="22" selection-end-line="2168" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html">
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1338">
-          <caret line="134" column="20" lean-forward="true" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+        <state relative-caret-position="374">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/comparisonController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="80" column="50" lean-forward="false" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
           <folding />
         </state>
       </provider>

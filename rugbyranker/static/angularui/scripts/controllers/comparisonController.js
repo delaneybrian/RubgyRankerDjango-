@@ -72,6 +72,16 @@ sportModule.controller('comparisonSelectionController', function ($scope, $route
             $scope.teamBName = $scope.teamDetails.teamBData.name;
 
 
+            console.log(response.data);
+
+            if($scope.teamDetails.matchRecord.Draws == 0 && $scope.teamDetails.matchRecord.teamALosses == 0 && $scope.teamDetails.matchRecord.teamAWins == 0){
+                $scope.displayTrafficLight = false;
+            }
+            else{
+                 $scope.displayTrafficLight = true;
+            }
+
+
             if($scope.teamDetails.recentMatches.length == 0){
                 $scope.DoNotDisplayMatches = true;
             }
