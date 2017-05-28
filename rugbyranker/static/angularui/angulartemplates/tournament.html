@@ -26,6 +26,7 @@
 <div class="standardcontent">
     <div class="tourteams">
         <h4>Teams:</h4>
+        <!--
         <table class="tourteamtable">
             <thead>
             <tr>
@@ -44,12 +45,32 @@
             </tr>
             </tbody>
         </table>
+        -->
+        <table class="comparisonMobileTable fullwidthTable">
+            <thead>
+            <tr>
+                <th>Team</th>
+                <th class="tourHideMobile"></th>
+                <th class="tourHideMobile">Tournament Ranking</th>
+                <th>Global Ranking</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="tourrecentgamesrow mobileComparisonRowRank compMinHeight" ng-click="teamtourlink(item.id)" ng-repeat=" item in tournamentteamdata" >
+                <td class="tourHideMobile mobileComparisonDataRank">{{ item.name }}</td>
+                <td class="mobileComparisonDataRank"><div class="tableContent"><img class="midteamlogo" alt="{{ item.name }} Logo" src="{{ item.logo_url }}"></div></td>
+                <td class="tourHideMobile mobileComparisonDataRank"><div class="tableContent">{{ $index + 1}}</div></td>
+                <td class="mobileComparisonDataRank"><div class="tableContent">{{ item.thisweek_position }}</div></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     <br>
     <br>
 
     <div class="tourrecentgames">
         <h4>Latest Matches:</h4>
+        <!--
         <table>
             <thead>
             <tr>
@@ -80,10 +101,30 @@
             </tr>
             </tbody>
         </table>
+        -->
+        <table class="comparisonMobileTable">
+                <tr>
+                    <th>Hometeam</th>
+                    <th>Score</th>
+                    <th>Awayteam</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="match in tournamentmatchdata" class="mobileComparisonRowNoHover">
+                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
+                                                                                        src="{{ match.hometeam.logo_url }}"><span class="matchHide paddingMatch teamname">{{ match.hometeam.name }}</span></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.hometeam_score }}</div></td>
+                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
+                                                                                        src="{{ match.awayteam.logo_url }}"><span class="matchHide paddingMatch teamname">{{ match.awayteam.name }}</span></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.awayteam_score }}</div></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.match_date | date : "d-MMMM-yyyy" }}</div></td>
+                </tr>
+            </table>
     </div>
 
     <div class="tourRecentGamesMedium">
         <h3>Latest Ranked Matches</h3>
+            <!--
             <div class="mobilematch" ng-repeat="match in tournamentmatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
                 <div class="matchInfo">{{ match.match_date | date : "d-MMMM-yyyy" }}</div>
                 <div class="mobileawayteam">
@@ -97,6 +138,22 @@
                     <span class="thirdMatch">{{ match.awayteam_score }}</span>
                 </div>
             </div>
+            -->
+        <table class="comparisonMobileTable mobilematch">
+                <tbody ng-repeat="match in tournamentmatchdata">
+                    <tr>
+                        <td class="wholeWidth">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"><span class="recentTeamName">{{ match.hometeam.name }}</span></td>
+                        <td class="mobileComparisonDataRank">{{ match.hometeam_score }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"><span class="recentTeamName">{{ match.awayteam.name }}</span></td>
+                        <td class="mobileComparisonDataRank">{{ match.awayteam_score }}</td>
+                    </tr>
+                </tbody>
+            </table>
     </div>
 </div>
 

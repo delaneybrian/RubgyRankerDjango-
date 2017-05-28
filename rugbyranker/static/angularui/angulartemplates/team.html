@@ -87,6 +87,7 @@
 
         <div class="latestgames">
             <h3>Latest Ranked Matches</h3>
+            <!--
             <table>
                 <tr>
                     <th>Hometeam</th>
@@ -109,11 +110,34 @@
                     <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
                 </tr>
             </table>
+            -->
+            <table class="comparisonMobileTable">
+                <tr>
+                    <th>Hometeam</th>
+                    <th>Score</th>
+                    <th>Awayteam</th>
+                    <th>Score</th>
+                    <th>Tournament</th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="match in teammatchdata" class="mobileComparisonRowNoHover">
+                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
+                                                                                        src="{{ match.hometeam.logo_url }}"><span class="matchHide paddingMatch teamname">{{ match.hometeam.name }}</span></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.hometeam_score }}</div></td>
+                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
+                                                                                        src="{{ match.awayteam.logo_url }}"><span class="matchHide paddingMatch teamname">{{ match.awayteam.name }}</span></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.awayteam_score }}</div></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent"><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo"
+                                                                                        src="{{ match.tournament.logo_url }}"></div></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.match_date | date : "d-MMMM-yyyy" }}</div></td>
+                </tr>
+            </table>
             <button type="button" class="btn allRankedMatchesButton"><a ng-href="/teams/{{ details.id }}/matches">All Ranked Matches</a></button>
         </div>
 
         <div class="latestgamesMobile">
             <h3>Latest Ranked Matches</h3>
+            <!--
             <div class="mobilematch" ng-repeat="match in teammatchdata" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
                 <div class="matchInfo">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</div>
                 <div class="mobileawayteam">
@@ -127,6 +151,22 @@
                     <span class="thirdMatch">{{ match.awayteam_score }}</span>
                 </div>
             </div>
+            -->
+            <table class="comparisonMobileTable">
+                <tbody ng-repeat="match in teammatchdata">
+                    <tr>
+                        <td class="wholeWidth">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"><span class="recentTeamName">{{ match.hometeam.name }}</span></td>
+                        <td class="mobileComparisonDataRank">{{ match.hometeam_score }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"><span class="recentTeamName">{{ match.awayteam.name }}</span></td>
+                        <td class="mobileComparisonDataRank">{{ match.awayteam_score }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
 

@@ -216,11 +216,11 @@
                 <div class="flexSquares">
                 <span ng-repeat="record in teamDetails.headToHeadForm track by $index">
                 <span class="smallSpacing" ng-show="record == 'W'"><i class="fa fa-square fa wonMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 <span class="smallSpacing" ng-show="record == 'L'"><i class="fa fa-square fa lostMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 <span class="smallSpacing" ng-show="record == 'D'"><i class="fa fa-square fa drewMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 </span>
                 </div>
             </div>
@@ -269,22 +269,22 @@
                 <div class="flexSquares">
                 <span ng-repeat="record in teamDetails.recentMatchRecord.teamARecentAny track by $index">
                 <span class="smallSpacing" ng-show="record == 'W'"><i class="fa fa-square fa wonMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 <span class="smallSpacing" ng-show="record == 'L'"><i class="fa fa-square fa lostMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 <span class="smallSpacing" ng-show="record == 'D'"><i class="fa fa-square fa drewMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 </span>
                 </div>
                 <h4>{{ teamBName }} vs All Teams</h4>
                 <div class="flexSquares">
-                <span  ng-repeat="record in teamDetails.recentMatchRecord.teamBRecentAny track by $index">
+                <span ng-repeat="record in teamDetails.recentMatchRecord.teamBRecentAny track by $index">
                 <span class="smallSpacing" ng-show="record == 'W'"><i class="fa fa-square fa wonMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 <span class="smallSpacing" ng-show="record == 'L'"><i class="fa fa-square fa lostMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 <span class="smallSpacing" ng-show="record == 'D'"><i class="fa fa-square fa drewMatchRecord"
-                                                 aria-hidden="true"></i></span>
+                                                                      aria-hidden="true"></i></span>
                 </span>
                 </div>
             </div>
@@ -398,6 +398,7 @@
             <h3>All {{ teamAName }} vs {{ teamBName }} Matches</h3>
         </div>
         <hr class="articlesHr">
+        <!--
         <table class="showWhenLarge">
             <tr>
                 <th>Hometeam</th>
@@ -425,6 +426,30 @@
                 <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
             </tr>
         </table>
+        -->
+        <table class="showWhenLarge comparisonMobileTable">
+                <tr>
+                    <th>Hometeam</th>
+                    <th>Score</th>
+                    <th>Awayteam</th>
+                    <th>Score</th>
+                    <th>Tournament</th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="match in teamDetails.recentMatches" class="mobileComparisonRowNoHover">
+                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
+                                                                                        src="{{ match.hometeam.logo_url }}"><span class="matchHide paddingMatch teamname">{{ match.hometeam.name }}</span></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.hometeam_score }}</div></td>
+                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
+                                                                                        src="{{ match.awayteam.logo_url }}"><span class="matchHide paddingMatch teamname">{{ match.awayteam.name }}</span></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.awayteam_score }}</div></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent"><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo"
+                                                                                        src="{{ match.tournament.logo_url }}"></div></td>
+                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.match_date | date : "d-MMMM-yyyy" }}</div></td>
+                </tr>
+        </table>
+
+        <!--
         <div class="mobilematch hideWhenLarge" ng-repeat="match in teamDetails.recentMatches" ng-class-odd="'oddmatch'"
              ng-class-even="'evenmatch'">
             <div class="matchInfo">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</div>
@@ -439,5 +464,28 @@
                 <span class="thirdMatch">{{ match.awayteam_score }}</span>
             </div>
         </div>
+        -->
+        <div class="mobilematch hideWhenLarge">
+            <table class="comparisonMobileTable">
+                <tbody ng-repeat="match in teamDetails.recentMatches">
+                <tr>
+                    <td class="wholeWidth">{{ match.match_date | date : "d-MMMM-yyyy" }}
+                        - {{ match.tournament.name }}</td>
+                </tr>
+                <tr>
+                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"><span
+                            class="recentTeamName">{{ match.hometeam.name }}</span></td>
+                    <td class="mobileComparisonDataRank">{{ match.hometeam_score }}</td>
+                </tr>
+                <tr>
+                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"><span
+                            class="recentTeamName">{{ match.awayteam.name }}</span></td>
+                    <td class="mobileComparisonDataRank">{{ match.awayteam_score }}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
     </div>
 </div>

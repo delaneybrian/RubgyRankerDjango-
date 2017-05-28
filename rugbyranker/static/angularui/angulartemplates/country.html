@@ -24,6 +24,7 @@
 <div class="standardcontent">
     <div class="countryteams">
         <h3>Teams</h3>
+        <!--
         <table>
             <thead>
             <tr>
@@ -39,12 +40,28 @@
             </tr>
             </tbody>
         </table>
+        -->
+        <table class="comparisonMobileTable">
+            <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>Team Logo</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="team in teams" ng-click="clickrank(team.id)" class="mobileComparisonRowRank minheightrow">
+                <td class="mobileComparisonDataRank">{{ team.name }}</td>
+                <td class="mobileComparisonDataRank"><div class="tableContent"><img class="smallteamlogo" src="{{ team.logo_url }}" alt="{{ team.name }} logo"></div></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     <br>
     <br>
 
     <div class="countrytournaments">
         <h3>Tournaments</h3>
+        <!--
         <table>
             <thead>
             <tr>
@@ -57,6 +74,22 @@
                 ng-class-even="'even'">
                 <td>{{ tournament.name }}</td>
                 <td><img class="midtournamentlogo" src="{{ tournament.logo_url }}" alt="{{ tournament.name }} logo">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        -->
+        <table class=" comparisonMobileTable">
+            <thead>
+            <tr>
+                <th>Tournament Name</th>
+                <th>Tournament Logo</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="tournament in tournaments" ng-click="clicktournament(tournament.id)" class="mobileComparisonRowRank minheightrow">
+                <td class="mobileComparisonDataRank">{{ tournament.name }}</td>
+                <td class="mobileComparisonDataRank"><div class="tableContent"><img class="midtournamentlogo" src="{{ tournament.logo_url }}" alt="{{ tournament.name }} logo"></div>
                 </td>
             </tr>
             </tbody>

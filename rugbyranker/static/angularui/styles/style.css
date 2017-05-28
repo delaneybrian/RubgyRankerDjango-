@@ -269,6 +269,18 @@ footer a{
 .sociallink{
     padding-right: 5%;
     padding-left: 5%;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+.minheightrow{
+    min-height: 65px;
+    height: 65px;
+}
+
+.fullwidthTable{
+    width: 100%;
 }
 
 .fa-twitter-square:hover{
@@ -327,6 +339,7 @@ img {
     display:flex;
     flex-direction: column;
     align-items: center ;
+    padding-bottom: 30px;
 }
 
 .team_stadium{
@@ -1953,12 +1966,24 @@ a:hover{
     padding-left: 20px;
 }
 
+.wholeWidth{
+    width: 100%;
+    min-width: 100%;
+}
+.recentTeamName{
+    padding-left: 30px;
+}
 
 
 .comparisonMobileTable{
     border-collapse: separate;
     border-spacing: .5em .5em;
     max-width: 100%;
+}
+
+.compMinHeight{
+    min-height: 120px;
+    height: 120px;
 }
 
 .smallSpacing{
