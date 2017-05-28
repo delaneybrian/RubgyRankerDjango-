@@ -2148,10 +2148,6 @@ a:hover{
     .displayMobile{
         display: block;
     }
-    .mobileComparisonDataRank{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 }​
 
 @media (max-width:812px) and (min-width:767px) {
