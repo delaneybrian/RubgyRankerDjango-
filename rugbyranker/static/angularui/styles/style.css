@@ -2137,6 +2137,23 @@ a:hover{
     padding-left: 30px;
 }
 
+.displayMobile{
+    display: none;
+}
+
+@media (max-width:500px)  {
+    .displayDesktop{
+        display: none;
+    }
+    .displayMobile{
+        display: block;
+    }
+    .mobileComparisonDataRank{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}​
+
 @media (max-width:812px) and (min-width:767px) {
     .standardcontent {
         padding-top: 95px;

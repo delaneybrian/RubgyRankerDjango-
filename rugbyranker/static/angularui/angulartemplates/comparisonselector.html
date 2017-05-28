@@ -23,21 +23,42 @@
                 </tr>
             </table>
             -->
-            <table class="comparisonMobileTableNotFixed">
-                <tr ng-repeat="team in searchResponseA" class="mobileComparisonRowNoHover"
-                    ng-click="clickteam(team.id)">
-                    <td style="width:80%" class="mobileComparisonDataRank">
-                        <img class="smallteamlogo " src="{{ team.logo_url }}">
-                        <span class="paddingMatch">{{ team.name }}</span>
-                    </td>
-                    <td style="width:20%" class="mobileComparisonDataRankHover"
-                        ng-click="addTeam(team)">
-                        <div class="tableContent">
-                            <i class="fa fa-plus-square fa-2x" aria-hidden="true"></i>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+            <div class="displayDesktop">
+                <table class="comparisonMobileTableNotFixed">
+                    <tr ng-repeat="team in searchResponseA" class="mobileComparisonRowNoHover"
+                        ng-click="clickteam(team.id)">
+                        <td style="width:80%" class="mobileComparisonDataRank">
+                            <img class="smallteamlogo " src="{{ team.logo_url }}">
+                            <span class="paddingMatch">{{ team.name }}</span>
+                        </td>
+                        <td style="width:20%" class="mobileComparisonDataRankHover"
+                            ng-click="addTeam(team)">
+                            <div class="tableContent">
+                                <i class="fa fa-plus-square fa-2x" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="displayMobile">
+                <table class="comparisonMobileTableNotFixed">
+                    <tr ng-repeat="team in searchResponseA" class="mobileComparisonRowNoHover"
+                        ng-click="clickteam(team.id)">
+                        <td style="width:85%" class="mobileComparisonDataRank">
+                            <img class="smallteamlogo " src="{{ team.logo_url }}">
+                            <span class="paddingMatch">{{ team.name }}</span>
+                        </td>
+                        <td style="width:15%" class="mobileComparisonDataRankHover"
+                            ng-click="addTeam(team)">
+                            <div class="tableContent">
+                                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
         </div>
     </div>
     <div>
