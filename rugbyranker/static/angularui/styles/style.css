@@ -2157,6 +2157,13 @@ a:hover{
     display: none;
 }
 
+.trafficLights{
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .DrewMatch{
