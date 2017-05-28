@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df72f643-8516-4158-ab11-ea47407c3c9f" name="Default" comment="" />
+    <list default="true" id="df72f643-8516-4158-ab11-ea47407c3c9f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="2151" column="12" lean-forward="false" selection-start-line="2151" selection-start-column="1" selection-end-line="2151" selection-end-column="12" />
+            <state relative-caret-position="84">
+              <caret line="297" column="0" lean-forward="true" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tournament.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>recentTeamName</find>
       <find>mobilecomparisonDatara</find>
       <find>hidemidLogo</find>
       <find>teamrivals</find>
@@ -94,6 +106,7 @@
       <find>mobileComparisonRowRank</find>
       <find>mobileComparisonDataRank</find>
       <find>30px</find>
+      <find>.td</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,13 +159,13 @@
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/rankings.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/home.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
-        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/homeController.js" />
         <option value="$PROJECT_DIR$/elo/templates/angularui/index.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonselector.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html" />
         <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/teamallmatches.html" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
+        <option value="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html" />
       </list>
     </option>
   </component>
@@ -789,13 +802,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1064,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="146" column="51" lean-forward="false" selection-start-line="146" selection-start-column="51" selection-end-line="146" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/scripts/controllers/homeController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
@@ -1139,10 +1137,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournaments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="2151" column="12" lean-forward="false" selection-start-line="2151" selection-start-column="1" selection-end-line="2151" selection-end-column="12" />
+        <state relative-caret-position="84">
+          <caret line="297" column="0" lean-forward="true" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/tournament.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding />
         </state>
       </provider>
