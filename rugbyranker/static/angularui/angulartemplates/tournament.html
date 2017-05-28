@@ -144,18 +144,18 @@
                 </div>
             </div>
             -->
-        <table class="comparisonMobileTable mobilematch">
+        <table class="comparisonMobileTableNotFixed mobilematch">
                 <tbody ng-repeat="match in tournamentmatchdata">
-                    <tr>
-                        <td class="wholeWidth">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</td>
+                    <tr class="minheight65">
+                        <td class="wholeWidth">{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
                     </tr>
-                    <tr>
-                        <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"><span class="recentTeamName">{{ match.hometeam.name }}</span></td>
-                        <td class="mobileComparisonDataRank">{{ match.hometeam_score }}</td>
+                    <tr class="minheight65">
+                        <td class="minheight65 mobileComparisonDataRankReducedPadding"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"><span class="recentTeamName">{{ match.hometeam.name }}</span></td>
+                        <td class="minheight65 mobileComparisonDataRank">{{ match.hometeam_score }}</td>
                     </tr>
-                    <tr>
-                        <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"><span class="recentTeamName">{{ match.awayteam.name }}</span></td>
-                        <td class="mobileComparisonDataRank">{{ match.awayteam_score }}</td>
+                    <tr class="minheight65">
+                        <td class="minheight65 mobileComparisonDataRankReducedPadding"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"><span class="recentTeamName">{{ match.awayteam.name }}</span></td>
+                        <td class="minheight65 mobileComparisonDataRank">{{ match.awayteam_score }}</td>
                     </tr>
                 </tbody>
             </table>

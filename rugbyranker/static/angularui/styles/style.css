@@ -2032,6 +2032,22 @@ a:hover{
     max-width: 100%;
 }
 
+.minheight65{
+    min-height: 65px;
+}
+
+.mobileComparisonDataRankReducedPadding{
+    min-height: 70px;
+    text-align: left;
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
 .mobileComparisonDataRankHover{
     min-height: 70px;
     text-align: left;
