@@ -2121,6 +2121,7 @@ a:hover{
     border-spacing: .5em .5em;
     max-width: 100%;
     table-layout: fixed;
+    width: 100%;
 }
 
 .comparisonMobileTableNotFixed{
