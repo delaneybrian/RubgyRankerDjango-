@@ -100,35 +100,7 @@
 
         <div class="homelatestmatches">
             <h3>Latest Ranked Matches</h3>
-            <!--
-            <table>
-                <tr>
-                    <th>Hometeam</th>
-                    <th class="matchHide"></th>
-                    <th>Score</th>
-                    <th class="matchHide"></th>
-                    <th>Score</th>
-                    <th>Awayteam</th>
-                    <th class="matchHide"></th>
-                    <th>Tournament</th>
-                    <th>Date</th>
-                </tr>
-                <tr ng-repeat="match in matches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
-                    <td><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
-                             src="{{ match.hometeam.logo_url }}"></td>
-                    <td class="matchHide" class="teamname">{{ match.hometeam.name }}</td>
-                    <td>{{ match.hometeam_score }}</td>
-                    <td class="matchHide">-</td>
-                    <td>{{ match.awayteam_score }}</td>
-                    <td><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
-                             src="{{ match.awayteam.logo_url }}"></td>
-                    <td class="matchHide" class="teamname">{{ match.awayteam.name }}</td>
-                    <td><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo"
-                             src="{{ match.tournament.logo_url }}"></td>
-                    <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
-                </tr>
-            </table>
--->
+
             <table class="comparisonMobileTableNotFixed">
                 <tr>
                     <th>Hometeam</th>
@@ -164,26 +136,8 @@
 
         </div>
 
-
-        <!--
         <div class="homecontentmobile">
             <h3>Latest Ranked Matches</h3>
-            <div class="mobilematch" ng-repeat="match in matches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
-                <div class="matchInfo">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</div>
-                <div class="mobileawayteam">
-                    <span class="firstMatch"><div class="tableContent"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></div></span>
-                    <span class="secondMatch">{{ match.hometeam.name }}</span>
-                    <span class="thirdMatch"><div class="tableContent"><b>{{ match.hometeam_score }}</b></div></span>
-                </div>
-                <div class="mobilehometeam">
-                    <span class="firstMatch"><div class="tableContent"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></div></span>
-                    <span class="secondMatch">{{ match.awayteam.name }}</span>
-                    <span class="thirdMatch"><div class="tableContent"><b>{{ match.awayteam_score }}</b></div></span>
-                </div>
-            </div>
-        </div>
-        -->
-        <div class="homecontentmobile">
             <table class="comparisonMobileTableNotFixed">
                 <tbody ng-repeat="match in matches">
                 <tr>
@@ -211,38 +165,7 @@
 
         <div class="rankingsnip">
             <h3>Top 15 Teams</h3>
-            <!--
-            <table>
-                <tr>
-                    <th>Position</th>
-                    <th>Team</th>
-                    <th></th>
-                    <th>Rating</th>
-                    <th>Country</th>
-                    <th>Movement</th>
-                </tr>
-                <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'"
-                    ng-click="clickrank(rank.id)">
-                    <td>{{ rank.thisweek_position }}</td>
-                    <td>{{ rank.name }}</td>
-                    <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
-                    <td>{{ rank.thisweek_rating }}</td>
-                    <td><a ng-href="/countries/{{ rank.country.id }}"><img class="flag"
-                                                                           src="{{ rank.country.flag_url }}"></a>
-                    </td>
-                    <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x"
-                                                                                      aria-hidden="true"></i>
-                        <p>({{ rank.lastweek_position }})</p></td>
-                    <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x"
-                                                                                     aria-hidden="true"></i>
-                        <p>({{ rank.lastweek_position }})</p></td>
-                    <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x"
-                                                                                     aria-hidden="true"></i>
-                        <p>({{ rank.lastweek_position }})</p></td>
 
-                </tr>
-            </table>
-            -->
             <table class="comparisonMobileTableNotFixed">
                 <tr>
                     <th>Position</th>
@@ -291,33 +214,7 @@
 
         <div class="rankingsnipmobile">
             <h3>Top 15 Teams</h3>
-            <!--
-            <table>
-                <thead>
-                <tr>
-                    <th>Team</th>
-                    <th>Ranking</th>
-                    <th>Change</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="rank in rankings" ng-class-odd="'odd'" ng-class-even="'even'"
-                    ng-click="clickrank(rank.id)">
-                    <td><b>{{ rank.thisweek_position }}</b></td>
-                    <td><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
-                    <td ng-show="rank.thisweek_position == rank.lastweek_position"><i class="fa fa-minus fa-2x"
-                                                                                      aria-hidden="true"></i>
-                        <p>({{ rank.lastweek_position }})</p></td>
-                    <td ng-show="rank.thisweek_position > rank.lastweek_position"><i class="fa fa-arrow-down fa-2x"
-                                                                                     aria-hidden="true"></i>
-                        <p>({{ rank.lastweek_position }})</p></td>
-                    <td ng-show="rank.thisweek_position < rank.lastweek_position"><i class="fa fa-arrow-up fa-2x"
-                                                                                     aria-hidden="true"></i>
-                        <p>({{ rank.lastweek_position }})</p></td>
-                </tr>
-                </tbody>
-            </table>
-            -->
+
             <table class="comparisonMobileTableNotFixed">
                 <thead>
                 <tr>
@@ -354,8 +251,5 @@
                 </tbody>
             </table>
         </div>
-
-
     </div>
-
 </div>

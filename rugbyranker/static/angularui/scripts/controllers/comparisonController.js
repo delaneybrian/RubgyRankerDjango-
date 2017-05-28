@@ -67,8 +67,8 @@ sportModule.controller('comparisonSelectionController', function ($scope, $route
     $http.get("/api/comparison/?teamA=" + teamAId + '&teamB=' + teamBId)
 
         .then(function (response) {
+            console.log(response.data)
             $scope.teamDetails = response.data;
-            console.log(response.data);
             $scope.teamAName = $scope.teamDetails.teamAData.name;
             $scope.teamBName = $scope.teamDetails.teamBData.name;
 

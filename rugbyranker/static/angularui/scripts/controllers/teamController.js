@@ -25,20 +25,13 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
             else{
                 $scope.changedown = true;
             }
-
-
-            console.log("Http Sucess");
-            console.log(response.data);
         }, function errorCallback(response) {
-            console.log(response);
             $location.url('/error');
         });
 
     $http.get("/api/teams/" + teamId + '/matches/')
         .then(function (response) {
             $scope.teammatchdata = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $http.get("/api/teams/" + teamId + '/information/')
@@ -104,23 +97,16 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
                 data: awayData,
                 options: options
             });
-            console.log("Http Sucess");
-            console.log(response.data);
-
         });
 
     $http.get("/api/teams/" + teamId + '/rivals/')
         .then(function (response) {
             $scope.rivals = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $http.get("/api/teams/" + teamId + '/history/')
         .then(function (response) {
             $scope.history = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $scope.sortType = 'position';
@@ -186,8 +172,6 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
                 data: data,
                 options: options
             });
-
-            console.log("Http Sucess");
         });
 
 });

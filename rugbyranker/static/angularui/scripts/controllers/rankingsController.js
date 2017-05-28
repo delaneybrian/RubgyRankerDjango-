@@ -3,15 +3,11 @@ sportModule.controller('rankingsController', function ($scope, $http, $location)
     $http.get("/api/rankings/")
         .then(function (response) {
             $scope.rankingdata = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $http.get("/api/rankings/highest/")
         .then(function (response) {
             $scope.highestlowest = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $scope.sortType     = 'position';
@@ -19,7 +15,6 @@ sportModule.controller('rankingsController', function ($scope, $http, $location)
     $scope.searchRanking   = '';
 
     $scope.clickrank = function(name){
-
         console.log($location.path("teams/"  + name))
     };
 

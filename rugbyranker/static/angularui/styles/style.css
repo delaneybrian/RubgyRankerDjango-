@@ -2157,6 +2157,22 @@ a:hover{
     display: none;
 }
 
+
+
+.DrewMatch{
+    background-color: #e68a00;
+}
+
+.LostMatch{
+    background-color: #ff0000;
+}
+
+.WonMatch{
+    background-color: #00b300;
+}
+
+
+
 @media (max-width:500px)  {
     .displayDesktop{
         display: none;

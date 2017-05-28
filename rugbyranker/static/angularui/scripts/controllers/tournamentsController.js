@@ -3,8 +3,6 @@ sportModule.controller('tournamentsController', function ($scope, $http, $locati
     $http.get("/api/tournaments/")
         .then(function (response) {
             $scope.tournaments = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $scope.tournamentlink = function(id){

@@ -5,8 +5,6 @@ sportModule.controller('newsletterController', function($scope, $http) {
     $scope.submit = function(emailaddress){
         $scope.test = emailaddress;
 
-        console.log('/api/newsletter');
-
         var dictionary = {
             email_address: emailaddress
         };
@@ -15,12 +13,9 @@ sportModule.controller('newsletterController', function($scope, $http) {
 
         $http.post('/api/newsletter/', jsondictionary)
             .success(function () {
-                console.log("HTTP SUCESS");
                 $scope.emailmessage = "Thanks for Subscribing";
             })
             .error(function (data, status, header, config) {
-                console.log("HTTP ERROR");
-                console.log(jsondictionary);
                 $scope.emailmessage = "Error Subscribing Please Try Again Later";
             });
 

@@ -78,6 +78,28 @@
         </div>
     </div>
 
+    <div>
+        <table class="comparisonStreakTeam">
+            <tr class="mobileComparisonRowNoHover">
+                <td class="mobileComparisonDataRank">Won</td>
+                <td class="mobileComparisonDataRank">Lost</td>
+                <td class="mobileComparisonDataRank">Drew</td>
+            </tr>
+            <tr class="mobileComparisonRowNoHover">
+                <td class="mobileComparisonDataRank WonMatch">
+                    <div class="tableContent">{{ teamDetails.matchRecord.teamAWins }}</div>
+                </td>
+                <td class="mobileComparisonDataRank LostMatch">
+                    <div class="tableContent">{{ teamDetails.matchRecord.teamALosses }}</div>
+                </td>
+                <td class="mobileComparisonDataRank DrewMatch">
+                    <div class="tableContent">{{ teamDetails.matchRecord.Draws }}</div
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
     <div class="centerTitle">
         <h3>Win Rates</h3>
     </div>
@@ -398,35 +420,7 @@
             <h3>All {{ teamAName }} vs {{ teamBName }} Matches</h3>
         </div>
         <hr class="articlesHr">
-        <!--
-        <table class="showWhenLarge">
-            <tr>
-                <th>Hometeam</th>
-                <th></th>
-                <th>Score</th>
-                <th></th>
-                <th>Score</th>
-                <th>Awayteam</th>
-                <th></th>
-                <th>Tournament</th>
-                <th>Date</th>
-            </tr>
-            <tr ng-repeat="match in teamDetails.recentMatches" ng-class-odd="'oddmatch'" ng-class-even="'evenmatch'">
-                <td><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}" alt="{{ match.hometeam.name }} logo">
-                </td>
-                <td class="teamname">{{ match.hometeam.name }}</td>
-                <td>{{ match.hometeam_score }}</td>
-                <td>-</td>
-                <td>{{ match.awayteam_score }}</td>
-                <td><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}" alt="{{ match.awayteam.name }} logo">
-                </td>
-                <td class="teamname">{{ match.awayteam.name }}</td>
-                <td><img class="smallteamlogo" src="{{ match.tournament.logo_url }}"
-                         alt="{{ match.tournament.name }} logo"></td>
-                <td>{{ match.match_date | date : "d-MMMM-yyyy" }}</td>
-            </tr>
-        </table>
-        -->
+
         <table class="showWhenLarge comparisonMobileTable">
                 <tr>
                     <th>Hometeam</th>
@@ -449,22 +443,6 @@
                 </tr>
         </table>
 
-        <!--
-        <div class="mobilematch hideWhenLarge" ng-repeat="match in teamDetails.recentMatches" ng-class-odd="'oddmatch'"
-             ng-class-even="'evenmatch'">
-            <div class="matchInfo">{{ match.match_date | date : "d-MMMM-yyyy" }} - {{ match.tournament.name }}</div>
-            <div class="mobileawayteam">
-                <span class="firstMatch"><img class="smallteamlogo" src="{{ match.hometeam.logo_url }}"></span>
-                <span class="secondMatch">{{ match.hometeam.name }}</span>
-                <span class="thirdMatch"><b>{{ match.hometeam_score }}</b></span>
-            </div>
-            <div class="mobilehometeam">
-                <span class="firstMatch"><img class="smallteamlogo" src="{{ match.awayteam.logo_url }}"></span>
-                <span class="secondMatch">{{ match.awayteam.name }}</span>
-                <span class="thirdMatch">{{ match.awayteam_score }}</span>
-            </div>
-        </div>
-        -->
         <div class="mobilematch hideWhenLarge">
             <table class="comparisonMobileTable">
                 <tbody ng-repeat="match in teamDetails.recentMatches">
@@ -484,8 +462,6 @@
                 </tr>
                 </tbody>
             </table>
-
         </div>
-
     </div>
 </div>

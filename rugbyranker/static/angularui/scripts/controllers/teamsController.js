@@ -3,16 +3,12 @@ sportModule.controller('teamsController', function ($scope, $http, $location, te
     $http.get("/api/teams/")
         .then(function (response) {
             $scope.teams = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $scope.newpage = function(next){
         $http.get(next)
         .then(function (response) {
             $scope.teams = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
     };
 
@@ -25,13 +21,10 @@ sportModule.controller('teamsController', function ($scope, $http, $location, te
             teamSearchService.search($scope.keywords).then(function(response){
                 $scope.searchResponse = response.data;
                 $scope.searchReponseLength = response.data.length;
-                console.log($scope.searchResponse);
             });
             }
             else{
                 $scope.searchResponse = null;
             }
         };
-
-
 });

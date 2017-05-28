@@ -3,40 +3,25 @@ sportModule.controller('homeController', function ($scope, $http, $location) {
     $http.get("api/home/articles/")
         .then(function (response) {
             $scope.articles = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
-
-
-
-
-
     $http.get("api/home/rankings/")
         .then(function (response) {
             $scope.rankings = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $http.get("/api/home/details/")
         .then(function (response) {
             $scope.details = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $http.get("/api/home/matches/")
         .then(function (response) {
             $scope.matches = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $http.get("/api/home/featured/")
         .then(function (response) {
             $scope.featured = response.data;
-            console.log("Http Sucess");
-            console.log(response.data);
         });
 
     $scope.clickrank = function (id) {
@@ -95,7 +80,5 @@ sportModule.controller('navController', function ($scope, $http, $location) {
 
     $scope.setActive = function (menuItem) {
         $scope.activeMenu = menuItem;
-        console.log($scope.activeMenu);
     };
-
 });

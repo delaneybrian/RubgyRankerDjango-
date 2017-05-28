@@ -122,6 +122,37 @@ def getMainDetails(request, format=None):
         # calculate head to head form
         headToHeadForm = []
 
+        teamAWins = 0
+        teamALosses = 0
+        Draws = 0
+
+        for match in allVsMatchesOrdered:
+            if (match.hometeam_id == teamAid):
+                if (match.hometeam_score > match.awayteam_score):
+                    teamAWins = teamAWins + 1
+                elif (match.hometeam_score < match.awayteam_score):
+                    teamALosses = teamALosses + 1
+                else:
+                    draws = draws + 1
+
+            if (match.awayteam_id == teamAid):
+                if (match.awayteam_score > match.hometeam_score):
+                    teamAWins = teamAWins + 1
+                elif (match.awayteam_score < match.hometeam_score):
+                    teamALosses = teamALosses + 1
+                else:
+                    draws = draws + 1
+
+
+        matchRecord = {
+            "teamAWins" : teamAWins,
+            "teamALosses" : teamALosses,
+            "Draws" : Draws
+        }
+
+        toreturn["matchRecord"] = matchRecord
+
+
         for match in allVsMatchesOrdered[:10]:
 
             if (match.hometeam_id == teamAid):
