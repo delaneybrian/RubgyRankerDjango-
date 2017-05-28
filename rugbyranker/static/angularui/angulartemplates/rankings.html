@@ -89,7 +89,7 @@
         </table>
 -->
 
-        <table class="fullwidthrank comparisonMobileTable">
+        <table class="fullwidthrank comparisonMobileTableNotFixed">
             <thead>
             <tr>
                 <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
@@ -143,7 +143,7 @@
             </tbody>
         </table>
 
-        <table class="mobilerank comparisonMobileTable">
+        <table class="mobilerank comparisonMobileTableNotFixed">
             <thead>
             <tr>
                 <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
@@ -182,7 +182,7 @@
             </tbody>
         </table>
 
-        <table class="ssmobilerank comparisonMobileTable">
+        <table class="ssmobilerank comparisonMobileTableNotFixed">
             <thead>
             <tr>
                 <th ng-click="sortType = 'thisweek_position'; sortReverse = !sortReverse">
@@ -201,7 +201,7 @@
             <tbody>
             <tr ng-repeat="rank in rankingdata | orderBy:sortType:sortReverse | filter:searchRank" class="mobileComparisonRowRank" ng-click="clickrank(rank.id)">
                 <td class="mobileComparisonDataRank"><div class="tableContent">{{ rank.thisweek_position }}</div></td>
-                <td class="mobileComparisonDataRank"><img class="smallteamlogo" src="{{ rank.logo_url }}"></td>
+                <td class="mobileComparisonDataRank"><div class="tableContent"><img class="smallteamlogo" src="{{ rank.logo_url }}"></div></td>
                 <td class="mobileComparisonDataRank" ng-show="rank.thisweek_position == rank.lastweek_position"><div class="tableContent"><i class="fa fa-minus fa-2x"
                                                                                   aria-hidden="true"></i>
                     <p>({{ rank.lastweek_position }})</p></div></td>

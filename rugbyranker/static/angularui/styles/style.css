@@ -832,6 +832,21 @@ latestgamestable{
   background-color: rgba(2, 22, 40, 1);
 }
 
+.rivalsNames{
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    min-height: 50.4px;
+}
+
+.paddedleft{
+    padding-right: 30px;
+}
+
 .tournamentcontainer:hover .touroverlay {
   opacity: 1;
 }
@@ -1184,6 +1199,17 @@ latestgamestable{
     }
 }
 
+@media(max-width: 660px){
+    .teamRivalsMobile{
+        display: table;
+        padding-top: 30px;
+        width: 100%;
+    }
+    .teamrivals{
+        display: none;
+    }
+}
+
 @media(max-width: 420px){
     .countryintro{
         flex-direction: column;
@@ -1199,10 +1225,6 @@ latestgamestable{
         width: 100%;
     }
 
-    .teamRivalsMobile{
-        display: block;
-        padding-top: 30px;
-    }
     .teamrivals{
         display: none;
     }
@@ -1280,6 +1302,12 @@ latestgamestable{
 
 }
 
+.smallHr{
+    width: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 /* Styles for ranking change teams */
 .rankingChanges{
     display: flex;
@@ -1296,6 +1324,10 @@ latestgamestable{
 
 .rankingChangeTeam{
     padding: 2% 5% 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -1306,7 +1338,8 @@ latestgamestable{
     align-items: center;
     padding: 5%;
     border-radius: 3%;
-    background-color: #A5B7CA;
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
     max-height: 290px;
     width: 270px;
     max-width:  270px;
@@ -1325,12 +1358,39 @@ latestgamestable{
 }
 
 .rankingChangeTeamContent:hover{
-    background-color: #2B4B6F;
+    background-color: #A5B7CA;
     color: white;
 }
 
 .teamchangepos{
     padding-left: 20px;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+.titleDiv{
+    min-width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.padleft{
+    padding-left: 20px;
+}
+
+.flexWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .centerstadium{
@@ -1551,7 +1611,26 @@ a:hover{
 
 }
 
+
+.positionandArrow{
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallArrow{
+    display: none;
+}
+
 @media (max-width: 700px){
+    .largeArrow{
+        display: none;
+    }
+    .smallArrow{
+        display: block;
+    }
     .articleContentAreaSmall{
         flex-direction: column;
     }
@@ -1830,6 +1909,9 @@ a:hover{
         margin-top: 0px;
         margin-bottom: 10px;
     }
+    .hideLargeLogo {
+        display: none;
+    }
     .hidemidLogo{
         display: block;
     }
@@ -1923,8 +2005,8 @@ a:hover{
     padding-top: .5em;
     padding-bottom: .5em;
     max-width: 100%;
-
 }
+
 
 .tableContent{
     width: 100%;
@@ -1941,6 +2023,7 @@ a:hover{
 }
 
 .mobileComparisonDataRank{
+    min-height: 70px;
     text-align: left;
     background-color: rgba(2, 22, 40, 1);
     color: white;
@@ -1949,17 +2032,58 @@ a:hover{
     max-width: 100%;
 }
 
+.mobileComparisonDataRankHover{
+    min-height: 70px;
+    text-align: left;
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    max-width: 100%;
+}
+
+.mobileComparisonDataRankHover:hover{
+    min-height: 70px;
+    text-align: left;
+    background-color: #7189A5;
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    max-width: 100%;
+}
+
+
+.mobileComparisonDataRankSmall{
+    text-align: left;
+    background-color: rgba(2, 22, 40, 1);
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: 5px;
+    padding-left: 15px;
+    max-width: 100%;
+}
 
 .mobileComparisonRowRank{
     margin-bottom: 10px;
+    min-height: 60px;
+}
+
+.mobileComparisonRowRankNoHover{
+    margin-bottom: 10px;
+    min-height: 60px;
 }
 
 .mobileComparisonRowRank:hover td{
     background-color: #7189A5;
+    min-height: 60px;
 }
+
+
 
 .mobileComparisonRowNoHover{
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .paddingMatch{
@@ -1972,6 +2096,7 @@ a:hover{
 }
 .recentTeamName{
     padding-left: 30px;
+    width: 90%;
 }
 
 
@@ -1979,7 +2104,16 @@ a:hover{
     border-collapse: separate;
     border-spacing: .5em .5em;
     max-width: 100%;
+    table-layout: fixed;
 }
+
+.comparisonMobileTableNotFixed{
+     border-collapse: separate;
+    border-spacing: .5em .5em;
+    max-width: 100%;
+    width: 100%;
+}
+
 
 .compMinHeight{
     min-height: 120px;
@@ -1999,10 +2133,9 @@ a:hover{
     background-color: #A5B7CA;
 }
 
-.hoverChange:hover{
-    color: black;
+.rivalSpacer {
+    padding-left: 30px;
 }
-
 
 @media (max-width:812px) and (min-width:767px) {
     .standardcontent {

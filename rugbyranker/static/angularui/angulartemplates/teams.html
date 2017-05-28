@@ -6,9 +6,11 @@
                 <h4>Search Teams</h4>
                 <div class="input-group margin-bottom-sm rankingsearch">
                     <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span>
-                    <input class="form-control" type="text" placeholder="Search Teams" ng-model="keywords" ng-change="search()">
+                    <input class="form-control" type="text" placeholder="Search Teams" ng-model="keywords"
+                           ng-change="search()">
                 </div>
                 <div ng-if="searchReponseLength > 0">
+                    <!--
                     <table class="teamSearchResults">
                         <tr ng-repeat="team in searchResponse" ng-class-odd="'odd'" ng-class-even="'even'"
                             ng-click="clickteam(team.id)">
@@ -17,10 +19,25 @@
                             </td>
                         </tr>
                     </table>
+                    -->
+                    <table class="comparisonMobileTableNotFixed">
+                    <tr ng-repeat="team in searchResponse" class="mobileComparisonRowRank" ng-click="clickteam(team.id)">
+                        <td style="width:60%" class="mobileComparisonDataRank">{{ team.name }}</td>
+                        <td style="width:20%" class="mobileComparisonDataRank">
+                            <div class="tableContent"><img class="smallteamlogo" src="{{ team.logo_url }}"></div>
+                        </td>
+                        <td style="width:20%" class="mobileComparisonDataRank teamsmobilehide">
+                            <div class="tableContent"><a ng-href="/countries/{{ team.country.id }}"><img class="flag"
+                                                                                                         src="{{ team.country.flag_url }}"></a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
                 </div>
             </div>
             <div class="allTeams">
                 <h4>All Teams</h4>
+                <!--
                 <table>
                     <tr>
                         <th>Team Name</th>
@@ -33,6 +50,25 @@
                         <td><img class="smallteamlogo" src="{{ team.logo_url }}"></td>
                         <td class="teamsmobilehide"><a ng-href="/countries/{{ team.country.id }}"><img class="flag"
                                                                                                        src="{{ team.country.flag_url }}"></a>
+                        </td>
+                    </tr>
+                </table>
+                -->
+                <table class="comparisonMobileTableNotFixed">
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Team Logo</th>
+                        <th class="teamsmobilehide">Country</th>
+                    </tr>
+                    <tr ng-repeat="team in teams.results" class="mobileComparisonRowRank" ng-click="clickteam(team.id)">
+                        <td style="width:60%" class="mobileComparisonDataRank">{{ team.name }}</td>
+                        <td style="width:20%" class="mobileComparisonDataRank">
+                            <div class="tableContent"><img class="smallteamlogo" src="{{ team.logo_url }}"></div>
+                        </td>
+                        <td style="width:20%" class="mobileComparisonDataRank teamsmobilehide">
+                            <div class="tableContent"><a ng-href="/countries/{{ team.country.id }}"><img class="flag"
+                                                                                                         src="{{ team.country.flag_url }}"></a>
+                            </div>
                         </td>
                     </tr>
                 </table>
