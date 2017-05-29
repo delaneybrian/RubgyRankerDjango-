@@ -1,5 +1,7 @@
 /*GENERAL SECTION CSS */
 
+*{border: 1px solid red}
+
 
 
 html{
@@ -1067,6 +1069,10 @@ latestgamestable{
         class: "smallteamlogo";
     }
 
+   .standardcontent{
+       padding: 5%;
+   }
+
   .rankingsnip {
     display: none;
   }
@@ -1098,7 +1104,7 @@ latestgamestable{
   }
 
   .standardcontent{
-       padding: 5% 10% 5% 10%;
+        padding-top: 50px;
     }
 }
 
@@ -1210,13 +1216,6 @@ latestgamestable{
         padding-top: 30px;
         width: 100%;
         max-width: 100%;
-    }
-    .tournamentInfo{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 75px;
     }
     .teamrivals{
         display: none;
@@ -1387,13 +1386,12 @@ latestgamestable{
     padding-right: 5%;
     padding-left: 5%;
     padding-bottom: 5%;
-    min-height: 350px;
 }
 .titleDiv{
     min-width: 250px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .padleft{
@@ -2214,20 +2212,8 @@ a:hover{
     padding:0px;
 }
 
-@media (max-width: 814px) {
-    .standardcontent{
-        padding-top: 100px;
-    }
-}
-
-@media (max-width: 765px) {
-    .standardcontent{
-        padding-top: 75px;
-    }
-}
 
 @media (max-width:500px)  {
-
     .displayDesktop{
         display: none;
     }
