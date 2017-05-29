@@ -1,7 +1,9 @@
 /*GENERAL SECTION CSS */
-/*
+
 *{border: 1px solid red}
-*/
+
+
+
 html{
      position: relative;
      min-height: 100%;
@@ -832,6 +834,11 @@ latestgamestable{
   background-color: rgba(2, 22, 40, 1);
 }
 
+.max100{
+    max-width: 100%;
+    width: 100%;
+}
+
 .rivalsNames{
     background-color: rgba(2, 22, 40, 1);
     color: white;
@@ -841,6 +848,8 @@ latestgamestable{
     margin-left: 0.5em;
     margin-right: 0.5em;
     min-height: 50.4px;
+    max-width: 100%;
+
 }
 
 .paddedleft{
@@ -1095,7 +1104,7 @@ latestgamestable{
   }
 
   .standardcontent{
-        padding-top: 50px;
+       padding: 2% 10% 2% 10%;
     }
 }
 
@@ -1145,6 +1154,8 @@ latestgamestable{
 
 .teamRivalsMobile{
     display: none;
+    max-width: 100%;
+    max-width: 100vw;
 }
 
 .midlogoshow{
@@ -1204,6 +1215,7 @@ latestgamestable{
         display: table;
         padding-top: 30px;
         width: 100%;
+        max-width: 100%;
     }
     .teamrivals{
         display: none;
@@ -1374,12 +1386,13 @@ latestgamestable{
     padding-right: 5%;
     padding-left: 5%;
     padding-bottom: 5%;
+    min-height: 350px;
 }
 .titleDiv{
     min-width: 250px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .padleft{
@@ -2184,8 +2197,28 @@ a:hover{
 }
 
 
+.seventywidth{
+    width: 70%;
+}
+
+.eightywidth{
+    width: 80%;
+}
+
+.twentywidth{
+    width: 20%;
+}
+
+.NoPad{
+    padding:0px;
+}
+
 
 @media (max-width:500px)  {
+
+    .standardcontent{
+
+    }
     .displayDesktop{
         display: none;
     }
@@ -2199,3 +2232,5 @@ a:hover{
         padding-top: 95px;
     }
 }​
+
+
