@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df72f643-8516-4158-ab11-ea47407c3c9f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/comparisonpage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/angulartemplates/team.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" afterPath="$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,8 +66,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="1218" column="0" lean-forward="false" selection-start-line="1218" selection-start-column="0" selection-end-line="1218" selection-end-column="0" />
+            <state relative-caret-position="362">
+              <caret line="2224" column="23" lean-forward="false" selection-start-line="2224" selection-start-column="23" selection-end-line="2224" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -99,8 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>table{</find>
-      <find>display: table</find>
       <find>onehu</find>
       <find>nohover</find>
       <find>tableContent</find>
@@ -129,6 +124,8 @@
       <find>flexColumn</find>
       <find>titleDiv</find>
       <find>teamRivalsMobile</find>
+      <find>standard</find>
+      <find>paddi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1158,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="1218" column="0" lean-forward="false" selection-start-line="1218" selection-start-column="0" selection-end-line="1218" selection-end-column="0" />
+        <state relative-caret-position="362">
+          <caret line="2224" column="23" lean-forward="false" selection-start-line="2224" selection-start-column="23" selection-end-line="2224" selection-end-column="23" />
           <folding />
         </state>
       </provider>
