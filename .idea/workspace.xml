@@ -66,8 +66,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1157" column="21" lean-forward="true" selection-start-line="1157" selection-start-column="21" selection-end-line="1157" selection-end-column="21" />
+            <state relative-caret-position="348">
+              <caret line="2100" column="20" lean-forward="false" selection-start-line="2100" selection-start-column="20" selection-end-line="2100" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -96,8 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onehu</find>
-      <find>nohover</find>
       <find>tableContent</find>
       <find>rivalstable</find>
       <find>mobileComparisonRow</find>
@@ -126,6 +124,8 @@
       <find>teamRivalsMobile</find>
       <find>standard</find>
       <find>paddi</find>
+      <find>star</find>
+      <find>mobileComparisonDataRankSmall</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1155,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rugbyranker/static/angularui/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1157" column="21" lean-forward="true" selection-start-line="1157" selection-start-column="21" selection-end-line="1157" selection-end-column="21" />
+        <state relative-caret-position="348">
+          <caret line="2100" column="20" lean-forward="false" selection-start-line="2100" selection-start-column="20" selection-end-line="2100" selection-end-column="20" />
           <folding />
         </state>
       </provider>
