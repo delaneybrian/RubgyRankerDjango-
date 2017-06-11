@@ -112,16 +112,22 @@
             <div>
                 <table class="comparisonMobileTable">
                     <tr class="mobileComparisonRow">
-                        <td class="mobileComparisonData seventywidth">Overall Win Precentage: </td>
-                        <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamAWinPrecentage | number : 2 }}%</div></td>
+                        <td class="mobileComparisonData seventywidth">Overall Win Precentage:</td>
+                        <td class="mobileComparisonData NoPad">
+                            <div class="tableContent">{{ teamAWinPrecentage | number : 2 }}%</div>
+                        </td>
                     </tr>
                     <tr class="mobileComparisonRow">
-                        <td class="mobileComparisonData seventywidth">Home Win Precentage: </td>
-                        <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamAHomeWinPrecentage | number : 2 }}%</div></td>
+                        <td class="mobileComparisonData seventywidth">Home Win Precentage:</td>
+                        <td class="mobileComparisonData NoPad">
+                            <div class="tableContent">{{ teamAHomeWinPrecentage | number : 2 }}%</div>
+                        </td>
                     </tr>
                     <tr class="mobileComparisonRow">
-                        <td class="mobileComparisonData seventywidth">Away Win Precentage: </td>
-                        <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamAAwayWinPrecentage | number : 2 }}%</div></td>
+                        <td class="mobileComparisonData seventywidth">Away Win Precentage:</td>
+                        <td class="mobileComparisonData NoPad">
+                            <div class="tableContent">{{ teamAAwayWinPrecentage | number : 2 }}%</div>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -135,16 +141,22 @@
             <div>
                 <table class="comparisonMobileTable">
                     <tr class="mobileComparisonRow">
-                        <td class="mobileComparisonData seventywidth">Overall Win Precentage: </td>
-                        <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamBWinPrecentage | number : 2 }}%</div></td>
+                        <td class="mobileComparisonData seventywidth">Overall Win Precentage:</td>
+                        <td class="mobileComparisonData NoPad">
+                            <div class="tableContent">{{ teamBWinPrecentage | number : 2 }}%</div>
+                        </td>
                     </tr>
                     <tr class="mobileComparisonRow">
-                        <td class="mobileComparisonData seventywidth">Home Win Precentage: </td>
-                        <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamBHomeWinPrecentage | number : 2 }}%</div></td>
+                        <td class="mobileComparisonData seventywidth">Home Win Precentage:</td>
+                        <td class="mobileComparisonData NoPad">
+                            <div class="tableContent">{{ teamBHomeWinPrecentage | number : 2 }}%</div>
+                        </td>
                     </tr>
                     <tr class="mobileComparisonRow">
-                        <td class="mobileComparisonData seventywidth">Away Win Precentage: </td>
-                        <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamBAwayWinPrecentage | number : 2 }}%</div></td>
+                        <td class="mobileComparisonData seventywidth">Away Win Precentage:</td>
+                        <td class="mobileComparisonData NoPad">
+                            <div class="tableContent">{{ teamBAwayWinPrecentage | number : 2 }}%</div>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -201,11 +213,15 @@
                     <table class="comparisonMobileTable">
                         <tr class="mobileComparisonRow">
                             <td class="mobileComparisonData seventywidth">{{ teamAName }} Average Score:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.allGamesAverage.teamAAllAverageScore }}</div></td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.allGamesAverage.teamAAllAverageScore }}</div>
+                            </td>
                         </tr>
                         <tr class="mobileComparisonRow">
                             <td class="mobileComparisonData seventywidth">{{ teamBName }} Average Score:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.allGamesAverage.teamBAllAverageScore }}</div></td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.allGamesAverage.teamBAllAverageScore }}</div>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -216,11 +232,15 @@
                     <table class="comparisonMobileTable">
                         <tr class="mobileComparisonRow">
                             <td class="mobileComparisonData seventywidth">{{ teamAName }} Average Score:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.vsScoresDict.teamAAvreageScore }}</div></td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.vsScoresDict.teamAAvreageScore }}</div>
+                            </td>
                         </tr>
                         <tr class="mobileComparisonRow">
                             <td class="mobileComparisonData seventywidth">{{ teamBName }} Average Score:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.vsScoresDict.teamBAvreageScore }}</div></td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.vsScoresDict.teamBAvreageScore }}</div>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -234,6 +254,21 @@
         </div>
         <hr class="articlesHr">
         <div class="recentFormContainer">
+            <div class="formKeyLarge">
+                <span class="makeMiddle"><i class="fa fa-square fa-3x wonMatchRecord paddedright" aria-hidden="true"></i> - Won</span>
+                <span class="makeMiddle"><i class="fa fa-square fa-3x lostMatchRecord paddedright" aria-hidden="true"></i> - Lost</span>
+                <span class="makeMiddle"><i class="fa fa-square fa-3x drewMatchRecord paddedright" aria-hidden="true"></i> - Draw</span>
+            </div>
+            <div class="formKeySmall">
+                <span class="makeMiddle"><i class="fa fa-square fa-2x wonMatchRecord paddedright" aria-hidden="true"></i> - Won</span>
+                <span class="makeMiddle"><i class="fa fa-square fa-2x lostMatchRecord paddedright" aria-hidden="true"></i> - Lost</span>
+                <span class="makeMiddle"><i class="fa fa-square fa-2x drewMatchRecord paddedright" aria-hidden="true"></i> - Draw</span>
+            </div>
+            <div class="formKeyMobile">
+                <span class="makeMiddle"><i class="fa fa-square fa wonMatchRecord paddedright" aria-hidden="true"></i> - Won</span>
+                <span class="makeMiddle"><i class="fa fa-square fa lostMatchRecord paddedright" aria-hidden="true"></i> - Lost</span>
+                <span class="makeMiddle"><i class="fa fa-square fa drewMatchRecord paddedright" aria-hidden="true"></i> - Draw</span>
+            </div>
             <div ng-hide="DoNotDisplayForm" class="recentFormHeadToHead">
                 <h4>{{ teamAName }} vs {{ teamBName }}</h4>
                 <span ng-repeat="record in teamDetails.headToHeadForm track by $index">
@@ -378,16 +413,28 @@
                 <div>
                     <table class="comparisonMobileTableNotFixed">
                         <tr class="mobileComparisonRow">
-                            <td class="mobileComparisonData eightywidth">{{ teamAName }} Current Streak Vs {{ teamBName }}:</td>
-                            <td class="mobileComparisonData twentywidth NoPad"><div class="tableContent">{{ teamDetails.streakAndWins.teamACurrentStreak }}</div></td>
+                            <td class="mobileComparisonData eightywidth">{{ teamAName }} Current Streak
+                                Vs {{ teamBName }}:
+                            </td>
+                            <td class="mobileComparisonData twentywidth NoPad">
+                                <div class="tableContent">{{ teamDetails.streakAndWins.teamACurrentStreak }}</div>
+                            </td>
                         </tr>
                         <tr class="mobileComparisonRow">
-                            <td class="mobileComparisonData eightywidth">{{ teamAName }} Max Streak Vs {{ teamBName }}:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.streakAndWins.teamAMaxStreak }}</div></td>
+                            <td class="mobileComparisonData eightywidth">{{ teamAName }} Max Streak
+                                Vs {{ teamBName }}:
+                            </td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.streakAndWins.teamAMaxStreak }}</div>
+                            </td>
                         </tr>
                         <tr class="mobileComparisonRow">
-                            <td class="mobileComparisonData eightywidth">{{ teamBName }} Max Streak Vs {{ teamAName }}:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.streakAndWins.teamBMaxStreak }}</div></td>
+                            <td class="mobileComparisonData eightywidth">{{ teamBName }} Max Streak
+                                Vs {{ teamAName }}:
+                            </td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.streakAndWins.teamBMaxStreak }}</div>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -398,19 +445,27 @@
                     <table class="comparisonMobileTableNotFixed">
                         <tr class="mobileComparisonRow">
                             <td class="mobileComparisonData eightywidth">{{ teamAName }} Current Streak:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.teamAData.current_streak }}</div></td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.teamAData.current_streak }}</div>
+                            </td>
                         </tr>
                         <tr class="mobileComparisonRow">
                             <td class="mobileComparisonData eightywidth">{{ teamAName }} Max Streak:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.teamAData.max_streak }}</div></td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.teamAData.max_streak }}</div>
+                            </td>
                         </tr>
                         <tr class="mobileComparisonRow">
                             <td class="mobileComparisonData eightywidth">{{ teamBName }} Current Streak:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.teamBData.current_streak }}</div></td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.teamBData.current_streak }}</div>
+                            </td>
                         </tr>
                         <tr class="mobileComparisonRow">
                             <td class="mobileComparisonData eightywidth">{{ teamBName }} Max Streak:</td>
-                            <td class="mobileComparisonData NoPad"><div class="tableContent">{{ teamDetails.teamBData.max_streak }}</div></td>
+                            <td class="mobileComparisonData NoPad">
+                                <div class="tableContent">{{ teamDetails.teamBData.max_streak }}</div>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -445,25 +500,35 @@
         <hr class="articlesHr">
 
         <table class="showWhenLarge comparisonMobileTable">
-                <tr>
-                    <th>Hometeam</th>
-                    <th>Score</th>
-                    <th>Awayteam</th>
-                    <th>Score</th>
-                    <th>Tournament</th>
-                    <th>Date</th>
-                </tr>
-                <tr ng-repeat="match in teamDetails.recentMatches" class="mobileComparisonRowNoHover">
-                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
-                                                                                        src="{{ match.hometeam.logo_url }}"><span class="matchHide paddingMatch teamname">{{ match.hometeam.name }}</span></td>
-                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.hometeam_score }}</div></td>
-                    <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
-                                                                                        src="{{ match.awayteam.logo_url }}"><span class="matchHide paddingMatch teamname">{{ match.awayteam.name }}</span></td>
-                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.awayteam_score }}</div></td>
-                    <td class="mobileComparisonDataRank"><div class="tableContent"><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo"
-                                                                                        src="{{ match.tournament.logo_url }}"></div></td>
-                    <td class="mobileComparisonDataRank"><div class="tableContent">{{ match.match_date | date : "d-MMMM-yyyy" }}</div></td>
-                </tr>
+            <tr>
+                <th>Hometeam</th>
+                <th>Score</th>
+                <th>Awayteam</th>
+                <th>Score</th>
+                <th>Tournament</th>
+                <th>Date</th>
+            </tr>
+            <tr ng-repeat="match in teamDetails.recentMatches" class="mobileComparisonRowNoHover">
+                <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
+                                                          src="{{ match.hometeam.logo_url }}"><span
+                        class="matchHide paddingMatch teamname">{{ match.hometeam.name }}</span></td>
+                <td class="mobileComparisonDataRank">
+                    <div class="tableContent">{{ match.hometeam_score }}</div>
+                </td>
+                <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
+                                                          src="{{ match.awayteam.logo_url }}"><span
+                        class="matchHide paddingMatch teamname">{{ match.awayteam.name }}</span></td>
+                <td class="mobileComparisonDataRank">
+                    <div class="tableContent">{{ match.awayteam_score }}</div>
+                </td>
+                <td class="mobileComparisonDataRank">
+                    <div class="tableContent"><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo"
+                                                   src="{{ match.tournament.logo_url }}"></div>
+                </td>
+                <td class="mobileComparisonDataRank">
+                    <div class="tableContent">{{ match.match_date | date : "d-MMMM-yyyy" }}</div>
+                </td>
+            </tr>
         </table>
 
         <div class="mobilematch hideWhenLarge">

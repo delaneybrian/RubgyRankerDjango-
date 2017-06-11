@@ -10,6 +10,20 @@ html{
     max-width: 100%;
 }
 
+
+.formKeyLarge{
+    display: flex;
+}
+
+.formKeySmall{
+    display: none;
+}
+
+.formKeyMobile{
+    display: none;
+}
+
+
 body{
     border-top: 0px;
     font-family: 'Roboto', sans-serif;
@@ -1165,6 +1179,14 @@ latestgamestable{
 
 @media(max-width: 600px){
 
+    .formKeySmall{
+        display: flex;
+    }
+
+    .formKeyLarge{
+        display: none;
+    }
+
     .hideLargeLogo{
         display: none;
     }
@@ -1883,6 +1905,7 @@ a:hover{
 
 }
 
+
 @media (max-width: 600px){
     .tournamentInfo{
         display: flex;
@@ -1902,6 +1925,8 @@ a:hover{
     .recentFormHeadToHead{
         display: none;
     }
+
+
     .recentFormGeneralMobile{
         display: block;
     }
@@ -1973,6 +1998,18 @@ a:hover{
     .recentFormHeadToHeadMobile{
         display: none;
     }
+
+    .formKeySmall{
+        display: none;
+    }
+    .formKeyLarge{
+        display: none;
+    }
+
+    .formKeyMobile{
+        display: flex;
+    }
+
     .recentFormHeadToHeadMobileSmall{
         display: block;
     }
@@ -2087,6 +2124,19 @@ a:hover{
     padding-top: .5em;
     padding-bottom: .5em;
     max-width: 100%;
+}
+
+.paddedright{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.makeMiddle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 
