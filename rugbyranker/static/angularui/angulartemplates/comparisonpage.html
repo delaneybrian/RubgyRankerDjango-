@@ -508,24 +508,24 @@
                 <th>Tournament</th>
                 <th>Date</th>
             </tr>
-            <tr ng-repeat="match in teamDetails.recentMatches" class="mobileComparisonRowNoHover">
-                <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
+            <tr ng-repeat="match in teamDetails.recentMatches" class="mobileComparisonRowNoHover width100">
+                <td class="mobileComparisonDataRank width30"><img class="smallteamlogo" alt="{{ match.hometeam.name }} logo"
                                                           src="{{ match.hometeam.logo_url }}"><span
                         class="matchHide paddingMatch teamname">{{ match.hometeam.name }}</span></td>
-                <td class="mobileComparisonDataRank">
+                <td class="mobileComparisonDataRank width75">
                     <div class="tableContent">{{ match.hometeam_score }}</div>
                 </td>
-                <td class="mobileComparisonDataRank"><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
+                <td class="mobileComparisonDataRank width30"><img class="smallteamlogo" alt="{{ match.awayteam.name }} logo"
                                                           src="{{ match.awayteam.logo_url }}"><span
                         class="matchHide paddingMatch teamname">{{ match.awayteam.name }}</span></td>
-                <td class="mobileComparisonDataRank">
+                <td class="mobileComparisonDataRank width75">
                     <div class="tableContent">{{ match.awayteam_score }}</div>
                 </td>
-                <td class="mobileComparisonDataRank">
+                <td class="mobileComparisonDataRank width10">
                     <div class="tableContent"><img class="smalltournamentlogo2" alt="{{ match.tournament.name }} logo"
                                                    src="{{ match.tournament.logo_url }}"></div>
                 </td>
-                <td class="mobileComparisonDataRank">
+                <td class="mobileComparisonDataRank width15">
                     <div class="tableContent">{{ match.match_date | date : "d-MMMM-yyyy" }}</div>
                 </td>
             </tr>

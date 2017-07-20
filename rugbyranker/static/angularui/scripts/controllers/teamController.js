@@ -7,6 +7,13 @@ sportModule.controller('teamController', function ($scope, $http, $routeParams, 
         .then(function (response) {
             $scope.details = response.data;
 
+            if (response.data.thisweek_rating == 5000){
+                console.log("blah")
+                $scope.details.thisweek_position = "N/A";
+                $scope.details.lastweek_position = "N/A";
+                $scope.details.thisweek_rating = "Not Ranked";
+            }
+
             //For Streak Chart
             $scope.streakLabels = ['Max Streak', 'Current Streak'];
             $scope.streakSeries = [];
