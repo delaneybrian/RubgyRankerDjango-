@@ -11,7 +11,7 @@ import html.parser
 def get_articles(request, format=None):
     paginator = PageNumberPagination()
     paginator.page_size = 5
-    articles = Article.objects.all().order_by('date')
+    articles = Article.objects.all().order_by('-date')
     result_page = paginator.paginate_queryset(articles, request)
     serializer = SmallArticleSerializer(result_page, many=True)
     return paginator.get_paginated_response(serializer.data)

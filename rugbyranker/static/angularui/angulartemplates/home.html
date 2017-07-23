@@ -88,8 +88,8 @@
             <hr class="articlesHr">
             <div class="articleContainer" ng-repeat="article in articles">
                 <div class="articleHomeContent">
-                    <h3>{{ article.mainheading }}</h3>
-                    <img src="{{ article.mainimage }}">
+                    <a href="/articles/{{ article.id }}"><h3>{{ article.mainheading }}</h3></a>
+                    <a href="/articles/{{ article.id }}"><img src="{{ article.mainimage }}"></a>
                     <p>{{ article.summary }}</p>
                     <a href="/articles/{{ article.id }}"><p>Read More...</p></a>
                     <small>{{ article.author }} - {{ article.date | date : "d-MMMM-yyyy" }}</small>

@@ -10,7 +10,7 @@ from rest_framework import status
 @api_view(['GET'])
 def get_articles(request, format=None):
         #try:
-            article = Article.objects.filter().order_by('date')[:3]
+            article = Article.objects.filter().order_by('-date')[:3]
             serializer = SmallArticleSerializer(article, many=True)
             return Response(serializer.data)
         #except:
