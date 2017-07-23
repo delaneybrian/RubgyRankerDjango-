@@ -1604,6 +1604,9 @@ a:hover{
     flex-direction: column;
 }
 
+.articleContent{
+    text-align: justify;
+}
 
 .articleContentAreaSmall{
     max-width: 800px;

@@ -1,4 +1,4 @@
-sportModule.controller('articleController', function ($scope, $routeParams, $http) {
+sportModule.controller('articleController', function ($scope, $routeParams, $http, $sce) {
 
     var articleId = String($routeParams.articleId);
 
@@ -8,4 +8,8 @@ sportModule.controller('articleController', function ($scope, $routeParams, $htt
         }, function errorCallback(response) {
             $location.url('/error');
         });
+
+    $scope.SkipValidation = function(value) {
+        return $sce.trustAsHtml(value);
+};
 });

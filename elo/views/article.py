@@ -3,12 +3,14 @@ from rest_framework.decorators import api_view
 from elo.models import Article
 from elo.serializers import FullArticleSerializer
 from rest_framework import status
+import html.parser
 
 
 @api_view(['GET'])
 def get_article(request, pk, format=None):
         try:
             article = Article.objects.get(pk=pk)
+            article.htmlcontent = html.unescape(article.htmlcontent)
             serializer = FullArticleSerializer(article)
             return Response(serializer.data)
         except Article.DoesNotExist:

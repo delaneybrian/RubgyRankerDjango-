@@ -1,4 +1,4 @@
-var sportModule = angular.module('sportModule', ['ngRoute', 'ui.bootstrap']);
+var sportModule = angular.module('sportModule', ['ngRoute', 'ui.bootstrap', 'ngSanitize']);
 
 sportModule.config(['$routeProvider', '$locationProvider', '$httpProvider',
     function ($routeProvider, $locationProvider, $httpProvider) {

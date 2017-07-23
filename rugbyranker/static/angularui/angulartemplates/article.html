@@ -11,8 +11,7 @@
                     <h3>{{ article.subheading }}</h3>
                 </div>
                 <hr class="articleHr">
-                <div class="articleContent">
-                    {{ article.htmlcontent }}
+                <div class="articleContent" ng-bind-html="SkipValidation(article.htmlcontent)">
                 </div>
                 <hr class="articleHr">
                 <div class="articleFooter">

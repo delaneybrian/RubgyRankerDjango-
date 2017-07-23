@@ -4,6 +4,7 @@ from elo.models import Article
 from elo.serializers import SmallArticleSerializer
 from rest_framework.pagination import PageNumberPagination
 from rest_framework import status
+import html.parser
 
 
 @api_view(['GET'])
