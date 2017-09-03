@@ -84,14 +84,14 @@
     </div>
     <div class="homecontent">
         <div class="homeArticles">
-            <b><h3>Latest News</h3></b>
+            <b><h3 class="centeredNews">Latest News</h3></b>
             <hr class="articlesHr">
             <div class="articleContainer" ng-repeat="article in articles">
                 <div class="articleHomeContent">
-                    <a href="/articles/{{ article.id }}"><h3>{{ article.mainheading }}</h3></a>
-                    <a href="/articles/{{ article.id }}"><img src="{{ article.mainimage }}"></a>
+                    <a href="/articles/{{ article.id }}"><h3 class="centeredNews">{{ article.mainheading }}</h3></a>
+                    <a class="homearticleimage" href="/articles/{{ article.id }}"><img class="homearticleimage" src="{{ article.mainimage }}"></a>
                     <p>{{ article.summary }}</p>
-                    <a href="/articles/{{ article.id }}"><p>Read More...</p></a>
+                    <a href="/articles/{{ article.id }}"><h4>Read More</h4></a>
                     <small>{{ article.author }} - {{ article.date | date : "d-MMMM-yyyy" }}</small>
                 </div>
                 <hr class="articlesHr">

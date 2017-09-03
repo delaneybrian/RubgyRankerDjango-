@@ -986,6 +986,15 @@ latestgamestable{
     */
 }
 
+.homearticleimage{
+    padding-bottom: 10px;
+}
+
+.centeredNews{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
 .mobileawayteam{
     height: 60px;
     width: 100%;
