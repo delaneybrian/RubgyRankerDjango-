@@ -43,11 +43,12 @@ sportModule.controller('navController', function ($scope, $http, $location) {
             link: "/rankings",
             icon: "fa-list-ol"
         },
-        {
-            name: "News",
-            link: "/articles",
-            icon: "fa-newspaper-o"
-        },
+
+        //{
+        //    name: "News",
+        //    link: "/articles",
+        //    icon: "fa-newspaper-o"
+        //},
         {
             name: "Teams",
             link: "/teams",
