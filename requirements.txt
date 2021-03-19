@@ -3,5 +3,5 @@ Django==1.11
 gunicorn==19.7.1
 psycopg2==2.7.5
 whitenoise==3.3.0
-djangorestframework==3.6.2
+djangorestframework==3.11.2
 pillow==4.1.1
